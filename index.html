@@ -5,7 +5,6 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- jQuery Mobile -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -16,15 +15,79 @@
 </head>
 
 <body>
-
     <!-- This is page 1-->
     <div data-role="page" id="Page1">
 
+        <!-- header logo-->
+        <div data-role="header" data-position="fixed" style="margin: auto; text-align: center;">
+            <img src="images/logo.png" width="130" height="100">
+        </div>
+
+        <!-- video -->
+        <video width="auto" height="240" autoplay>
+            <source src="videos/intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- welcome note-->
+        <h2 style="padding: 5px 20px; margin-top: -120px; color: rgb(247, 34, 34);">Hello Kumari, What DIY do you want
+            today?
+        </h2>
+
+        <!-- POI Card-->
+        <div role="main" class="ui-content" style="margin-top: -220px;">
+            <div class="ui-grid-a" data-filter="true" data-filter-placeholder="Search" style="margin-top: 200px;">
+                <div class="ui-block-a card ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" style="height:auto">
+                        <span class="flaticon-122-heart" style="float: right;"></span>
+                        <img class="center" src="images/cat.png" /></br>
+                        <span>Product </span> </br> <span class="card-price">Rs. 500.00</span>
+                    </div>
+                </div>
+                <div class="ui-block-b card ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" style="height:auto">
+                        <span class="flaticon-122-heart" style="float: right;"></span>
+                        <img class="center" src="images/elephant.png" /></br>
+                        <span>Product </span> </br> <span class="card-price">Rs. 500.00</span>
+                    </div>
+                </div>
+                <div class="ui-block-a card ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" style="height:auto">
+                        <span class="flaticon-122-heart" style="float: right;"></span>
+                        <img class="center" src="images/dog.png" /></br>
+                        <span>Product </span> </br> <span class="card-price">Rs. 500.00</span>
+                    </div>
+                </div>
+                <div class="ui-block-b card ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" style="height:auto">
+                        <span class="flaticon-122-heart" style="float: right;"></span>
+                        <img class="center" src="images/elephant.png" /></br>
+                        <span>Product </span> </br> <span class="card-price">Rs. 500.00</span>
+                    </div>
+                </div>
+                <div class="ui-block-a card ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" style="height:auto">
+                        <span class="flaticon-122-heart" style="float: right;"></span>
+                        <img class="center" src="images/dog.png" /></br>
+                        <span>Product </span> </br> <span class="card-price">Rs. 500.00</span>
+                    </div>
+                </div>
+                <div class="ui-block-b card ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" style="height:auto">
+                        <span class="flaticon-122-heart" style="float: right;"></span>
+                        <img class="center" src="images/cow.png" /></br>
+                        <span>Product </span> </br> <span class="card-price">Rs. 500.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <!-- Footer -->
         <div data-role="footer" data-position="fixed">
             <nav data-role="navbar">
                 <ul>
-                    <li><a href="#Page2" class="ui-btn menu ui-btn-active"><span class="flaticon-053-home"></span></a></li>
+                    <li><a href="#Page2" class="ui-btn menu ui-btn-active"><span class="flaticon-053-home"></span></a>
+                    </li>
                     <li><a href="#Page2" class="ui-btn menu"><span class="flaticon-122-heart"></span></a></li>
                     <li><a href="#Page2" class="ui-btn menu"><span class="flaticon-008-shopping-cart"></span></a></li>
                     <li><a href="#Page2" class="ui-btn menu"><span class="flaticon-097-user"></span></a></li>
@@ -33,5 +96,4 @@
         </div>
     </div>
 </body>
-
 </html>
