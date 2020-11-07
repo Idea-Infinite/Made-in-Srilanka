@@ -752,6 +752,7 @@ button[disabled],
 }
 .menu > span {
 	margin-left: -15px;
+	color: #54568c;
 }
 
 .custom-corners .ui-bar {
@@ -759,6 +760,10 @@ button[disabled],
 	border-top-left-radius: inherit;
 	-webkit-border-top-right-radius: inherit;
 	border-top-right-radius: inherit;
+	border-bottom-left-radius: inherit;
+	-webkit-border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+	-webkit-border-bottom-right-radius: inherit;
   }
   .custom-corners .ui-body {
 	border-top-width: 0;
