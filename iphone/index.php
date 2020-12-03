@@ -1,35 +1,12 @@
-<!-- Made in Sri Lanka - Team Idea Infinite - Group 5 -->
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Poppins:wght@200&display=swap"
-        rel="stylesheet">
-
-    <!-- jQuery Mobile -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="css/themes/teamIdeaInfinite.css">
-    <link rel="stylesheet" href="css/font/flaticon.css">
-
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-</head>
-
+<?php include 'parts/head.php' ?>
 <body>
     <!-- This is page 1-->
     <div data-role="page" id="page1">
 
         <!-- header logo-->
         <div data-role="header" data-position="fixed"
-            style="margin: auto; text-align: center; background-color:#54568C;">
-            <img src="images/logo.png" style="float: left;" width="100" height="100">
-            <h1 class="header-title">Made In Sri Lanka</h1>
+            class="header">
+            <img src="images/logo.png" class="logo" width="127" height="56">
         </div>
 
         <!-- video -->
@@ -41,17 +18,20 @@
         <!-- welcome note-->
         <div style="position: absolute;">
             <h2
-                style="padding: 5px 20px; margin-top: -120px; 
-                color: rgb(255, 255, 255); font-family: 'Montserrat', sans-serif; font-weight: 200;">
-                Hello Kumari, What DIY do you want
+                style="padding: 5px 20px; margin-top: -120px; font-size: 20;
+                color: rgb(255, 255, 255); font-family: 'Poppins', sans-serif; font-weight: 200;">
+                Hello Snoopy, What DIY do you want
                 today?
             </h2>
         </div>
 
-        <div role="main" class="ui-content" style="margin-top: -220px;">
+        <div role="main" class="ui-content" style="margin-top: -250px;">
             <!-- POI Card-->
-            <div class="ui-grid-a" data-filter="true" data-filter-placeholder="Search" style="margin-top: 200px;">
+            <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products" style="margin-top: 200px;">
                 <h3>Recommended DYI</h3>
+                <?php
+                    
+                ?>
                 <div class="ui-block-a card ui-corner-all custom-corners">
                     <div class="ui-bar ui-bar-a ui-card">
                         <span class="flaticon-122-heart fav-icon-card"></span>
