@@ -28,52 +28,24 @@
         <div role="main" class="ui-content" style="margin-top: -250px;">
             <!-- POI Card-->
             <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products" style="margin-top: 200px;">
-                <h3>Recommended DYI</h3>
+                <div>
+                <h3 style="float: left">Recommended DYI</h3>
+                <h3 style="float: right">View All</h3>
+                </div>
                 <?php
-                    
+                    $data = file_get_contents('..\common\db.json');
+                    $json = json_decode($data, true);
+
+                    foreach ($json as $key => $item) {
+                        if ($key % 2 == 0) {
+                            $column = 'a';
+                        } else {
+                            $column = 'b';
+                        }
+                        $name = $item['name'];
+                        include 'parts/poiCard.php';
+                    }
                 ?>
-                <div class="ui-block-a card ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a ui-card">
-                        <span class="flaticon-122-heart fav-icon-card"></span>
-                        <img class="center" src="images/cat.png" /></br>
-                        <span>Cat A </span> </br> <span class="card-price">LKR 500.00</span>
-                    </div>
-                </div>
-                <div class="ui-block-b card ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a ui-card">
-                        <span class="flaticon-122-heart fav-icon-card"></span>
-                        <img class="center" src="images/elephant.png" /></br>
-                        <span>Elephant A </span> </br> <span class="card-price">LKR 500.00</span>
-                    </div>
-                </div>
-                <div class="ui-block-a card ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a ui-card">
-                        <span class="flaticon-122-heart fav-icon-card"></span>
-                        <img class="center" src="images/dog.png" /></br>
-                        <span>Dog A </span> </br> <span class="card-price">Rs. 500.00</span>
-                    </div>
-                </div>
-                <div class="ui-block-b card ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a ui-card">
-                        <span class="flaticon-122-heart fav-icon-card"></span>
-                        <img class="center" src="images/elephant.png" /></br>
-                        <span>Elephant B </span> </br> <span class="card-price">Rs. 500.00</span>
-                    </div>
-                </div>
-                <div class="ui-block-a card ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a ui-card">
-                        <span class="flaticon-122-heart fav-icon-card"></span>
-                        <img class="center" src="images/dog.png" /></br>
-                        <span>Dog B </span> </br> <span class="card-price">Rs. 500.00</span>
-                    </div>
-                </div>
-                <div class="ui-block-b card ui-corner-all custom-corners">
-                    <div class="ui-bar ui-bar-a ui-card">
-                        <span class="flaticon-122-heart fav-icon-card"></span>
-                        <img class="center" src="images/cow.png" /></br>
-                        <span>Cow A </span> </br> <span class="card-price">Rs. 500.00</span>
-                    </div>
-                </div>
             </div>
         </div>
 
