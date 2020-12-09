@@ -1,5 +1,5 @@
-<!-- This is store page-->
-<div data-role="page" id="store">
+<!-- This is wishList page-->
+<div data-role="page" id="wishList">
 
     <!-- header logo-->
     <div data-role="header" data-position="fixed"
@@ -7,28 +7,29 @@
         <img src="images/logo.png" class="logo" width="127" height="56">
     </div>
 
-    <div role="main" class="ui-content" style="margin-top: -250px;">
+    <div role="main" class="ui-content" style="padding: 0">
         <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
-            <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
+        <div class="ui-grid-a search">
+            <div class="header-title">
+                <h3>Wish List</h3>
+                <img src="../common/assets/images/icons/wishList.png" height="35px" width="35px">
             </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
+            <div class="back-box">
+                <?php
+                $data = file_get_contents('..\common\db.json');
+                $json = json_decode($data, true);
 
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
+                foreach ($json as $key => $item) {
+                    if ($key % 2 == 0) {
+                        $column = 'a';
+                    } else {
+                        $column = 'b';
+                    }
+                    $name = $item['name'];
+                    include 'parts/poiCard.php';
                 }
-                $name = $item['name'];
-                include 'parts/poiCard.php';
-            }
-            ?>
+                ?>
+            </div>
         </div>
     </div>
     <?php include 'parts/bottomNavbar.php' ?>

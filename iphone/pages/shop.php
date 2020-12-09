@@ -1,5 +1,5 @@
-<!-- This is store page-->
-<div data-role="page" id="store">
+<!-- This is shop page-->
+<div data-role="page" id="shop">
 
     <!-- header logo-->
     <div data-role="header" data-position="fixed"

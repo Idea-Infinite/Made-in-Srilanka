@@ -1,12 +1,6 @@
 <!-- This is page 1-->
 <div data-role="page" id="page1">
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
-    </div>
-
     <!-- video -->
     <video style="object-fit: cover;" width="100%" height="240" autoplay>
         <source src="videos/intro.mp4" type="video/mp4">
@@ -29,7 +23,7 @@
              style="margin-top: 200px;">
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="#store" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
+                <a href="#shop" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
             </div>
             <?php
             $data = file_get_contents('..\common\db.json');

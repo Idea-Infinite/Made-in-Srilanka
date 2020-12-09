@@ -1,14 +1,16 @@
 
 h3 {
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
+
 /* Header */
 .header {
-    margin: auto; 
-    text-align: center; 
-    background-color:#1797F3 !important;
+    margin: auto;
+    text-align: center;
+    background-color: #1797F3 !important;
     padding-top: 30px;
 }
+
 .logo {
     text-align: center;
     margin-bottom: -5px;
@@ -16,20 +18,23 @@ h3 {
 
 
 .footer_main {
-    background-color:#54568C;
+    background-color: #54568C;
     padding: 10px 20px;
     color: #fff;
     font-size: 11px;
     font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
 }
 
-.bottom_nav_bar li a{
+.bottom_nav_bar li a {
     background-color: #f3f3f3 !important;
     color: #000000 !important;
     border-color: #f3f3f3 !important;
 }
 
-.bottom_nav_bar li .ui-btn-active{
+.bottom_nav_bar li .ui-btn-active {
     background-color: #dadada !important;
 }
 
@@ -45,48 +50,77 @@ h3 {
     width: 75%;
     margin: auto;
 }
-  .card {
+
+.card {
     padding: 8px;
+    min-width: 170px;
 }
+
 .card-price {
     color: #f5a278;
     position: absolute;
     bottom: 10px;
 }
 
+.card-title {
+    white-space: break-spaces;
+    max-width: 120px;
+    font-weight: 200;
+    font-family: 'Poppins';
+    margin-top: -5px;
+}
+
+.back-box {
+    margin: 10px 10px 30px 10px;
+    padding: 20px 5px;
+    overflow: auto;
+    background: #FFFFFF;
+    border-radius: 16px;
+    transform: rotate(0.2deg);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
 .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .header-title {
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 24px !important;
-  font-family: 'Poppins', sans-serif;
+    margin: 10px auto auto;
+    width: fit-content;
+}
+
+.header-title h3 {
+    font-size: 24px !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    float: left;
+    padding: 13px;
+    margin: 0;
+}
+
+.header-title img {
+    padding: 10px;
 }
 
 .ui-card {
-  height: 170px;
-  border-radius: 16px !important;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transform: rotate(0.2deg);
+    height: 170px;
+    border-radius: 16px !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(0.2deg);
     background-color: #fff;
 }
 
 .ui-card > span {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .fav-icon-card {
-  float: right;
-  position: absolute;
-  right: 0;
-  margin-right: 20px;
+    float: right;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
 }

@@ -1,35 +1,30 @@
 <!-- This is store page-->
-<div data-role="page" id="store">
+<div data-role="page" id="about">
+    <?php include 'parts/header.php' ?>
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
-    </div>
-
-    <div role="main" class="ui-content" style="margin-top: -250px;">
-        <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
-            <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
-            </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
-
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                include 'parts/poiCard.php';
-            }
-            ?>
+    <div role="main" class="ui-content">
+        <div class="header-title">
+            <h3>About Us</h3>
+            <img src="../common/assets/images/icons/wishList.png" height="35px" width="35px">
         </div>
+        <p style="font-size: 12px; font-family: 'Montserrat', sans-serif; text-align: justify">
+            iCraft is the leading independent home improvement and home repair website. It has been repeatedly honored
+            among the Best on the Web, and was named "One of the Top 50 Sites in the World" by Time Magazine. In
+            addition to our broad list of topics, we operate the most active home improvement forum on the internet,
+            enabling consumers to get personalized advice from professionals in over 100 subjects.
+
+            iCraft was established in 1995 with the goal of providing consumers with unbiased home improvement and
+            repair information in a community environment. Today DoItYourself averages over ten million unique visitors
+            per month. With comprehensive how-to content, engaging features and interviews, and expertly moderated
+            community forums, DoItYourself makes it easy and fun to tackle even the most complex home improvement
+            projects.
+
+            Would you like to share a project you DIYed? Check out our Projects section.
+
+
+        </p>
+
+        <img src="../common/assets/images/aboutus.png" hight="180px" width="340px">
     </div>
     <?php include 'parts/bottomNavbar.php' ?>
     <?php include 'parts/footer.php' ?>
