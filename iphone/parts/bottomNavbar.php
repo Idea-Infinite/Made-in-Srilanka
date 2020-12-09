@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<div data-role="footer" data-position="fixed">
+<div data-role="footer" data-position="fixed" class="bottom_nav_bar">
     <nav data-role="navbar">
         <ul>
             <li><a href="#page1" class="ui-btn menu ui-btn-active"><span class="flaticon-053-home"></span></a>

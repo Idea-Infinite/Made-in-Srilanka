@@ -28,8 +28,8 @@
         <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
              style="margin-top: 200px;">
             <div>
-                <h3 style="float: left">Recommended DYI</h3>
-                <h3 style="float: right">View All</h3>
+                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
+                <a style="float: right; line-height: 3.5em;">View All</a>
             </div>
             <?php
             $data = file_get_contents('..\common\db.json');
