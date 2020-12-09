@@ -1,26 +1,10 @@
-<!-- This is page 1-->
-<div data-role="page" id="page1">
+<!-- This is store page-->
+<div data-role="page" id="store">
 
     <!-- header logo-->
     <div data-role="header" data-position="fixed"
          class="header">
         <img src="images/logo.png" class="logo" width="127" height="56">
-    </div>
-
-    <!-- video -->
-    <video style="object-fit: cover;" width="100%" height="240" autoplay>
-        <source src="videos/intro.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <!-- welcome note-->
-    <div style="position: absolute;">
-        <h2
-            style="padding: 5px 20px; margin-top: -120px; font-size: 20;
-                color: rgb(255, 255, 255); font-family: 'Poppins', sans-serif; font-weight: 200;">
-            Hello Snoopy, What DIY do you want
-            today?
-        </h2>
     </div>
 
     <div role="main" class="ui-content" style="margin-top: -250px;">
@@ -29,7 +13,7 @@
              style="margin-top: 200px;">
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="#store" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
+                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
             </div>
             <?php
             $data = file_get_contents('..\common\db.json');
