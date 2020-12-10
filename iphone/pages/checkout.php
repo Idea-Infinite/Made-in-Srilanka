@@ -7,14 +7,16 @@
         <h3>Checkout</h3>
         <img src="../common/assets/images/icons/checkout.png" height="35px" width="35px">
     </div>
-    <div style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0)">
+    <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
         <form class="form-light">
             <p>Shipping Information</p>
             <input type="text" name="address1" id="address1" value="" placeholder="Address Line 1">
             <input type="text" name="address2" id="address2" value="" placeholder="Address Line 2">
             <input type="text" name="address3" id="address3" value="" placeholder="Address Line 3">
-            <input type="text" name="zone" id="zone" value="" placeholder="Zone">
-            <input type="text" name="country" id="country" value="" placeholder="Country">
+            <div style=" display: inline-flex">
+                <input type="text" name="zip" id="zip" value="" placeholder="Zone">
+                <input type="text" name="country" id="country" value="" placeholder="Country">
+            </div>
             <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
                 <legend style="padding: 5px">Payment Method:</legend>
                 <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6a" value="on" checked="checked">
@@ -22,7 +24,11 @@
                 <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6b" value="off">
                 <label for="radio-choice-t-6b">Stripe</label>
             </fieldset>
-
+            <input type="text" name="cardNo" id="cardNo" value="" placeholder="Card Number">
+            <div style="display: inline-flex">
+                <input type="text" name="cvv" id="cvv" value="" placeholder="CVV">
+                <input type="text" name="exp" id="exp" value="" placeholder="MM/YY">
+            </div>
             <button style="opacity: 1">Sign In</button>
         </form>
     </div>
