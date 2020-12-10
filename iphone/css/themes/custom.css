@@ -84,6 +84,18 @@ input[type=text], input[type=password] {
     padding: 0;
 }
 
+.ui-panel-inner {
+    padding: 0 !important;
+}
+
+.side-menu-info {
+    margin: 13% 0 0 0
+}
+
+.side-menu-info p {
+    margin: 0;
+}
+
 .bottom_nav_bar li a {
     background-color: #f3f3f3 !important;
     color: #000000 !important;

@@ -1,7 +1,7 @@
 <!-- This is checkout page-->
 <div data-role="page" id="profile"
      style='background-image: url("../common/assets/images/profile-back.jpg");
-     background-size: cover; background-position: bottom;'>>
+     background-size: cover; background-position: bottom;'>
 
     <?php include 'parts/header.php' ?>
 
