@@ -32,6 +32,7 @@
 
 
     </div>
-    <?php include 'parts/bottomNavbar.php' ?>
-    <?php include 'parts/footer.php' ?>
+    <div style="margin-bottom: 100px;">
+        <?php include 'parts/footer.php' ?>
+    </div>
 </div>
