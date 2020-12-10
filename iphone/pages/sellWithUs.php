@@ -1,35 +1,36 @@
-<!-- This is store page-->
-<div data-role="page" id="store">
+<!-- This is sell with us page-->
+<div data-role="page" id="sellWithUs">
+    <?php include 'parts/header.php' ?>
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
-    </div>
+    <div role="main" class="ui-content"
+         style='background-image: url("../common/assets/images/christmas.jpg"); background-size: cover;'>
 
-    <div role="main" class="ui-content" style="margin-top: -250px;">
-        <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
-            <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
-            </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
-
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                include 'parts/poiCard.php';
-            }
-            ?>
+        <div class="header-title">
+            <h3>Sell With Us</h3>
+            <img src="../common/assets/images/icons/cash.png" height="35px" width="35px">
         </div>
+        <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
+            <form>
+
+                <input type="text" name="firstName" id="firstName" value="" placeholder="First Name">
+                <input type="text" name="lastName" id="lastName" value="" placeholder="Last Name">
+                <input type="text" name="address" id="address" value="" placeholder="Address">
+                <input type="text" name="nic" id="nic" value="" placeholder="NIC">
+                <input type="text" name="username" id="username" value="" placeholder="Username">
+                <input type="password" name="password" id="password" value="" placeholder="Password">
+                <input type="password" name="rePassword" id="rePassword" value="" placeholder="Re-type password">
+
+                <button style="opacity: 1">Sign Up</button>
+                <center>
+                    <a href="#login"
+                       style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
+                        Already have an account?
+                    </a>
+                </center>
+            </form>
+        </div>
+
+
     </div>
     <?php include 'parts/bottomNavbar.php' ?>
     <?php include 'parts/footer.php' ?>

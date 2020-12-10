@@ -9,6 +9,8 @@
 <?php include 'pages/login.php' ?>
 <?php include 'pages/register.php' ?>
 <?php include 'pages/booking.php' ?>
+<?php include 'pages/sellWithUs.php' ?>
+
 
 
 </body>
