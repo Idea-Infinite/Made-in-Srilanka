@@ -1,36 +1,32 @@
-<!-- This is store page-->
-<div data-role="page" id="store">
+<!-- This is checkout page-->
+<div data-role="page" id="checkout">
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
+    <?php include 'parts/header.php' ?>
+
+    <div class="header-title">
+        <h3>Checkout</h3>
+        <img src="../common/assets/images/icons/checkout.png" height="35px" width="35px">
+    </div>
+    <div style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0)">
+        <form class="form-light">
+            <p>Shipping Information</p>
+            <input type="text" name="address1" id="address1" value="" placeholder="Address Line 1">
+            <input type="text" name="address2" id="address2" value="" placeholder="Address Line 2">
+            <input type="text" name="address3" id="address3" value="" placeholder="Address Line 3">
+            <input type="text" name="zone" id="zone" value="" placeholder="Zone">
+            <input type="text" name="country" id="country" value="" placeholder="Country">
+            <fieldset data-role="controlgroup" data-theme="b" data-type="horizontal">
+                <legend style="padding: 5px">Payment Method:</legend>
+                <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6a" value="on" checked="checked">
+                <label for="radio-choice-t-6a">Card</label>
+                <input type="radio" name="radio-choice-t-6" id="radio-choice-t-6b" value="off">
+                <label for="radio-choice-t-6b">Stripe</label>
+            </fieldset>
+
+            <button style="opacity: 1">Sign In</button>
+        </form>
     </div>
 
-    <div role="main" class="ui-content" style="margin-top: -250px;">
-        <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
-            <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
-            </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
-
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                include 'parts/poiCard.php';
-            }
-            ?>
-        </div>
-    </div>
     <?php include 'parts/bottomNavbar.php' ?>
     <?php include 'parts/footer.php' ?>
 </div>

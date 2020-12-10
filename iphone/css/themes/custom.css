@@ -35,6 +35,30 @@ input[type=text], input[type=password] {
     border-radius: 5px;
 }
 
+.form-light input[type=text] {
+    background-color: #f3f4f9 !important;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+/*.form-light input[type=radio] {*/
+/*    background-color: #f3f4f9 !important;*/
+/*    padding: 5px 20px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+.ui-radio {
+    width: 50%;
+}
+
+.ui-radio .ui-btn {
+    text-align: center;
+}
+
+.ui-controlgroup-controls {
+    width: 100%;
+}
+
 .menu-icon {
     background-color: unset;
     color: unset;
