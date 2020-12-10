@@ -23,8 +23,9 @@
 
 
         </p>
-
-        <img src="../common/assets/images/aboutus.png" hight="180px" width="340px">
+        <center>
+            <img src="../common/assets/images/aboutus.png" height="180px" width="340px">
+        </center>
     </div>
     <?php include 'parts/bottomNavbar.php' ?>
     <?php include 'parts/footer.php' ?>

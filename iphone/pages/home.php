@@ -1,5 +1,6 @@
 <!-- This is page 1-->
 <div data-role="page" id="page1">
+    <?php include 'parts/header.php' ?>
 
     <!-- video -->
     <video style="object-fit: cover;" width="100%" height="240" autoplay>

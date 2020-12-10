@@ -28,6 +28,16 @@ h3 {
     width: 100%;
 }
 
+input[type=text], input[type=password] {
+    background-color: #d4d5dc;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.ui-input-text {
+    padding: 0;
+}
+
 .bottom_nav_bar li a {
     background-color: #f3f3f3 !important;
     color: #000000 !important;
@@ -71,7 +81,7 @@ h3 {
 }
 
 .back-box {
-    margin: 10px 10px 30px 10px;
+    margin: 10px 10px 70px 10px;
     padding: 20px 5px;
     overflow: auto;
     background: #FFFFFF;
@@ -103,6 +113,10 @@ h3 {
 
 .header-title img {
     padding: 10px;
+}
+
+.ui-content {
+    margin-bottom: 80px;
 }
 
 .ui-card {
