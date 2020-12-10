@@ -1,30 +1,41 @@
 <!-- This is booking page-->
-<div data-role="page" id="register"
-     style='background-image: url("../common/assets/images/winestopper.jpg"); background-size: cover;'>
+<div data-role="page" id="booking"
+     style='background-image: url("../common/assets/images/booking_back.jpg");
+     background-size: cover; background-position: bottom;'>
     <?php include 'parts/header.php' ?>
 
     <div role="main" class="ui-content">
 
         <div class="header-title">
             <h3>Booking</h3>
-            <img src="../common/assets/images/icons/wishList.png" height="35px" width="35px">
+            <img src="../common/assets/images/icons/booking.png" height="35px" width="35px">
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
             <form>
-
-                <input type="text" name="firstName" id="firstName" value="" placeholder="First Name">
-                <input type="text" name="lastName" id="lastName" value="" placeholder="Last Name">
-                <input type="text" name="username" id="username" value="" placeholder="Username">
-                <input type="password" name="password" id="password" value="" placeholder="Password">
-                <input type="password" name="rePassword" id="rePassword" value="" placeholder="Re-type Password">
-
-                <button style="opacity: 1">Sign Up</button>
+                <input type="text" name="firstName" id="firstName" value="" placeholder="Name">
+                <select name="select-native-1" id="select-native-1">
+                    <option value="1" disabled hidden selected>Select Location</option>
+                    <option value="2">The 2nd Option</option>
+                    <option value="3">The 3rd Option</option>
+                    <option value="4">The 4th Option</option>
+                </select>
+                <select name="select-native-1" id="select-native-1">
+                    <option value="1" disabled hidden selected>Select Time Slot</option>
+                    <option value="2">The 2nd Option</option>
+                    <option value="3">The 3rd Option</option>
+                    <option value="4">The 4th Option</option>
+                </select>
+                <select name="select-native-1" id="select-native-1">
+                    <option value="1" disabled hidden selected>Select Session</option>
+                    <option value="2">The 2nd Option</option>
+                    <option value="3">The 3rd Option</option>
+                    <option value="4">The 4th Option</option>
+                </select>
                 <center>
-                    <a href="#login"
-                       style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
-                        Already have an account?
-                    </a>
+                    <span style="color:#fff;">Note: The payment of LKR 2500/= need to paid for these session.</span>
                 </center>
+
+                <button style="opacity: 1">Place Booking</button>
             </form>
         </div>
 
