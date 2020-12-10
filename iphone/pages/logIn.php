@@ -24,10 +24,8 @@
                 </center>
             </form>
         </div>
-
-
     </div>
     <div style="margin-bottom: 100px;">
         <?php include 'parts/footer.php' ?>
     </div>
-</div>pe
+</div>
