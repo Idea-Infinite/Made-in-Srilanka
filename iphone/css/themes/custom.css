@@ -9,6 +9,7 @@ h3 {
     text-align: center;
     background-color: #1797F3 !important;
     padding-top: 30px;
+    border: none;
 }
 
 .logo {
@@ -32,6 +33,20 @@ input[type=text], input[type=password] {
     background-color: #d4d5dc !important;
     padding: 5px 20px;
     border-radius: 5px;
+}
+
+.menu-icon {
+    background-color: unset;
+    color: unset;
+    text-shadow: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    position: absolute;
+    top: 53%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .ui-select > .ui-btn {

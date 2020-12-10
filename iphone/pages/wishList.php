@@ -1,11 +1,7 @@
 <!-- This is wishList page-->
 <div data-role="page" id="wishList">
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
-    </div>
+    <?php include 'parts/header.php' ?>
 
     <div role="main" class="ui-content" style="padding: 0">
         <!-- POI Card-->
