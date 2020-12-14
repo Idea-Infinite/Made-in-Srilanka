@@ -1,4 +1,4 @@
-<div data-role="panel" data-display="overlay" id="sideMenu">
+<div data-role="panel" data-display="overlay" data-position-fixed="true" id="sideMenu">
     <!-- panel content goes here -->
     <div style="height: 150px; background-color:#f3f3f3; padding: 20px; display: flex">
         <img src="../common/assets/images/icons/user.png" height="100px" width="100px">
