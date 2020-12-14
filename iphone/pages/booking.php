@@ -1,14 +1,15 @@
+<?php include '../parts/head.php' ?>
 <!-- This is booking page-->
 <div data-role="page" id="booking"
      style='background-image: url("../common/assets/images/booking_back.jpg");
      background-size: cover; background-position: bottom;'>
-    <?php include 'parts/header.php' ?>
+    <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
 
         <div class="header-title">
             <h3>Booking</h3>
-            <img src="../common/assets/images/icons/booking.png" height="35px" width="35px">
+            <img src="../../common/assets/images/icons/booking.png" height="35px" width="35px">
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
             <form>
@@ -38,7 +39,8 @@
                 <button style="opacity: 1">Place Booking</button>
             </form>
         </div>
+        <?php include '../parts/bottomNavbar.php' ?>
+        <?php include '../parts/footer.php' ?>
     </div>
-    <?php include 'parts/bottomNavbar.php' ?>
-    <?php include 'parts/footer.php' ?>
-</div>
+    </body>
+    </html>

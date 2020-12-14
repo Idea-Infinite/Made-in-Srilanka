@@ -1,6 +1,3 @@
-<?php include 'parts/head.php' ?>
-
-<body>
 
 <?php include 'pages/home.php' ?>
 <?php include 'pages/shop.php' ?>
@@ -12,8 +9,5 @@
 <?php include 'pages/sellWithUs.php' ?>
 <?php include 'pages/checkout.php' ?>
 <?php include 'pages/profile.php' ?>
+<?php include 'pages/product.php' ?>
 
-
-</body>
-
-</html>

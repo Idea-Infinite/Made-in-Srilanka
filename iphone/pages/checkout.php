@@ -1,11 +1,12 @@
+<?php include '../parts/head.php' ?>
 <!-- This is checkout page-->
 <div data-role="page" id="checkout">
 
-    <?php include 'parts/header.php' ?>
+    <?php include '../parts/header.php' ?>
 
     <div class="header-title">
         <h3>Checkout</h3>
-        <img src="../common/assets/images/icons/checkout.png" height="35px" width="35px">
+        <img src="../../common/assets/images/icons/checkout.png" height="35px" width="35px">
     </div>
     <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
         <form class="form-light">
@@ -31,8 +32,8 @@
             </div>
             <button style="opacity: 1">Sign In</button>
         </form>
+        <?php include '../parts/bottomNavbar.php' ?>
+        <?php include '../parts/footer.php' ?>
     </div>
-
-    <?php include 'parts/bottomNavbar.php' ?>
-    <?php include 'parts/footer.php' ?>
-</div>
+    </body>
+    </html>

@@ -1,10 +1,11 @@
+<?php include '../parts/head.php' ?>
 <!-- This is store page-->
 <div data-role="page" id="store">
 
     <!-- header logo-->
     <div data-role="header" data-position="fixed"
          class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
+        <img src="../images/logo.png" class="logo" width="127" height="56">
     </div>
 
     <div role="main" class="ui-content" style="margin-top: -250px;">
@@ -26,11 +27,12 @@
                     $column = 'b';
                 }
                 $name = $item['name'];
-                include 'parts/poiCard.php';
+                include '../parts/poiCard.php';
             }
             ?>
         </div>
+        <?php include '../parts/bottomNavbar.php' ?>
+        <?php include '../parts/footer.php' ?>
     </div>
-    <?php include 'parts/bottomNavbar.php' ?>
-    <?php include 'parts/footer.php' ?>
-</div>
+    </body>
+    </html>

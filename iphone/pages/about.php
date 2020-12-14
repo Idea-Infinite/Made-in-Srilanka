@@ -1,11 +1,12 @@
+<?php include '../parts/head.php' ?>
 <!-- This is store page-->
 <div data-role="page" id="about">
-    <?php include 'parts/header.php' ?>
+    <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
         <div class="header-title">
             <h3>About Us</h3>
-            <img src="../common/assets/images/icons/wishList.png" height="35px" width="35px">
+            <img src="../../common/assets/images/icons/wishList.png" height="35px" width="35px">
         </div>
         <p style="font-size: 12px; font-family: 'Montserrat', sans-serif; text-align: justify">
             iCraft is the leading independent home improvement and home repair website. It has been repeatedly honored
@@ -24,9 +25,11 @@
 
         </p>
         <center>
-            <img src="../common/assets/images/aboutus.png" height="180px" width="340px">
+            <img src="../../common/assets/images/aboutus.png" height="180px" width="340px">
         </center>
     </div>
-    <?php include 'parts/bottomNavbar.php' ?>
-    <?php include 'parts/footer.php' ?>
+    <?php include '../parts/bottomNavbar.php' ?>
+    <?php include '../parts/footer.php' ?>
 </div>
+</body>
+</html>

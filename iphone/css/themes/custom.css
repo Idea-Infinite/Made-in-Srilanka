@@ -41,6 +41,16 @@ input[type=text], input[type=password] {
     border-radius: 5px;
 }
 
+.side-menu {
+    width: 100%;
+    padding: 40px 20px
+}
+
+.side-menu a {
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
 /*.form-light input[type=radio] {*/
 /*    background-color: #f3f4f9 !important;*/
 /*    padding: 5px 20px;*/

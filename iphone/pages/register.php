@@ -1,13 +1,14 @@
+<?php include '../parts/head.php' ?>
 <!-- This is register page-->
 <div data-role="page" id="register"
      style='background-image: url("../common/assets/images/winestopper.jpg"); background-size: cover;'>
-    <?php include 'parts/header.php' ?>
+    <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
 
         <div class="header-title">
             <h3>Sign Up</h3>
-            <img src="../common/assets/images/icons/registration.png" height="35px" width="35px">
+            <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
             <form>
@@ -31,6 +32,6 @@
 
     </div>
     <div style="margin-bottom: 100px;">
-        <?php include 'parts/footer.php' ?>
+        <?php include '../parts/footer.php' ?>
     </div>
 </div>

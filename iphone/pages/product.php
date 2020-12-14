@@ -1,13 +1,26 @@
+<?php include '../parts/head.php' ?>
 <!-- This is store page-->
-<div data-role="page" id="store">
+<div data-role="page" id="product">
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="images/logo.png" class="logo" width="127" height="56">
-    </div>
+    <?php include '../parts/header.php' ?>
 
-    <div role="main" class="ui-content" style="margin-top: -250px;">
+    <div role="main" class="ui-content">
+
+        <div class="header-title">
+            <h3>Product</h3>
+            <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
+        </div>
+
+        <div class="back-box">
+            <div class="ui-block-a  card ui-corner-all custom-corners">
+                <div class="ui-bar ui-bar-a ui-card">
+                    <span class="flaticon-122-heart fav-icon-card"></span>
+                    <img class="center" src="../images/cat.png" width="80" height="80"></br>
+                    <p class="card-title"><?php echo $namesss ?? 'jjjjj' ?> </p> </br> <span class="card-price">LKR 500.00</span>
+                </div>
+            </div>
+        </div>
+
         <!-- POI Card-->
         <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
              style="margin-top: 200px;">
@@ -26,11 +39,12 @@
                     $column = 'b';
                 }
                 $name = $item['name'];
-                include 'parts/poiCard.php';
+                include '../parts/poiCard.php';
             }
             ?>
         </div>
-    </div>
-    <?php include 'parts/bottomNavbar.php' ?>
-    <?php include 'parts/footer.php' ?>
+        <?php include '../parts/bottomNavbar.php' ?>
+        <?php include '../parts/footer.php' ?>
 </div>
+    </body>
+    </html>
