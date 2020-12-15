@@ -11,7 +11,7 @@
     <table class="side-menu">
         <tr>
             <td><img src="../../common/assets/images/icons/home.png" width="35" height="35"></td>
-            <td>Home</td>
+            <td><a href="../pages/home.php">Home</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/shop.png" width="35" height="35"></td>
@@ -19,38 +19,31 @@
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/booking.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>Book Class</td>
+            <td><a href="../pages/booking.php">Book Class</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/order_history.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>Order History</td>
+            <td><a href="../pages/orderHistory.php">Order History</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/contact_us.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>Contact Us</td>
+            <td><a href="../pages/contactUs.php">Contact Us</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/icons8_information_96px.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>About Us</td>
+            <td><a href="../pages/about.php">About Us</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/cash.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>Sell with Us</td>
+            <td><a href="../pages/sellWithUs.php">Sell with Us</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/qr.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>Scan QR</td>
+            <td><a href="../popups/viewQR.php">Scan QR</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/exit.png" width="35" height="35"></td>
-            <td><a href="../pages/shop.php">Shop</a></td>
-            <td>Logout</td>
+            <td><a href="../pages/logIn.php">Logout</a></td>
         </tr>
     </table>
 
