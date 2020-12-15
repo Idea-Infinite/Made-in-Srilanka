@@ -138,6 +138,10 @@ input[type=text], input[type=password] {
     color: #f5a278;
     position: absolute;
     bottom: 10px;
+    font-family: 'Poppins', serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-shadow: none;
 }
 
 .card-title {
@@ -146,6 +150,14 @@ input[type=text], input[type=password] {
     font-weight: 200;
     font-family: 'Poppins';
     margin-top: -5px;
+}
+
+.fa-checked {
+    color: orange;
+}
+
+.fa-star {
+    padding: 5px;
 }
 
 .back-box {
