@@ -1,35 +1,38 @@
 <?php include '../parts/head.php' ?>
-<!-- This is store page-->
-<div data-role="page" id="store">
+<!-- This is shop page-->
+<div data-role="page" id="orderHistory">
+    <?php include '../parts/header.php' ?>
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="../images/logo.png" class="logo" width="127" height="56">
-    </div>
-
-    <div role="main" class="ui-content" style="margin-top: -250px;">
+    <div role="main" class="ui-content">
+        <div class="header-title" style="margin-bottom: 10px;">
+            <h3>Order History</h3>
+            <img src="../../common/assets/images/icons/shop.png" height="35px" width="35px">
+        </div>
         <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
+        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for orders"
+             style="margin-top: 10px;">
             <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
-            </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
+                <table class="wish-list">
+                    <tr>
+                        <td style="width: 30%"><img class="center" src="../images/cat.png" width="80" height="80">
 
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                include '../parts/poiCard.php';
-            }
-            ?>
+                        </td>
+                        <td style="width: 30%;">
+                            <p>Title</p>
+                            <button style="opacity: 1; padding: 4px; background-color: #9EFFB4; color: black" disabled>
+                                Success
+                            </button>
+                        </td>
+                        <td style="width: 10%">
+                            <p>x5</p>
+                        </td>
+                        <td style="font-size: 12px; width: 85px;">
+                            <button>Rate Now</button>
+                            <p>Price</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>

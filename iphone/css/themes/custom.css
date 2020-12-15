@@ -152,6 +152,10 @@ input[type=text], input[type=password] {
     margin-top: -5px;
 }
 
+.wish-list td {
+    padding: 10px;
+}
+
 .fa-checked {
     color: orange;
 }
