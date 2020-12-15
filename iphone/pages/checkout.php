@@ -33,7 +33,6 @@
             <button style="opacity: 1">Sign In</button>
         </form>
         <?php include '../parts/bottomNavbar.php' ?>
-        <?php include '../parts/footer.php' ?>
-    </div>
+    </div><?php include '../parts/footer.php' ?>
     </body>
     </html>
