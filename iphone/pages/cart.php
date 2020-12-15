@@ -1,37 +1,74 @@
 <?php include '../parts/head.php' ?>
-<!-- This is store page-->
-<div data-role="page" id="store">
+<!-- This is shop page-->
+<div data-role="page" id="cart">
+    <?php include '../parts/header.php' ?>
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="../images/logo.png" class="logo" width="127" height="56">
-    </div>
-
-    <div role="main" class="ui-content" style="margin-top: -250px;">
-        <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
-            <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
-            </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
-
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                include '../parts/poiCard.php';
-            }
-            ?>
+    <div role="main" class="ui-content">
+        <div class="header-title" style="margin-bottom: 10px;">
+            <h3>Cart</h3>
+            <img src="../../common/assets/images/icons/checkout.png" height="35px" width="35px">
         </div>
-        <?php include '../parts/bottomNavbar.php' ?>
+        <!-- POI Card-->
+            <div>
+                <!--card 1-->
+                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">
+                    <div class="ui-block-a " style="width: 15%;">
+                        <img class="center" src="../images/cat.png"
+                             style="width: 35px; top: 50%; position: absolute; transform: translateY(-50%);">
+                    </div>
+                    <div class="ui-block-b" style="width: 50%;">
+                        <p>Title</p>
+                    </div>
+                    <div class="ui-block-c" style="width: 10%;">
+                        <p>x5</p>
+                    </div>
+                    <div class="ui-block-d" style="width: 25%; font-size: 20px; ">
+                        <p>$54.00</p>
+                    </div>
+                </div>
+
+                <!--card 2-->
+                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">
+                    <div class="ui-block-a " style="width: 15%;">
+                        <img class="center" src="../images/cat.png"
+                             style="width: 35px; top: 50%; position: absolute; transform: translateY(-50%);">
+                    </div>
+                    <div class="ui-block-b" style="width: 50%;">
+                        <p>Title</p>
+                    </div>
+                    <div class="ui-block-c" style="width: 10%;">
+                        <p>x5</p>
+                    </div>
+                    <div class="ui-block-d" style="width: 25%; font-size: 20px; ">
+                        <p>$54.00</p>
+                    </div>
+                </div>
+
+                <!--card 3-->
+                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">
+                    <div class="ui-block-a " style="width: 15%;">
+                        <img class="center" src="../images/cat.png"
+                             style="width: 35px; top: 50%; position: absolute; transform: translateY(-50%);">
+                    </div>
+                    <div class="ui-block-b" style="width: 50%;">
+                        <p>Title</p>
+                    </div>
+                    <div class="ui-block-c" style="width: 10%;">
+                        <p>x5</p>
+                    </div>
+                    <div class="ui-block-d" style="width: 25%; font-size: 20px; ">
+                        <p>$54.00</p>
+                    </div>
+                </div>
+                <center><h1>Total: <span class="price-color">LKR.10,304.00</span></h1></center>
+                <center>
+                    <button>Checkout</button>
+                </center>
+
+            </div>
+        </div>
+
+    <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>
     </html>

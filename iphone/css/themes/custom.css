@@ -134,6 +134,10 @@ input[type=text], input[type=password] {
     min-width: 170px;
 }
 
+.price-color {
+    color: #f5a278;
+}
+
 .card-price {
     color: #f5a278;
     position: absolute;
