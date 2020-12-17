@@ -1,5 +1,5 @@
 <?php include '../parts/head.php' ?>
-<!-- This is checkout page-->
+<!-- This is profile page-->
 <div data-role="page" id="profile"
      style='background-image: url("../common/assets/images/profile-back.jpg");
      background-size: cover; background-position: bottom;'>

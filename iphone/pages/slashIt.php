@@ -1,5 +1,4 @@
-<?php include '../parts/head.php' ?>
-<!-- This is store page-->
+<!-- This is slashit page-->
 <div data-role="page" id="store">
 
     <div role="main" class="ui-content" style="margin-top: -250px;">

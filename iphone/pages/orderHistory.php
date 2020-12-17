@@ -1,5 +1,5 @@
 <?php include '../parts/head.php' ?>
-<!-- This is shop page-->
+<!-- This is order history page-->
 <div data-role="page" id="orderHistory">
     <?php include '../parts/header.php' ?>
 
