@@ -5,7 +5,7 @@
     <?php include '../parts/header.php' ?>
 
     <?php
-    $data = file_get_contents('..\..\common\db.json');
+    $data = $GLOBALS['db'];
     $json = json_decode($data, true);
     $id = $_GET['id'];
     ?>

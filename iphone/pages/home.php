@@ -28,7 +28,7 @@
                 <a href="#shop" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
             </div>
             <?php
-            $data = file_get_contents('..\..\common\db.json');
+            $data = $GLOBALS['db'];
             $json = json_decode($data, true);
 
             foreach ($json as $key => $item) {

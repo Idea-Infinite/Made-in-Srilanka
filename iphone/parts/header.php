@@ -1,5 +1,6 @@
 <!-- side menu-->
 <?php include "sideMenu.php" ?>
+<?php include "db.php" ?>
 <!-- header logo-->
 <div data-role="header" data-position="fixed"
      class="header">
