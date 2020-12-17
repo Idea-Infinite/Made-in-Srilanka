@@ -77,7 +77,7 @@
         <div style="
    display: inline-flex;width: 100%;
 ">
-            <button style="margin: 10px;">Add to Cart</button>
+            <button id="addToCart" style="margin: 10px;">Add to Cart</button>
             <button style="margin: 10px">Buy Now</button>
         </div>
 
@@ -121,8 +121,33 @@
             </table>
         </div>
 
-
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>
+    <script>
+        $addCartButton = $('#addToCart');
+        $addCartButton.on('click', function () {
+            let found = false;
+            let qty = 1;
+            if ($.cookie('cart') != null) {
+                data = JSON.parse($.cookie('cart'));
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i]['id'] === <?php echo $id ?>) {
+                        data[i]['qty'] = data[i]['qty'] + 1;
+                        qty = data[i]['qty'];
+                        found = true;
+                        break;
+                    }
+                }
+            } else {
+                data = [];
+            }
+            if (!found) {
+                data.push({"id": <?php echo $id ?>, "qty": qty});
+            }
+            $.cookie('cart', JSON.stringify(data), {path: '/'});
+            $('#addToCart').html('Added ' + qty);
+            alert("Added to the cart");
+        });
+    </script>
     </html>
