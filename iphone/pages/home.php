@@ -42,7 +42,14 @@
             }
             ?>
         </div>
+        <?php include '../popups/introductoryInformation.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
-    </div><?php include '../parts/footer.php' ?>
+    </div>
+    <?php include '../parts/footer.php' ?>
     </body>
+    <script>
+        $(window).on('load', function () {
+            $("#popupIntroductory").popup("open");
+        });
+    </script>
     </html>
