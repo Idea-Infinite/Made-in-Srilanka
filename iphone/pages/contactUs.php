@@ -1,35 +1,111 @@
 <?php include '../parts/head.php' ?>
-<!-- This is store page-->
-<div data-role="page" id="store">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpqIR1ZdFGYjyKBKFqKCKhbSVGj_hyTz4&callback=initialize"
+        defer
+></script>
 
-    <!-- header logo-->
-    <div data-role="header" data-position="fixed"
-         class="header">
-        <img src="../images/logo.png" class="logo" width="127" height="56">
+<script>
+    function initialize() {
+        var latlng = new google.maps.LatLng(18.520266, 73.856406);
+        var latlng2 = new google.maps.LatLng(28.579943, 77.330006);
+        var latlng3 = new google.maps.LatLng(28.579943, 77.330006);
+        var nugegoda = {
+            zoom: 15,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var kurunegala = {
+            zoom: 15,
+            center: latlng2,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var kandy = {
+            zoom: 15,
+            center: latlng3,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), nugegoda);
+
+        var map2 = new google.maps.Map(document.getElementById("map-2"), kurunegala);
+
+        var map3 = new google.maps.Map(document.getElementById("map-3"), kandy);
+
+        var myMarker = new google.maps.Marker(
+            {
+                position: latlng,
+                map: map,
+                title: "Nugegoda"
+            });
+
+        var myMarker2 = new google.maps.Marker(
+            {
+                position: latlng2,
+                map: map2,
+                title: "Kurunegala"
+            });
+
+        var myMarker3 = new google.maps.Marker(
+            {
+                position: latlng3,
+                map: map3,
+                title: "Kandy"
+            });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<!-- This is checkout page-->
+<div data-role="page" id="contactUs">
+
+    <?php include '../parts/header.php' ?>
+
+    <div class="header-title">
+        <h3>Conact Us</h3>
+        <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
     </div>
+    <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
+        <form class="form-light">
+            <h4>You can send your suggestions/feedback :</h4>
+            <input type="text" name="name" id="name" value="" placeholder="Name">
+            <input type="text" name="email" id="email" value="" placeholder="e-mail">
+            <textarea name="comment" id="comment" placeholder="Comment/Suggestions"></textarea>
+            <button style="opacity: 1">Submit</button>
+        </form>
 
-    <div role="main" class="ui-content" style="margin-top: -250px;">
-        <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
+        <div class="back-box" style="padding: 15px; margin-bottom: 20px">
+            <h3 style="text-align: center">You can reach us on:</h3>
             <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
+                <div style="padding: 8px"><i class="fa flaticon-080-instagram"></i> icraft</div>
+                <div style="padding: 8px"><i class="fa flaticon-099-facebook"></i> icraftSL</div>
+                <div style="padding: 8px"><i class="fa flaticon-049-telephone"></i> 011-2029079</div>
             </div>
-            <?php
-            $data = file_get_contents('..\common\db.json');
-            $json = json_decode($data, true);
-
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                include '../parts/poiCard.php';
-            }
-            ?>
+        </div>
+        <!--        locations-->
+        <div onload="initialize()" style="margin-bottom: 70px">
+            <div data-role="collapsible" data-collapsed="false">
+                <h4>Nugegoda</h4>
+                <div>
+                    <div id="map" style="width:100%; height:220px"></div>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h4>Kurunegala</h4>
+                <div>
+                    <div id="map-2" style="width:100%; height:220px"></div>
+                </div>
+            </div>
+            <div data-role="collapsible">
+                <h4>Kandy</h4>
+                <div>
+                    <div id="map-3" style="width:100%; height:220px"></div>
+                </div>
+            </div>
         </div>
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>

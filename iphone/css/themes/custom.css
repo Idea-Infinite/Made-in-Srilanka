@@ -160,6 +160,13 @@ input[type=text], input[type=password] {
     padding: 10px;
 }
 
+#map {
+    height: 200px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .fa-checked {
     color: orange;
 }
