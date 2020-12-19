@@ -8,30 +8,25 @@
             <h3>Slash It</h3>
             <img src="../../common/assets/images/icons/slashIt.png" height="35px" width="35px">
         </div>
-        <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 10px;">
-            <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="../pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View
-                    All</a>
-            </div>
-            <?php
-            $data = $GLOBALS['db'];
-            $json = json_decode($data, true);
 
-            foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $item['name'];
-                $price = $item['price'];
-                include '../parts/poiCard.php';
-            }
-            ?>
+        <center>
+            <img src="../../common/assets/images/slashit/slashit-banner-1.png" width="330">
+        </center>
+        <div style="display: flex; justify-content: space-around; padding: 10px">
+            <img src="../../common/assets/images/slashit/callfriend.png" width="95">
+            <img src="../../common/assets/images/slashit/callfriend2.png" width="95">
+            <img src="../../common/assets/images/slashit/selectitem.png" width="95">
         </div>
+        <div style="display: flex; justify-content: space-around; padding: 10px">
+            <img src="../../common/assets/images/slashit/gift.png" width="95">
+            <a href="slashItPlay.php">
+                <img src="../../common/assets/images/slashit/playNwin.png" width="200">
+            </a>
+        </div>
+        <center>
+            <img src="../../common/assets/images/slashit/gameRules.png" width="330">
+        </center>
+
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>
