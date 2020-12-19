@@ -12,7 +12,7 @@
     <!-- welcome note-->
     <div style="position: absolute;">
         <h2
-                style="padding: 5px 20px; margin-top: -120px; font-size: 20;
+                style="padding: 5px 20px; margin-top: -120px; font-size: 20px;
                 color: rgb(255, 255, 255); font-family: 'Poppins', sans-serif; font-weight: 200;">
             Hello Snoopy, What DIY do you want
             today?
@@ -48,8 +48,10 @@
     <?php include '../parts/footer.php' ?>
     </body>
     <script>
+        // if (!$.cookie('introduction')){
         $(window).on('load', function () {
             $("#popupIntroductory").popup("open");
         });
+        // }
     </script>
     </html>

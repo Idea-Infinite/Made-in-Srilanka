@@ -234,3 +234,12 @@ input[type=text], input[type=password] {
     margin-right: 20px;
 }
 
+.ui-overlay-inherit {
+    background: #333;
+    opacity: .8;
+}
+
+.ui-popup-container {
+    left: 50%;
+    transform: translateX(-50%);
+}

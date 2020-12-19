@@ -62,7 +62,7 @@
 <a-scene background="color: #ECECEC">
     <a-assets>
         <a-asset-item id="brainstem"
-                      src="https://cdn.aframe.io/test-models/models/glTF-2.0/brainstem/BrainStem.gltf"></a-asset-item>
+                      src="../../common/assets/images/gltf/Mosque.gltf"></a-asset-item>
     </a-assets>
 
     <a-entity gltf-model="#brainstem" position="0 1.25 -0.7" scale="0.4 0.4 0.4"
