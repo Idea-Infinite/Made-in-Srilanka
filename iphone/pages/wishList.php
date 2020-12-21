@@ -13,7 +13,7 @@
             </div>
             <div class="back-box">
                 <?php
-                $data = file_get_contents('..\common\db.json');
+                $data = $GLOBALS['db'];
                 $json = json_decode($data, true);
 
                 foreach ($json as $key => $item) {
