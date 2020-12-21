@@ -30,7 +30,7 @@
                         <p>x5</p>
                     </div>
                     <div class="ui-block-d" style="width: 25%; font-size: 11px; ">
-                        <a href="#popupLogin" data-rel="popup" data-position-to="window"
+                        <a href="#popuprating" data-rel="popup" data-position-to="window"
                            class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
                            data-transition="pop">Rate Now</a>
 
@@ -55,7 +55,9 @@
                         <p>x5</p>
                     </div>
                     <div class="ui-block-d" style="width: 25%; font-size: 12px; ">
-                        <button style="font-size: 11px">Rate Now</button>
+                        <a href="#popuprating" data-rel="popup" data-position-to="window"
+                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+                           data-transition="pop">Rate Now</a>
                         <p>Price</p>
                     </div>
                 </div>
@@ -77,7 +79,10 @@
                         <p>x5</p>
                     </div>
                     <div class="ui-block-d" style="width: 25%; font-size: 12px; ">
-                        <button style="font-size: 11px">Rate Now</button>
+
+                        <a href="#popuprating" data-rel="popup" data-position-to="window"
+                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"
+                           data-transition="pop">Rate Now</a>
                         <p>Price</p>
                     </div>
                 </div>

@@ -39,7 +39,7 @@
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/qr.png" width="35" height="35"></td>
-            <td><a href="../popups/viewQR.php">Scan QR</a></td>
+            <td><a data-rel="popup" data-position-to="window" href="#viewQR">Scan QR</a></td>
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/exit.png" width="35" height="35"></td>
@@ -51,3 +51,5 @@
         <p style="text-align: center;">Version 1.0.0</p>
     </div>
 </div><!-- /panel -->
+
+<?php include("../popups/viewQR.php") ?>

@@ -37,7 +37,8 @@
                     <p class="card-price" style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
                 </div>
                 <div class="ui-block-b" style="width: 20%">
-                    <img src="../../common/assets/images/icons/ar.png">
+                    <a href="#viewAR" data-rel="popup" data-position-to="window"
+                       data-transition="pop"><img src="../../common/assets/images/icons/ar.png"></a>
                 </div>
             </div>
         </div>
@@ -55,8 +56,10 @@
                     <p>
                     <center style="margin-bottom: -15px">Have a question?</center>
                     </p>
-                    <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
-                </div>
+                    <a data-rel="popup" data-position-to="window"
+                       data-transition="pop" href="#chatWithSeller">
+                        <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
+                    </a></div>
             </div>
         </div>
         <div data-role="collapsible" data-enhanced="true"
@@ -121,6 +124,8 @@
             </table>
         </div>
 
+        <?php include '../popups/chatWithSeller.php' ?>
+        <?php include '../popups/viewAR.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>

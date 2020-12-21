@@ -1,13 +1,15 @@
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
+     class="ui-content">
 
-<script type="text/javascript">
-    // Load check
-    AFRAME.registerComponent('model-loader', {
-        init: function () {
-            this.el.addEventListener('model-loaded', function () {
-                console.log('Finish model load');
-                $("#loading").hide();
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+
+    <script type="text/javascript">
+        // Load check
+        AFRAME.registerComponent('model-loader', {
+            init: function () {
+                this.el.addEventListener('model-loaded', function () {
+                    console.log('Finish model load');
+                    $("#loading").hide();
             });
         }
     });
@@ -55,21 +57,22 @@
             }
         });
     });
-</script>
-<body>
-<!--Todo: check google ar for more functions-->
-<div id="loading">loading...</div>
-<a-scene background="color: #ECECEC">
-    <a-assets>
-        <a-asset-item id="brainstem"
-                      src="../../common/assets/images/gltf/Mosque.gltf"></a-asset-item>
-    </a-assets>
+    </script>
 
-    <a-entity gltf-model="#brainstem" position="0 1.25 -0.7" scale="0.4 0.4 0.4"
-              animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
+    <!--Todo: check google ar for more functions-->
+    <div id="loading">loading...</div>
+    <a-scene background="color: #ECECEC">
+        <a-assets timeout="100000">
+            <a-asset-item id="brainstem"
+                          ∂
+                          src="https://s3.eu-central-1.wasabisys.com/gsofttest/gltf/black_leather_chair.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity gltf-model="#brainstem"
+                  position="0 -0.02 -0.07" scale="0.05 0.05 0.05"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
 
 
-    <a-sky color="#FAFAFA"></a-sky>
-</a-scene>
-</body>
-</html>
+        <a-sky color="#FAFAFA"></a-sky>
+    </a-scene>
+</div>

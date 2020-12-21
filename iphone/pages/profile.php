@@ -6,7 +6,7 @@
 
     <?php include '../parts/header.php' ?>
 
-    <div class="header-title" style="margin-top: -10px;">
+    <div class="header-title">
         <h3>Profile</h3>
         <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
     </div>
@@ -34,11 +34,16 @@
                 </tr>
             </table>
             <div style="display: flex; padding-top: 20px">
-                <button style="opacity: 1; font-size: 14px;">Order History</button>
+                <a href="orderHistory.php">
+                    <button style="opacity: 1; font-size: 14px;">Order History</button>
+                </a>
                 <div style="width: 20px"></div>
-                <button style="opacity: 1; font-size: 14px;">Edit Details</button>
+                <a data-rel="popup" data-position-to="window" href="#editprofile">
+                    <button style="opacity: 1; font-size: 14px;">Edit Details</button>
+                </a>
             </div>
         </div>
+        <?php include '../popups/editProfile.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>
