@@ -14,7 +14,7 @@
             <div id="items">
             </div>
 
-            <center><h1>Total: <span id="totalPrice" class="price-color">LKR.10,304.00</span></h1></center>
+            <center><h1>Total: <span id="totalPrice" class="price-color">LKR.0.00</span></h1></center>
             <center>
                 <button>Checkout</button>
             </center>

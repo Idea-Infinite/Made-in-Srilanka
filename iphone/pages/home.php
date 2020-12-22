@@ -38,6 +38,7 @@
                     $column = 'b';
                 }
                 $name = $item['name'];
+                $price = $item['price'];
                 include '../parts/poiCard.php';
             }
             ?>

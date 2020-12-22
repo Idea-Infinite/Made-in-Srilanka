@@ -1,8 +1,6 @@
 <div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
      class="ui-content">
 
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-
     <script type="text/javascript">
         // Load check
         AFRAME.registerComponent('model-loader', {
