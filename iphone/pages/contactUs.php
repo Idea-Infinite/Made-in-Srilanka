@@ -80,9 +80,13 @@
 
         <div class="back-box" style="padding: 15px; margin-bottom: 20px">
             <h3 style="text-align: center">You can reach us on:</h3>
-            <div>
-                <div style="padding: 8px"><i class="fa flaticon-080-instagram"></i> icraft</div>
-                <div style="padding: 8px"><i class="fa flaticon-099-facebook"></i> icraftSL</div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a" style="padding: 8px"><i class="fa flaticon-080-instagram"></i>
+                    icraft
+                </div>
+                <div class="ui-block-b" style="padding: 8px"><i class="fa flaticon-099-facebook"></i>
+                    icraftSL
+                </div>
                 <div style="padding: 8px"><i class="fa flaticon-049-telephone"></i> 011-2029079</div>
             </div>
         </div>

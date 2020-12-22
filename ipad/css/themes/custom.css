@@ -193,7 +193,7 @@ input[type=text], input[type=password] {
 }
 
 .header-title {
-    margin: 10px 35% auto;
+    margin: 10px 30px auto 38%;
     width: fit-content;
     
     /* text-align: center; */
@@ -205,7 +205,7 @@ input[type=text], input[type=password] {
     font-weight: 500;
     float: left;
     padding: 13px;
-    margin: 0;
+    margin: auto;
 }
 
 .header-title img {

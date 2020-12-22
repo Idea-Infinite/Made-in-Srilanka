@@ -7,9 +7,10 @@
 
 <script>
     function initialize() {
-        var latlng = new google.maps.LatLng(18.520266, 73.856406);
-        var latlng2 = new google.maps.LatLng(28.579943, 77.330006);
-        var latlng3 = new google.maps.LatLng(28.579943, 77.330006);
+        var latlng = new google.maps.LatLng(6.86673, 79.89347);
+        var latlng2 = new google.maps.LatLng(7.487436, 80.365025);
+        var latlng3 = new google.maps.LatLng(7.268108, 80.598766);
+
         var nugegoda = {
             zoom: 15,
             center: latlng,
@@ -69,45 +70,70 @@
         <h3>Conact Us</h3>
         <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
     </div>
-    <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
-        <form class="form-light">
-            <h4>You can send your suggestions/feedback :</h4>
-            <input type="text" name="name" id="name" value="" placeholder="Name">
-            <input type="text" name="email" id="email" value="" placeholder="e-mail">
-            <textarea name="comment" id="comment" placeholder="Comment/Suggestions"></textarea>
-            <button style="opacity: 1">Submit</button>
-        </form>
+    <div class="back-box" style="padding: 30px 20px;">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
 
-        <div class="back-box" style="padding: 15px; margin-bottom: 20px">
-            <h3 style="text-align: center">You can reach us on:</h3>
-            <div>
-                <div style="padding: 8px"><i class="fa flaticon-080-instagram"></i> icraft</div>
-                <div style="padding: 8px"><i class="fa flaticon-099-facebook"></i> icraftSL</div>
-                <div style="padding: 8px"><i class="fa flaticon-049-telephone"></i> 011-2029079</div>
+                    <div style="margin-left: 150px">
+                        <img style="float: left" src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
+                        <h2>Locate Us</h2>
+                    </div>
+
+                <!-- locations-->
+                <div onload="initialize()" style="margin-bottom: 70px">
+                    <div data-role="collapsible" data-collapsed="false">
+                        <h4>Nugegoda</h4>
+                        <div>
+                            <div id="map" style="width:100%; height:220px"></div>
+                        </div>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>Kurunegala</h4>
+                        <div>
+                            <div id="map-2" style="width:100%; height:220px"></div>
+                        </div>
+                    </div>
+                    <div data-role="collapsible">
+                        <h4>Kandy</h4>
+                        <div>
+                            <div id="map-3" style="width:100%; height:220px"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <div class="ui-block-b">
+                <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
+                    <form class="form-light">
+                        <h4>You can send your suggestions/feedback :</h4>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                        <input type="text" name="name" id="name" value="" placeholder="Name">
+                            </div>
+                            <div class="ui-block-b">
+                        <input type="text" name="email" id="email" value="" placeholder="e-mail">
+                            </div>
+                        </div>
+                        <textarea name="comment" id="comment" placeholder="Comment/Suggestions"></textarea>
+                        <button style="opacity: 1">Submit</button>
+                    </form>
+
+                    <div class="back-box" style="padding: 15px; margin-bottom: 20px">
+                        <h3 style="text-align: center">You can reach us on:</h3>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="padding: 8px"><i class="fa flaticon-080-instagram"></i>
+                                icraft
+                            </div>
+                            <div class="ui-block-b" style="padding: 8px"><i class="fa flaticon-099-facebook"></i>
+                                icraftSL
+                            </div>
+                            <div style="padding: 8px"><i class="fa flaticon-049-telephone"></i> 011-2029079</div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /grid-a -->
         </div>
-        <!--        locations-->
-        <div onload="initialize()" style="margin-bottom: 70px">
-            <div data-role="collapsible" data-collapsed="false">
-                <h4>Nugegoda</h4>
-                <div>
-                    <div id="map" style="width:100%; height:220px"></div>
-                </div>
-            </div>
-            <div data-role="collapsible">
-                <h4>Kurunegala</h4>
-                <div>
-                    <div id="map-2" style="width:100%; height:220px"></div>
-                </div>
-            </div>
-            <div data-role="collapsible">
-                <h4>Kandy</h4>
-                <div>
-                    <div id="map-3" style="width:100%; height:220px"></div>
-                </div>
-            </div>
-        </div>
-        <?php include '../parts/bottomNavbar.php' ?>
-    </div><?php include '../parts/footer.php' ?>
+    </div>
+    <?php include '../parts/footer.php' ?>
+    <?php include '../parts/bottomNavbar.php' ?>
     </body>
     </html>
