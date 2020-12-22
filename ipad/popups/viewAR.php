@@ -1,4 +1,4 @@
-<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
+<!--<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
      class="ui-content">
 
     <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
@@ -68,11 +68,11 @@
                           src="https://s3.eu-central-1.wasabisys.com/gsofttest/gltf/black_leather_chair.gltf"></a-asset-item>
         </a-assets>
 
-        <a-entity gltf-model="#brainstem"
+        <a-scene gltf-model="#brainstem"
                   position="0 -0.02 -0.07" scale="0.05 0.05 0.05"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-scene>
 
 
         <a-sky color="#FAFAFA"></a-sky>
     </a-scene>
-</div>
+</div>-->

@@ -26,7 +26,7 @@
         <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 45%; margin: auto;">
 
             <span class="flaticon-122-heart fav-icon-card"></span>
-            <img class="center" src="../images/cat.png" style="max-width: 120px">
+            <img class="center" src="<?php echo $json[$id]['image'] ?? '' ?>" style="max-width: 120px">
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="width: 80%">
                 <div class="ui-grid-a">
