@@ -62,9 +62,7 @@
 
 <!-- This is checkout page-->
 <div data-role="page" id="contactUs">
-
     <?php include '../parts/header.php' ?>
-
     <div class="header-title">
         <h3>Conact Us</h3>
         <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
@@ -90,7 +88,7 @@
                 <div style="padding: 8px"><i class="fa flaticon-049-telephone"></i> 011-2029079</div>
             </div>
         </div>
-        <!--        locations-->
+        <!--  locations-->
         <div onload="initialize()" style="margin-bottom: 70px">
             <div data-role="collapsible" data-collapsed="false">
                 <h4>Nugegoda</h4>
