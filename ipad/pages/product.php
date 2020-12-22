@@ -16,14 +16,31 @@
             <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
         </div>
 
-        <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
+        <div class="ui-grid-a">
+    <div class="ui-block-a">
+        <div class="ui-bar ui-bar-a" style="height:60px">Block A</div></div>
+    <div class="ui-block-b">
+        <div class="ui-bar ui-bar-a" style="height:60px">Block B</div></div>
+</div><!-- /grid-a -->
+
+        <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 45%; margin: auto;">
 
             <span class="flaticon-122-heart fav-icon-card"></span>
             <img class="center" src="../images/cat.png" style="max-width: 120px">
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="width: 80%">
-                    <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
-                    <?php
+                <div class="ui-grid-a">
+    <!-- name price and star -->
+    <div class="ui-block-a">
+        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
+        <p class="card-price" style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
+        <div>
+             <p><?php echo $json[$id]['description'] ?? '' ?></p>
+        </div>
+        
+    </div>
+    <div class="ui-block-b" style="margin-top: 12px;">
+    <?php
                     for ($i = 0; $i < 5; $i++) {
                         if ((int)$json[$id]['rating'] <= $i) {
                             echo
@@ -34,7 +51,8 @@
                         }
                     }
                     ?>
-                    <p class="card-price" style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
+</div><!-- /grid-a -->
+                    
                 </div>
                 <div class="ui-block-b" style="width: 20%">
                     <a href="#viewAR" data-rel="popup" data-position-to="window"
@@ -46,9 +64,7 @@
         <!-- text area -->
         <div class="ui-grid-a" style="padding: 12px;">
             <div class="ui-block-a" style="width:65%">
-                <div style="margin-top: 41px">
-                    <p><?php echo $json[$id]['description'] ?? '' ?></p>
-                </div>
+                
             </div>
 
             <div class="ui-block-b" style="width: 35%">

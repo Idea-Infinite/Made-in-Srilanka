@@ -12,21 +12,21 @@
             <img src="../../common/assets/images/icons/booking.png" height="35px" width="35px">
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
-            <form>
+            <form class="booking-form">
                 <input type="text" name="firstName" id="firstName" value="" placeholder="Name">
-                <select name="select-native-1" id="select-native-1">
+                <select name="select-location" id="select-location">
                     <option value="1" disabled hidden selected>Select Location</option>
                     <option value="2">The 2nd Option</option>
                     <option value="3">The 3rd Option</option>
                     <option value="4">The 4th Option</option>
                 </select>
-                <select name="select-native-1" id="select-native-1">
+                <select name="select-time" id="select-time">
                     <option value="1" disabled hidden selected>Select Time Slot</option>
                     <option value="2">The 2nd Option</option>
                     <option value="3">The 3rd Option</option>
                     <option value="4">The 4th Option</option>
                 </select>
-                <select name="select-native-1" id="select-native-1">
+                <select name="select-Session" id="select-Session">
                     <option value="1" disabled hidden selected>Select Session</option>
                     <option value="2">The 2nd Option</option>
                     <option value="3">The 3rd Option</option>
