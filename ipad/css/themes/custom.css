@@ -193,8 +193,10 @@ input[type=text], input[type=password] {
 }
 
 .header-title {
-    margin: 10px auto auto;
+    margin: 10px 35% auto;
     width: fit-content;
+    
+    /* text-align: center; */
 }
 
 .header-title h3 {
