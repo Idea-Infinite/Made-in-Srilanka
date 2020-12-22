@@ -1,43 +1,46 @@
 [
     {
         "id": 1,
-        "name": "Soup - Base Broth",
-        "description": "Cheese - Asiago",
-        "longDescription": "t's hard to put together a meaningful UI prototype without making real requests to an API. By making real requests, you'll uncover problems with application flow, timing, and API design early, improving the quality of both the user experience and API. With Mockaroo, you can design your own mock APIs, You control the URLs, responses, and error conditions. Paralellize UI and API development and start delivering better applications faster today!",
+        "name": "Dog House",
+        "description": "A simple handmade toy dog house",
+        "longDescription": "A doghouse, dog house, dogshed or kennel is a small shed commonly built in the shape of a house, intended to provide dogs with a sense of security and protection from various weather conditions. Numerous materials can be used, such as wood, plastic, resin, and hardboard.",
         "price": "58.85",
         "rating": 4.1,
         "comments": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-        "image": "http://dummyimage.com/193x191.jpg/ff4444/ffffff",
-        "ar_view": "http://dummyimage.com/220x211.bmp/ff4444/ffffff"
+        "image": "https://static.turbosquid.com/Preview/2020/09/12__14_57_31/01.png44A22F16-1C6F-4585-BA71-43D0D8F245C5DefaultHQ.jpg",
+        "ar_view": "doghouse.gltf"
     },
     {
         "id": 2,
-        "name": "Crab - Blue,",
-        "description": "Wine - Redchard Merritt",
+        "name": "Low Poly Car",
+        "description": "Sportcar- Vertices",
+        "longDescription": "A sports car is a car designed with an emphasis on dynamic performance, such as handling, acceleration, top speed, or thrill of driving.",
         "price": "63.22",
         "rating": 2.5,
         "comments": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
-        "image": "http://dummyimage.com/175x158.jpg/5fa2dd/ffffff",
-        "ar_view": "http://dummyimage.com/119x166.bmp/cc0000/ffffff"
+        "image": "https://p.turbosquid.com/ts-thumb/xm/S1yQFz/u4/1/png/1608459005/1920x1080/fit_q99/99182edb23443be0a240e9036f4018bd894fa399/1.jpg",
+        "ar_view": "sportcar.glb"
     },
     {
         "id": 3,
-        "name": "Brandy Cherry",
-        "description": "Nut - Macadamia",
+        "name": "Wooden Toy Plane",
+        "description": "Wooden Toy Biplane",
+        "longDescription": "Handmade Wooden Toy Biplane These planes come in two color variations using maple and walnut hardwoods. Propeller rotates and wheels roll. They're hand sanded and coated with a non toxic oil and beeswax finish",
         "price": "59.59",
         "rating": 4.2,
         "comments": "Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam.",
-        "image": "http://dummyimage.com/148x234.bmp/cc0000/ffffff",
-        "ar_view": "http://dummyimage.com/179x152.jpg/dddddd/000000"
+        "image": "https://static.turbosquid.com/Preview/2020/11/07__09_26_08/v_cycles_220936.png5751BBF2-DF03-42AB-8FEF-9B25D879F127DefaultHQ.jpg",
+        "ar_view": "WoodenPlane.gltf"
     },
     {
         "id": 4,
-        "name": "Mushrooms - Honey",
-        "description": "Chickensplit Half",
+        "name": "Drone - Toy",
+        "description": "Toy drone",
+        "longDescription": "A drone, in technological terms, is an unmanned aircraft. ... Essentially, a drone is a flying robot that can be remotely controlled or fly autonomously through software-controlled flight plans in their embedded systems",
         "price": "31.74",
         "rating": 4.4,
         "comments": "Ut tellus. Nulla ut erat id mauris vulputate elementum.",
-        "image": "http://dummyimage.com/203x178.jpg/ff4444/ffffff",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/518pMpQuV4L._AC_SL1001_.jpg",
         "ar_view": "http://dummyimage.com/156x167.bmp/5fa2dd/ffffff"
     },
     {
