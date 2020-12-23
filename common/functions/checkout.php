@@ -16,6 +16,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 // get data from db
 // read file
 $json = file_get_contents('../db.json');
+$orders = json_decode(file_get_contents("../orders.json"), true);
 
 // Converts it into a PHP object
 $products = json_decode($json);
@@ -47,8 +48,6 @@ $checkout_session = Session::create(
         'cancel_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=failed',
     ]);
 $session_id = $checkout_session->id;
-if (!isset($_SESSION['orders'])) {
-    $_SESSION['orders'] = array();
-}
-$_SESSION['orders'][$session_id] = $data;
+$orders[$session_id] = $data;
+file_put_contents("../orders.json", json_encode($orders));
 echo json_encode(['id' => $session_id]);
