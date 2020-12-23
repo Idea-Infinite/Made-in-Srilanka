@@ -28,6 +28,7 @@
                 }
                 $name = $item['name'];
                 $price = $item['price'];
+                $image = $item['image'];
                 include '../parts/poiCard.php';
             }
             ?>
