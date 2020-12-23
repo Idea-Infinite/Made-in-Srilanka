@@ -15,33 +15,89 @@
             <h3>Product</h3>
             <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
         </div>
+        <!--start of main grid-->
+        <div class="ui-grid-a">
+            <!--            start of main product block-->
+            <div class="ui-block-a">
+                <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
 
-        <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
-
-            <span class="flaticon-122-heart fav-icon-card"></span>
-            <img class="center" src="../images/cat.png" style="max-width: 120px">
-            <div class="ui-grid-a">
-                <div class="ui-block-a" style="width: 80%">
-                    <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
-                    <?php
-                    for ($i = 0; $i < 5; $i++) {
-                        if ((int)$json[$id]['rating'] <= $i) {
-                            echo
-                            '<span class="fa fa-star"></span>';
-                        } else {
-                            echo
-                            '<span class="fa fa-star fa-checked"></span>';
-                        }
-                    }
-                    ?>
-                    <p class="card-price" style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
+                    <span class="flaticon-122-heart fav-icon-card"></span>
+                    <img class="center" src="../images/cat.png" style="max-width: 120px">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 80%">
+                            <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
+                            <?php
+                            for ($i = 0; $i < 5; $i++) {
+                                if ((int)$json[$id]['rating'] <= $i) {
+                                    echo
+                                    '<span class="fa fa-star"></span>';
+                                } else {
+                                    echo
+                                    '<span class="fa fa-star fa-checked"></span>';
+                                }
+                            }
+                            ?>
+                            <p class="card-price" style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
+                        </div>
+                        <div class="ui-block-b" style="width: 20%">
+                            <a href="#viewAR" data-rel="popup" data-position-to="window"
+                               data-transition="pop"><img src="../../common/assets/images/icons/ar.png"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="ui-block-b" style="width: 20%">
-                    <a href="#viewAR" data-rel="popup" data-position-to="window"
-                       data-transition="pop"><img src="../../common/assets/images/icons/ar.png"></a>
+            </div>
+            <!--            start of feature product block-->
+            <div class="ui-block-b">
+                <div>
+                    <p>
+                    <center style="margin-bottom: -15px">Have a question?</center>
+                    </p>
+                    <a data-rel="popup" data-position-to="window"
+                       data-transition="pop" href="#chatWithSeller">
+                        <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
+                    </a>
+                </div>
+                <!--                start of mini product grid-->
+                <div style="overflow: unset">
+                    <div class="ipad-feature-products-mini" style="overflow: unset" class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
+
+                                <span class="flaticon-122-heart fav-icon-card"></span>
+                                <img class="center" src="../images/cat.png" style="max-width: 120px">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a" style="width: 80%">
+                                        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
+                                        <p class="card-price"
+                                           style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
+                                    </div>
+                                    <div class="ui-block-b" style="width: 20%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-block-b">
+                            <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
+
+                                <span class="flaticon-122-heart fav-icon-card"></span>
+                                <img class="center" src="../images/cat.png" style="max-width: 120px">
+                                <div class="ui-grid-a">
+                                    <div class="ui-block-a" style="width: 80%">
+                                        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
+
+                                        <p class="card-price"
+                                           style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
+                                    </div>
+                                    <div class="ui-block-b" style="width: 20%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
 
         <!-- text area -->
         <div class="ui-grid-a" style="padding: 12px;">
@@ -59,7 +115,8 @@
                     <a data-rel="popup" data-position-to="window"
                        data-transition="pop" href="#chatWithSeller">
                         <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
-                    </a></div>
+                    </a>
+                </div>
             </div>
         </div>
         <div data-role="collapsible" data-enhanced="true"
@@ -148,9 +205,9 @@
                 data = [];
             }
             if (!found) {
-                data.push({"id": <?php echo $id ?>, "qty": qty});
+                data.push({ "id": <?php echo $id ?>, "qty": qty });
             }
-            $.cookie('cart', JSON.stringify(data), {path: '/'});
+            $.cookie('cart', JSON.stringify(data), { path: '/' });
             $('#addToCart').html('Added ' + qty);
             alert("Added to the cart");
         });
