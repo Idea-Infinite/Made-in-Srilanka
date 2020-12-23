@@ -9,6 +9,19 @@
             <img src="../../common/assets/images/icons/shop.png" height="35px" width="35px">
         </div>
         <!-- POI Card-->
+
+        <?php
+        if (isset($_GET['status']) && $_GET['status'] == 'success') {
+            echo '<div class="ui-grid-c back-box" ' .
+                'style="padding: 15px; margin-bottom: 10px; background-color: #D4EDDA; color: #009999">' .
+                'Your Payment is Successful! You will receive your order soon.</div>';
+
+        } else if (isset($_GET['status']) && $_GET['status'] == 'failed') {
+            echo '<div class="ui-grid-c back-box" ' .
+                'style="padding: 15px; margin-bottom: 10px; background-color: #F8D7DA; color: #721C24">' .
+                'Your Payment is not successful! Please check your card detail.</div>';
+        }
+        ?>
         <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for orders"
              style="margin-top: 10px;">
             <div>
@@ -92,4 +105,11 @@
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>
+    <script>
+        <?php
+        if (isset($_GET['status']) && $_GET['status'] == 'success') {
+            echo '$.removeCookie(\'cart\', { path: \'/\' });';
+        }
+        ?>
+    </script>
     </html>
