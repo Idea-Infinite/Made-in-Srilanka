@@ -22,10 +22,10 @@
                 <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
 
                     <span class="flaticon-122-heart fav-icon-card"></span>
-                    <img class="center" src="../images/cat.png" style="max-width: 120px">
+                    <?php echo '<img class="center" src="', $json[$id]['image'], '" style="max-width: 120px">' ?? '' ?>
                     <div class="ui-grid-a">
                         <div class="ui-block-a" style="width: 80%">
-                            <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
+                            <p style="font-weight: 200; font-family: 'Poppins',serif;"><?php echo $json[$id]['name'] ?? '' ?> </p>
                             <?php
                             for ($i = 0; $i < 5; $i++) {
                                 if ((int)$json[$id]['rating'] <= $i) {
