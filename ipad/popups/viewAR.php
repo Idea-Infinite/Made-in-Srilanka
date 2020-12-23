@@ -1,78 +1,28 @@
-<!--<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
+<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
      class="ui-content">
 
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <meta name="description" content="Model Viewer (VR / AR) • A-Frame">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="../../common/js/aframe.min.js"></script>
+    <script src="../../common/js/aframe-extras.min.js"></script>
 
-    <script type="text/javascript">
-        // Load check
-        AFRAME.registerComponent('model-loader', {
-            init: function () {
-                this.el.addEventListener('model-loaded', function () {
-                    console.log('Finish model load');
-                    $("#loading").hide();
-            });
-        }
-    });
+    <script src="../../common/js/hide-on-enter-ar.js"></script>
+    <script src="../../common/js/ar-shadows.js"></script>
+    <script src="../../common/js/model-viewer.js"></script>
+    <script src="../../common/js/background-gradient.js"></script>
 
-    // drag logic
-    $(function () {
-        var kRotateSpeed = 0.27;
+    <body>
+    <a-scene
 
-        var clicking = false;
-        var currentRotation;
-        var clickPosX = 0;
-        var clickPosY = 0;
-        var rotation = {x: 0, y: 0, z: 0};
+            renderer="colorManagement: true;"
+            model-viewer="gltfModel: #man; title: car">
+        <a-assets>
 
-        // can touch device?
-        var isTouch = ('ontouchstart' in window);
+            <a-asset-item id="man" src="../images/WoodenPlane.gltf"
+                          response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
 
-        $('#a-scene').bind({
-            'touchstart mousedown': function (e) {
-                clicking = true;
-                rotation = $('#model-parent').attr("rotation");
-                clickPosX = (isTouch ? event.changedTouches[0].pageX : e.pageX);
-                clickPosY = (isTouch ? event.changedTouches[0].pageY : e.pageY);
-            },
-            'touchmove mousemove': function (e) {
-                if (clicking == false) return;
-                //e.preventDefault();
-                var x = (isTouch ? event.changedTouches[0].pageX : e.pageX) - clickPosX;
-                var y = (isTouch ? event.changedTouches[0].pageY : e.pageY) - clickPosY;
-                var rad = rotation.y * Math.PI / 180;
-
-                rotation.y = rotation.y + (x * kRotateSpeed);
-                rotation.x = rotation.x + (Math.cos(rad) * y * kRotateSpeed);
-                rotation.z = rotation.z + (Math.sin(rad) * y * kRotateSpeed);
-
-                $('#model-parent').attr(
-                    "rotation",
-                    rotation.x + " " + rotation.y + " " + rotation.z
-                );
-                clickPosX = (isTouch ? event.changedTouches[0].pageX : e.pageX);
-                clickPosY = (isTouch ? event.changedTouches[0].pageY : e.pageY);
-            },
-            'touchend mouseup mouseout': function (e) {
-                clicking = false;
-            }
-        });
-    });
-    </script>
-
-    <!--Todo: check google ar for more functions-->
-    <div id="loading">loading...</div>
-    <a-scene background="color: #ECECEC">
-        <a-assets timeout="100000">
-            <a-asset-item id="brainstem"
-                          ∂
-                          src="https://s3.eu-central-1.wasabisys.com/gsofttest/gltf/black_leather_chair.gltf"></a-asset-item>
+            <img id="shadow" src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
         </a-assets>
-
-        <a-scene gltf-model="#brainstem"
-                  position="0 -0.02 -0.07" scale="0.05 0.05 0.05"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-scene>
-
-
-        <a-sky color="#FAFAFA"></a-sky>
     </a-scene>
-</div>-->
+    </body>
+</div>
