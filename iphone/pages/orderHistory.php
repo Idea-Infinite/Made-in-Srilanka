@@ -1,4 +1,8 @@
-<?php include '../parts/head.php' ?>
+<?php include
+'../parts/head.php';
+ob_start();
+session_start();
+?>
 <!-- This is order history page-->
 <div data-role="page" id="orderHistory">
     <?php include '../parts/header.php' ?>
@@ -15,6 +19,7 @@
             echo '<div class="ui-grid-c back-box" ' .
                 'style="padding: 15px; margin-bottom: 10px; background-color: #D4EDDA; color: #009999">' .
                 'Your Payment is Successful! You will receive your order soon.</div>';
+            setcookie('cart', null, time() - 3600, '/');
 
         } else if (isset($_GET['status']) && $_GET['status'] == 'failed') {
             echo '<div class="ui-grid-c back-box" ' .
@@ -35,12 +40,20 @@
     </body>
     <script>
         const update = async () => {
-            cart = JSON.parse($.cookie('orderHistory'));
-            for (let i = 0; i < cart.length; i++) {
-                let id = cart[i]['id'];
-                let qty = cart[i]['qty'];
-                await addCard(id, qty);
-            }
+            $.getJSON('../../common/orders.json', function (data) {
+                let status = data['status'];
+
+                Object.keys(status).forEach(async function (k) {
+                    if (status[k] !== "REJECTED") {
+                        let order = data[k];
+                        for (let j = 0; j < order.length; j++) {
+                            let id = order[j]['id'];
+                            let qty = order[j]['qty'];
+                            await addCard(id, qty);
+                        }
+                    }
+                });
+            });
         }
 
         const addCard = async (id, qty) =>
@@ -73,12 +86,10 @@
                     '                </div>\n');
             });
 
-        if ($.cookie('orderHistory') != null) {
-            setTimeout(function () {
-                $('#loading').hide();
-                update();
-            }, 2000);
-        }
+        setTimeout(function () {
+            $('#loading').hide();
+            update();
+        }, 2000);
 
     </script>
     </html>

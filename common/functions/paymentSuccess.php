@@ -8,9 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $order_id = $data['data']['object']['id'];
     foreach ($orders as $key => $order) {
         if ($key == $order_id) {
-            setcookie('cart', null, time() - 3600, '/');
-            setcookie('orderHistory', json_encode($order), time() + 100000, '/');
-            break;
+            $orders['status'][$key] = "PENDING";
+            $json = json_encode($orders);
+            file_put_contents("../orders.json", $json);
+            echo "Success";
+            return;
         }
     }
 }
+echo "Error";
