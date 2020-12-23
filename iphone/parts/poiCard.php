@@ -4,7 +4,7 @@
             <span class="flaticon-122-heart fav-icon-card"></span>
             <img class="center" src="<?php echo $image ?>" width="80" height="80"></br>
             <p class="card-title"><?php echo $name ?> </p> </br> <span
-                    class="card-price"><?php echo $price ?? '' ?></span>
+                    class="card-price">LKR <?php echo $price ?? '' ?></span>
         </div>
     </a>
 </div>
