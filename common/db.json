@@ -45,13 +45,14 @@
     },
     {
         "id": 5,
-        "name": "Marsala - Sperone",
-        "description": "Loaf Pan - 2 Lb, Foil",
+        "name": "Leather Chair",
+        "description": "3D Black Leather Chair model",
+        "longDescription": "Clean detailed mesh, fully quad based topology. Modeled in real world scale. Wrinkles are baked to normal map. Fully UV unwrapped non overlapping. Low-Poly. With 4K Color, Roughness and Normalmap in lossless PNG format. 100% PBR compatible. Works in any 3D software / game engine. Native Blender file has all scene, camera and render settings ready.",
         "price": "87.61",
         "rating": 4.3,
         "comments": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-        "image": "http://dummyimage.com/248x174.bmp/ff4444/ffffff",
-        "ar_view": "http://dummyimage.com/235x211.png/dddddd/000000"
+        "image": "https://static.turbosquid.com/Preview/2020/04/30__15_59_33/02.jpgAF8B0AB2-D335-4AA7-B91C-DB6592E64D01DefaultHQ.jpg",
+        "ar_view": "black_leather_chair.gltf"
     },
     {
         "id": 6,
