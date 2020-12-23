@@ -63,7 +63,7 @@
         <a-assets timeout="100000">
             <a-asset-item id="brainstem"
                           ∂
-                          src="https://s3.eu-central-1.wasabisys.com/gsofttest/gltf/black_leather_chair.gltf"></a-asset-item>
+                          src="../images/knife.glb"></a-asset-item>
         </a-assets>
 
         <a-entity gltf-model="#brainstem"
