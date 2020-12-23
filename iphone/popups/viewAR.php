@@ -59,18 +59,15 @@
 
     <!--Todo: check google ar for more functions-->
     <div id="loading">loading...</div>
-    <a-scene background="color: #ECECEC">
-        <a-assets timeout="100000">
-            <a-asset-item id="brainstem"
-                          ∂
-                          src="https://s3.eu-central-1.wasabisys.com/gsofttest/gltf/black_leather_chair.gltf"></a-asset-item>
+    <a-scene
+            renderer="colorManagement: true;"
+            model-viewer="gltfModel: #man; title: car">
+        <a-assets>
+
+            <a-asset-item id="man" src="../images/WoodenPlane.gltf"
+                          response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
+
+            <img id="shadow" src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
         </a-assets>
-
-        <a-entity gltf-model="#brainstem"
-                  position="0 -0.02 -0.07" scale="0.05 0.05 0.05"
-                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"></a-entity>
-
-
-        <a-sky color="#FAFAFA"></a-sky>
     </a-scene>
 </div>
