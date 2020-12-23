@@ -1,12 +1,12 @@
 <?php
-
+session_start();
 require_once('../stripe-php/init.php');
 
 use Stripe\Checkout\Session;
 use Stripe\Stripe;
 
 header('Content-Type: application/json');
-$YOUR_DOMAIN = 'http://localhost/mobile';
+$DOMAIN = 'http://localhost/mobile';
 
 Stripe::setApiKey('sk_test_51Hs4vICZjSyoKagrFIBYkgON3TKZ9TST4xp8sJ5t99IQpr0EyUOYVFj1u8hIxx9GVr8BlhYKsrq20UfWWjVtMs4900xuY2ithd');
 
@@ -16,6 +16,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 // get data from db
 // read file
 $json = file_get_contents('../db.json');
+$orders = json_decode(file_get_contents("../orders.json"), true);
 
 // Converts it into a PHP object
 $products = json_decode($json);
@@ -43,7 +44,10 @@ $checkout_session = Session::create(
         'payment_method_types' => ['card'],
         'line_items' => $line_items,
         'mode' => 'payment',
-        'success_url' => $YOUR_DOMAIN . '/iphone/pages/orderHistory.php?status=success',
-        'cancel_url' => $YOUR_DOMAIN . '/iphone/pages/orderHistory.php?status=failed',
+        'success_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=success',
+        'cancel_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=failed',
     ]);
-echo json_encode(['id' => $checkout_session->id]);
+$session_id = $checkout_session->id;
+$orders[$session_id] = $data;
+file_put_contents("../orders.json", json_encode($orders));
+echo json_encode(['id' => $session_id]);
