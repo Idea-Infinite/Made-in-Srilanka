@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = json_decode(file_get_contents('php://input'), true);
     $order_id = $data['data']['object']['id'];
     foreach ($_SESSION['orders'] as $key => $order) {
