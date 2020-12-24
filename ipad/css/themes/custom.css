@@ -29,10 +29,26 @@ h3 {
     width: 100%;
 }
 
+.footer_main-no-navbar {
+    background-color: #54568C;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 input[type=text], input[type=password] {
     background-color: #d4d5dc !important;
     padding: 5px 20px;
     border-radius: 5px;
+}
+
+::placeholder {
+    color: #787879  !important;
+    opacity: 1; /* Firefox */
 }
 
 .form-light input[type=text] {

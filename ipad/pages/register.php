@@ -1,7 +1,7 @@
 <?php include '../parts/head.php' ?>
 <!-- This is register page-->
 <div data-role="page" id="register"
-     style='background-image: url("../common/assets/images/winestopper.jpg"); background-size: cover;'>
+     style='background-image: url("../../common/assets/images/christmas.jpg"); background-size: cover;'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
@@ -21,7 +21,7 @@
 
                 <button style="opacity: 1">Sign Up</button>
                 <center>
-                    <a href="#login"
+                    <a href="logIn.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
                         Already have an account?
                     </a>
@@ -31,7 +31,11 @@
 
 
     </div>
-    <div style="margin-bottom: 100px;">
-        <?php include '../parts/footer.php' ?>
+    <!-- Footer-->
+    <div class="footer_main-no-navbar">
+        <p>
+            ©  2020 Made In Sri Lanka.</br>
+            Designed & Developed by Team Idea Infinite
+        </p>
     </div>
 </div>
