@@ -1,21 +1,23 @@
 <?php include '../parts/head.php' ?>
 <!-- This is profile page-->
 <div data-role="page" id="profile"
-     style='background-image: url("../common/assets/images/profile-back.jpg");
+     style='background-image: url("../../common/assets/images/profile-back.jpg");
      background-size: cover; background-position: bottom;'>
 
     <?php include '../parts/header.php' ?>
+    <div role="main" class="ui-content">
+         <div class="back-box" style="padding: 50px 20px; background-color: rgba(1, 1, 1, 0.7);">
 
-    <div class="header-title">
-        <h3>Profile</h3>
-        <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
-    </div>
-    <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
-        <div class="back-box" style="padding: 50px 20px;">
+            <div class="header-title" style="color: white">
+                <h3>Profile</h3>
+                <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
+            </div>
+
+             <div class="back-box" style="padding: 50px 20px; background-color: rgba(255, 255, 255, 0.7); width: 50%; margin: auto;">
             <center>
                 <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
             </center>
-            <table style="width:100%; padding-top: 40px">
+            <table style="width: 100%; margin-left: 15%;color: black;font-weight: bolder;">
                 <tr>
                     <td>Username</td>
                     <td>Smith</td>
@@ -33,7 +35,9 @@
                     <td>Jackson</td>
                 </tr>
             </table>
-            <div style="display: flex; padding-top: 20px">
+             </div>
+
+            <div style="display: flex; padding-top: 20px; margin: 10px auto auto; width: fit-content;">
                 <a href="orderHistory.php">
                     <button style="opacity: 1; font-size: 14px;">Order History</button>
                 </a>
@@ -43,8 +47,10 @@
                 </a>
             </div>
         </div>
+    </div>
         <?php include '../popups/editProfile.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
-    </div><?php include '../parts/footer.php' ?>
+    <?php include '../parts/footer.php' ?>
+</div>
     </body>
     </html>
