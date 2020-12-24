@@ -142,7 +142,11 @@
                     </tr>
                 </table>
             </div>
-
+            <a data-rel="popup" data-position-to="window"
+               data-transition="pop" href="#customer_Rewards">
+                <button style="margin-bottom: 5px; font-size: 12px">Diamonds</button>
+            </a>
+            <?php include '../popups/customer_Rewards.php' ?>
             <?php include '../popups/chatWithSeller.php' ?>
             <?php include '../popups/viewAR.php' ?>
             <?php include '../parts/bottomNavbar.php' ?>
