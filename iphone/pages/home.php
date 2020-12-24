@@ -52,8 +52,34 @@
     <script>
         // if (!$.cookie('introduction')){
         $(window).on('load', function () {
+            if ($.cookie('wishList') != null) {
+                data = JSON.parse($.cookie('wishList'));
+                for (let i = 0; i < data.length; i++) {
+                    $("#" + data[i]).css('color', 'red');
+                }
+            }
             $("#popupIntroductory").popup("open");
         });
+
         // }
+
+        function favourite(e) {
+            let id = e.id;
+            if ($.cookie('wishList') != null) {
+                data = JSON.parse($.cookie('wishList'));
+                if (!data.includes(id)) {
+                    data.push(id);
+                    $(e).css('color', 'red')
+                } else {
+                    data = data.filter(item => item !== id);
+                    $(e).css('color', 'black')
+                }
+            } else {
+                data = [];
+                data.push(id);
+                $(e).css('color', 'red')
+            }
+            $.cookie('wishList', JSON.stringify(data), {path: '/'});
+        }
     </script>
     </html>

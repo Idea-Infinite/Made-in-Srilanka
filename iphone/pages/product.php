@@ -18,7 +18,7 @@
 
         <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
 
-            <span class="flaticon-122-heart fav-icon-card"></span>
+            <span class="flaticon-122-heart fav-icon-card" id="<?php echo $id ?>" onclick="favourite(this)"></span>
             <?php echo '<img class="center" src="', $json[$id]['image'], '" style="max-width: 120px">' ?? '' ?>
             <div class="ui-grid-a">
                 <div class="ui-block-a" style="width: 80%">
@@ -130,6 +130,34 @@
     </div><?php include '../parts/footer.php' ?>
     </body>
     <script>
+        $(window).on('load', function () {
+            if ($.cookie('wishList') != null) {
+                data = JSON.parse($.cookie('wishList'));
+                for (let i = 0; i < data.length; i++) {
+                    $("#" + data[i]).css('color', 'red');
+                }
+            }
+        });
+
+        function favourite(e) {
+            let id = e.id;
+            if ($.cookie('wishList') != null) {
+                data = JSON.parse($.cookie('wishList'));
+                if (!data.includes(id)) {
+                    data.push(id);
+                    $(e).css('color', 'red')
+                } else {
+                    data = data.filter(item => item !== id);
+                    $(e).css('color', 'black')
+                }
+            } else {
+                data = [];
+                data.push(id);
+                $(e).css('color', 'red')
+            }
+            $.cookie('wishList', JSON.stringify(data), {path: '/'});
+        }
+
         $addCartButton = $('#addToCart');
         $addCartButton.on('click', function () {
             let found = false;
@@ -148,9 +176,9 @@
                 data = [];
             }
             if (!found) {
-                data.push({ "id": <?php echo $id ?>, "qty": qty });
+                data.push({"id": <?php echo $id ?>, "qty": qty});
             }
-            $.cookie('cart', JSON.stringify(data), { path: '/' });
+            $.cookie('cart', JSON.stringify(data), {path: '/'});
             $('#addToCart').html('Added ' + qty);
             alert("Added to the cart");
         });

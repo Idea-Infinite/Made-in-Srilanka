@@ -13,24 +13,23 @@
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
             <form>
-                <input type="text" name="firstName" id="firstName" value="" placeholder="Name">
-                <select name="select-native-1" id="select-native-1">
+                <input type="text" name="firstName" id="firstName" value="" placeholder="Name" required>
+                <select name="select-native-1" id="location" required>
                     <option value="1" disabled hidden selected>Select Location</option>
-                    <option value="2">The 2nd Option</option>
-                    <option value="3">The 3rd Option</option>
-                    <option value="4">The 4th Option</option>
+                    <option value="2">Nugegoda</option>
+                    <option value="3">Kurunegala</option>
+                    <option value="4">Kandy</option>
                 </select>
-                <select name="select-native-1" id="select-native-1">
+                <select name="select-native-1" id="timeSlot" required>
                     <option value="1" disabled hidden selected>Select Time Slot</option>
-                    <option value="2">The 2nd Option</option>
-                    <option value="3">The 3rd Option</option>
-                    <option value="4">The 4th Option</option>
+                    <option value="2">15:00 p.m</option>
+                    <option value="3">16:00 p.m</option>
+                    <option value="4">17:00 p.m</option>
                 </select>
-                <select name="select-native-1" id="select-native-1">
+                <select name="select-native-1" id="select-native-1" required>
                     <option value="1" disabled hidden selected>Select Session</option>
-                    <option value="2">The 2nd Option</option>
-                    <option value="3">The 3rd Option</option>
-                    <option value="4">The 4th Option</option>
+                    <option value="2">Hand Craft</option>
+                    <option value="3">Wooden Craft</option>
                 </select>
                 <center>
                     <span style="color:#fff;">Note: The payment of LKR 2500/= need to paid for these session.</span>
