@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="ui-block-b" style="min-width: 50%">
-                    <div class="ui-block-a  card ui-corner-all custom-corners" style="min-width: 50%">
+                    <div class="ui-block-a  card ui-corner-all custom-corners" style="min-width: 50%; padding-right: 1px;">
                         <a href="product.php?id=5">
                             <div class="ui-bar ui-bar-a ui-card">
                                 <span class="flaticon-122-heart fav-icon-card"></span>
@@ -73,7 +73,7 @@
                         </a>
                     </div>
 
-                    <div class="ui-block-b  card ui-corner-all custom-corners" style="min-width: 50%">
+                    <div class="ui-block-b  card ui-corner-all custom-corners" style="min-width: 50%; padding-right: 1px;">
                         <a href="product.php?id=5">
                             <div class="ui-bar ui-bar-a ui-card">
                                 <span class="flaticon-122-heart fav-icon-card"></span>
