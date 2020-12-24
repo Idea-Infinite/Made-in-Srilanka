@@ -261,3 +261,11 @@ input[type=text], input[type=password] {
     left: 50%;
     transform: translateX(-50%);
 }
+
+.ipad-feature-products-mini{
+   font-size: 10px;
+}
+
+.ipad-feature-products-mini .card-price{
+   font-size: 10px;
+}

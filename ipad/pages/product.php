@@ -44,53 +44,39 @@
                                data-transition="pop"><img src="../../common/assets/images/icons/ar.png"></a>
                         </div>
                     </div>
+                    <p><?php echo $json[$id]['description'] ?? '' ?></p>
                 </div>
             </div>
             <!--            start of feature product block-->
-            <div class="ui-block-b">
+            <div class="ui-block-b ipad-feature-product">
                 <div>
                     <p>
                     <center style="margin-bottom: -15px">Have a question?</center>
                     </p>
                     <a data-rel="popup" data-position-to="window"
                        data-transition="pop" href="#chatWithSeller">
-                        <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
+                        <button style="margin: auto;  font-size: 12px; width:40%">chat now</button>
                     </a>
                 </div>
                 <!--                start of mini product grid-->
-                <div style="overflow: unset">
-                    <div class="ipad-feature-products-mini" style="overflow: unset" class="ui-grid-a">
+                <div class="ipad-feature-products-mini">
+                    <div class="ui-grid-a">
                         <div class="ui-block-a">
                             <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
 
-                                <span class="flaticon-122-heart fav-icon-card"></span>
-                                <img class="center" src="../images/cat.png" style="max-width: 120px">
-                                <div class="ui-grid-a">
-                                    <div class="ui-block-a" style="width: 80%">
-                                        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
+                                <?php echo '<img class="center" src="', $json[$id + 1]['image'], '" style="width: 100px">' ?? '' ?>
+                                        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id+1]['name'] ?? '' ?> </p>
                                         <p class="card-price"
-                                           style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
-                                    </div>
-                                    <div class="ui-block-b" style="width: 20%">
-                                    </div>
-                                </div>
+                                           style="position: relative"><?php echo $json[$id+1]['price'] ?? '' ?></p>
                             </div>
                         </div>
                         <div class="ui-block-b">
                             <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
-
-                                <span class="flaticon-122-heart fav-icon-card"></span>
-                                <img class="center" src="../images/cat.png" style="max-width: 120px">
-                                <div class="ui-grid-a">
+                                <?php echo '<img class="center" src="', $json[$id + 2]['image'], '" style="width: 100px">' ?? '' ?>
                                     <div class="ui-block-a" style="width: 80%">
-                                        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id]['name'] ?? '' ?> </p>
-
+                                        <p style="font-weight: 200; font-family: 'Poppins';"><?php echo $json[$id+2]['name'] ?? '' ?> </p>
                                         <p class="card-price"
-                                           style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
-                                    </div>
-                                    <div class="ui-block-b" style="width: 20%">
-                                    </div>
-                                </div>
+                                           style="position: relative"><?php echo $json[$id+2]['price'] ?? '' ?></p>
                             </div>
                         </div>
                     </div>
@@ -103,21 +89,9 @@
         <div class="ui-grid-a" style="padding: 12px;">
             <div class="ui-block-a" style="width:65%">
                 <div style="margin-top: 41px">
-                    <p><?php echo $json[$id]['description'] ?? '' ?></p>
                 </div>
             </div>
 
-            <div class="ui-block-b" style="width: 35%">
-                <div>
-                    <p>
-                    <center style="margin-bottom: -15px">Have a question?</center>
-                    </p>
-                    <a data-rel="popup" data-position-to="window"
-                       data-transition="pop" href="#chatWithSeller">
-                        <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
-                    </a>
-                </div>
-            </div>
         </div>
         <div data-role="collapsible" data-enhanced="true"
              class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed">
@@ -139,23 +113,6 @@
 ">
             <button id="addToCart" style="margin: 10px;">Add to Cart</button>
             <button style="margin: 10px">Buy Now</button>
-        </div>
-
-        <b><span>Similar Items</span></b>
-        <div class="ui-grid-a">
-            <?php
-            for ($i = 0; $i < 2; $i++) {
-                if ($i == 0) {
-                    $column = 'a';
-                } else {
-                    $column = 'b';
-                }
-                $name = $json[$i]['name'];
-                $price = $json[$i]['price'];
-                $key = $i;
-                include '../parts/poiCard.php';
-            }
-            ?>
         </div>
         <div>
             <form>
