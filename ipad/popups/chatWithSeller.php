@@ -1,6 +1,6 @@
 <div style="max-width: none; min-width: 300px;" data-role="popup" id="chatWithSeller" data-theme="a" class="ui-content">
     <div class="header-title" style="margin-top: -10px; display: flex">
-        <h3>Chat with seller</h3>
+        <h4>Chat with seller</h4>
         <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
     </div>
     <div class="chat-with-seller">
