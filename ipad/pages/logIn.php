@@ -31,7 +31,7 @@
     <!-- Footer-->
     <div class="footer_main-no-navbar">
         <p>
-            ©  2020 Made In Sri Lanka.</br>
+            © 2020 Made In Sri Lanka.</br>
             Designed & Developed by Team Idea Infinite
         </p>
     </div>

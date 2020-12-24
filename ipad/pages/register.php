@@ -10,16 +10,24 @@
             <h3>Sign Up</h3>
             <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
         </div>
-        <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
+        <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.7);">
             <form>
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a" style="margin-left: 50px; width: 40%">
+                        <input type="text" name="firstName" id="firstName" value="" placeholder="First Name">
+                        <input type="text" name="username" id="username" value="" placeholder="Username">
+                        <input type="password" name="password" id="password" value="" placeholder="Password">
+                    </div>
+                    <div class="ui-block-b" style="width: 20px"></div>
+                    <div class="ui-block-c" style="width: 40%">
+                        <input type="text" name="lastName" id="lastName" value="" placeholder="Last Name">
+                        <br/><br/>
+                        <input style="margin-top: -5px" type="password" name="rePassword" id="rePassword" value=""
+                               placeholder="Re-type Password">
+                    </div>
+                </fieldset><!-- /grid-a -->
 
-                <input type="text" name="firstName" id="firstName" value="" placeholder="First Name">
-                <input type="text" name="lastName" id="lastName" value="" placeholder="Last Name">
-                <input type="text" name="username" id="username" value="" placeholder="Username">
-                <input type="password" name="password" id="password" value="" placeholder="Password">
-                <input type="password" name="rePassword" id="rePassword" value="" placeholder="Re-type Password">
-
-                <button style="opacity: 1">Sign Up</button>
+                <button style="opacity: 1; width: 205px; margin: 25px auto auto auto">Sign Up</button>
                 <center>
                     <a href="logIn.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
@@ -34,7 +42,7 @@
     <!-- Footer-->
     <div class="footer_main-no-navbar">
         <p>
-            ©  2020 Made In Sri Lanka.</br>
+            © 2020 Made In Sri Lanka.</br>
             Designed & Developed by Team Idea Infinite
         </p>
     </div>
