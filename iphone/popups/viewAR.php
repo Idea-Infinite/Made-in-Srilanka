@@ -1,4 +1,4 @@
-<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
+<!--<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
      class="ui-content">
 
     <script type="text/javascript">
@@ -57,8 +57,8 @@
     });
     </script>
 
-    <!--Todo: check google ar for more functions-->
-    <div id="loading">loading...</div>
+ Todo: check google ar for more functions
+   <!-- <div id="loading">loading...</div>
     <a-scene
             renderer="colorManagement: true;"
             model-viewer="gltfModel: #man; title: car">
@@ -69,5 +69,5 @@
 
             <img id="shadow" src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
         </a-assets>
-    </a-scene>
-</div>
+    </a-scene>-->
+<!--</div>-->
