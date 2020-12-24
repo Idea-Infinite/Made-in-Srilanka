@@ -7,7 +7,7 @@
         "price": "581.85",
         "rating": 4.1,
         "comments": "Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-        "image": "https://static.turbosquid.com/Preview/2020/09/12__14_57_31/01.png44A22F16-1C6F-4585-BA71-43D0D8F245C5DefaultHQ.jpg",
+        "image": "../../common/assets/images/products/wooden_house.jpg",
         "ar_view": "../../common/models/doghouse.gltf"
     },
     {
@@ -18,7 +18,7 @@
         "price": "623.22",
         "rating": 2.5,
         "comments": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
-        "image": "https://p.turbosquid.com/ts-thumb/xm/S1yQFz/u4/1/png/1608459005/1920x1080/fit_q99/99182edb23443be0a240e9036f4018bd894fa399/1.jpg",
+        "image": "../../common/assets/images/products/toy_car.jpg",
         "ar_view": "../../common/models/sportcar.glb"
     },
     {
@@ -29,7 +29,7 @@
         "price": "529.59",
         "rating": 4.2,
         "comments": "Morbi a ipsum. Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam.",
-        "image": "https://static.turbosquid.com/Preview/2020/11/07__09_26_08/v_cycles_220936.png5751BBF2-DF03-42AB-8FEF-9B25D879F127DefaultHQ.jpg",
+        "image": "../../common/assets/images/products/toy_plane.jpg",
         "ar_view": "../../common/models/WoodenPlane.gltf"
     },
     {
@@ -40,7 +40,7 @@
         "price": "321.74",
         "rating": 4.4,
         "comments": "Ut tellus. Nulla ut erat id mauris vulputate elementum.",
-        "image": "https://images-na.ssl-images-amazon.com/images/I/518pMpQuV4L._AC_SL1001_.jpg",
+        "image": "../../common/assets/images/products/toy_plane_aero.jpg",
         "ar_view": "../../common/models/Drone.glb"
     },
     {
@@ -51,7 +51,7 @@
         "price": "827.61",
         "rating": 4.3,
         "comments": "Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh. Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-        "image": "https://static.turbosquid.com/Preview/2020/04/30__15_59_33/02.jpgAF8B0AB2-D335-4AA7-B91C-DB6592E64D01DefaultHQ.jpg",
+        "image": "../../common/assets/images/products/leather_chair.jpg",
         "ar_view": "../../common/models/black_leather_chair.gltf"
     },
     {
@@ -62,7 +62,7 @@
         "price": "841.94",
         "rating": 2.9,
         "comments": "Vivamus vestibulum sagittis sapien.",
-        "image": "https://static.turbosquid.com/Preview/2020/11/12__08_38_54/CombatKnifeR1.jpgAB1478EE-6BFF-48F5-839A-6FC3D5CAF8C3Zoom.jpg",
+        "image": "../../common/assets/images/products/knife.jpg",
         "ar_view": "../../common/models/knife.glb"
     },
     {
