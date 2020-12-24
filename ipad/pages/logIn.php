@@ -12,12 +12,12 @@
                 <h3>Login</h3>
                 <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
             </div>
-            <form style="color: #1797F3">
+            <form style="color: #1797F3;  ">
 
                 <input type="text" name="username" id="username" value="" placeholder="Username">
                 <input type="password" name="password" id="password" value="" placeholder="Password">
 
-                <button style="opacity: 1">Sign In</button>
+                <button style="opacity: 1; width: 205px; margin: 25px auto auto auto;">Sign In</button>
                 <center>
                     <a href="register.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
