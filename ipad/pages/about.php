@@ -1,16 +1,16 @@
 <?php include '../parts/head.php' ?>
 <!-- This is store page-->
-<div data-role="page" id="about">
+<div data-role="page" id="about" style='background-image: url("../../common/assets/images/aboutusback.jpg");'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
 
-        <div class="header-title">
+        <div class="header-title" style="color: white">
             <h3>About Us</h3>
             <img src="../../common/assets/images/icons/wishList.png" height="35px" width="35px">
         </div>
         <center>
-            <p style="font-size: 14px; font-family: 'poppins', serif; text-align: justify; width: 700px">
+            <p style="font-size: 14px; font-family: 'poppins', serif; text-align: justify; width: 700px; color: white">
                 iCraft is the leading independent home improvement and home repair website. It has been repeatedly honored
                 among the Best on the Web, and was named "One of the Top 50 Sites in the World" by Time Magazine. In
                 addition to our broad list of topics, we operate the most active home improvement forum on the internet,
