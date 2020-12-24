@@ -176,7 +176,6 @@
                         </div>
                         <div/>
                     </td>
-                    </td>
                 </tr>
             </table>
         </div>
@@ -185,6 +184,7 @@
         <?php include '../popups/viewAR.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
+</div>
     </body>
     <script>
         $addCartButton = $('#addToCart');
