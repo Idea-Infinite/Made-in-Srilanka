@@ -4,7 +4,6 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpqIR1ZdFGYjyKBKFqKCKhbSVGj_hyTz4&callback=initialize"
         defer
 ></script>
-
 <script>
     function initialize() {
         var latlng = new google.maps.LatLng(6.86673, 79.89347);
@@ -135,5 +134,6 @@
     </div>
     <?php include '../parts/footer.php' ?>
     <?php include '../parts/bottomNavbar.php' ?>
+</div>
     </body>
     </html>

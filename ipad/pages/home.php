@@ -61,23 +61,25 @@
                 </div>
 
                 <div class="ui-block-b" style="min-width: 50%">
-                    <div class="ui-block-a  card ui-corner-all custom-corners" style="min-width: 50%">
+                    <div class="ui-block-a  card ui-corner-all custom-corners" style="min-width: 50%; padding-right: 1px;">
                         <a href="product.php?id=5">
                             <div class="ui-bar ui-bar-a ui-card">
                                 <span class="flaticon-122-heart fav-icon-card"></span>
                                 <img class="center" src="<?php echo $json[5]['image'] ?>" width="80" height="80"></br>
-                                <strong><p style="text-decoration: none" class="card-title"><?php echo $json[5]['name'] ?> </p> </br> <span
+                                <strong><p style="text-decoration: none"
+                                           class="card-title"><?php echo $json[5]['name'] ?> </p> </br> <span
                                             class="card-price">LKR <?php echo $json[5]['price'] ?? '' ?></span></strong>
                             </div>
                         </a>
                     </div>
 
-                    <div class="ui-block-b  card ui-corner-all custom-corners" style="min-width: 50%">
+                    <div class="ui-block-b  card ui-corner-all custom-corners" style="min-width: 50%; padding-right: 1px;">
                         <a href="product.php?id=5">
                             <div class="ui-bar ui-bar-a ui-card">
                                 <span class="flaticon-122-heart fav-icon-card"></span>
                                 <img class="center" src="<?php echo $json[6]['image'] ?>" width="80" height="80"></br>
-                                <strong><p style="text-decoration: none" class="card-title"><?php echo $json[6]['name'] ?> </p> </br> <span
+                                <strong><p style="text-decoration: none"
+                                           class="card-title"><?php echo $json[6]['name'] ?> </p> </br> <span
                                             class="card-price">LKR <?php echo $json[6]['price'] ?? '' ?></span></strong>
                             </div>
                         </a>
@@ -94,47 +96,37 @@
 
                     foreach ($json as $key => $item) {
 
-                            if ($key % 4 == 0) {
-                                $column = 'a';
-                            } else if ($key % 3 == 0) {
-                                $column = 'b';
-                            } else if ($key % 2 == 0) {
-                                $column = 'c';
-                            } else {
-                                $column = 'd';
-                            }
-                            $name = $item['name'];
-                            $image = $item['image'];
-                            $price = $item['price'];
-                            include '../parts/poiCard.php';
-                            if ($key++ == 7) break;
+                        if ($key % 4 == 0) {
+                            $column = 'a';
+                        } else if ($key % 3 == 0) {
+                            $column = 'b';
+                        } else if ($key % 2 == 0) {
+                            $column = 'c';
+                        } else {
+                            $column = 'd';
+                        }
+                        $name = $item['name'];
+                        $image = $item['image'];
+                        $price = $item['price'];
+                        include '../parts/poiCard.php';
+                        if ($key++ == 7) break;
                     }
                     ?>
-
                 </div>
-
-                
-
             </div>
-
-
-
-            </div>
-
-
-
+        </div>
     </div>
-        <?php include '../popups/introductoryInformation.php' ?>
-        <?php include '../parts/bottomNavbar.php' ?>
+    <?php include '../popups/introductoryInformation.php' ?>
+    <?php include '../parts/bottomNavbar.php' ?>
     <?php include '../parts/footer.php' ?>
 </div>
 
-    </body>
-    <script>
-        // if (!$.cookie('introduction')){
-        $(window).on('load', function () {
-            $("#popupIntroductory").popup("open");
-        });
-        // }
-    </script>
-    </html>
+</body>
+<script>
+    // if (!$.cookie('introduction')){
+    $(window).on('load', function () {
+        $("#popupIntroductory").popup("open");
+    });
+    // }
+</script>
+</html>
