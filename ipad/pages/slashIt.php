@@ -15,9 +15,9 @@
             </a>
         </center>
         <div style="display: flex; justify-content: space-around; padding: 40px 0px">
-            <img src="../../common/assets/images/slashit/slashit-banner-1.png" width="330">
-            <img src="../../common/assets/images/slashit/callfriend.png" >
-            <img src="../../common/assets/images/slashit/callfriend2.png" >
+            <img src="../../common/assets/images/slashit/slashit-banner-1.png"  width="330">
+            <img src="../../common/assets/images/slashit/callfriend.png" style="border-radius: 20px;" >
+            <img src="../../common/assets/images/slashit/callfriend2.png"style="border-radius: 20px;" >
         </div>
         <div style="display: flex">
             <img src="../../common/assets/images/slashIt-ipad2.png" style="width: 28%; margin-right: 20px; border-radius: 46px; ">
