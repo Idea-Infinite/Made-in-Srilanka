@@ -114,7 +114,14 @@
                 </div>
 
             </div>
-            <div data-role="collapsible" data-enhanced="true"
+
+            <div>
+                <h2>Product Description</h2>
+                <p style="text-align: justify; font-weight: bolder; "><?php echo $json[$id]['longDescription'] ?? '' ?></p>
+                <br/>
+            </div>
+
+            <!--<div data-role="collapsible" data-enhanced="true"
                  class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed">
                         <span class="ui-collapsible-heading ui-collapsible-heading-collapsed" style="margin-top: -30px;
                          padding: 0 12px;">
@@ -124,9 +131,9 @@
                         </span>
 
                 <div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
-                    <p style="text-align: justify"><?php echo $json[$id]['longDescription'] ?? '' ?></p>
+                    <p style="text-align: justify"><?php /*echo $json[$id]['longDescription'] ?? '' */?></p>
                 </div>
-            </div>
+            </div>-->
 
             <?php include '../parts/comments.php' ?>
             <a data-rel="popup" data-position-to="window"
