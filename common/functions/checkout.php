@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once('../stripe-php/init.php');
+include "../../common/vars.php";
 
 use Stripe\Checkout\Session;
 use Stripe\Stripe;
