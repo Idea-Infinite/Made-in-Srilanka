@@ -11,7 +11,7 @@
                     </td>
                     <td>
                         <div class="product-comment"></div>
-                        <h3>Goofy</h3>
+                        <h3>Snoopy</h3>
                         <p>What are the colours available?</p>
                         <div>
                             <a style="margin: 10px">reply</a><a>like</a>
