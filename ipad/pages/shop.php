@@ -32,6 +32,7 @@
             }
             ?>
         </div>
+    </div>
         <?php include '../parts/bottomNavbar.php' ?>
     </div><?php include '../parts/footer.php' ?>
     </body>

@@ -246,6 +246,13 @@ input[type=text], input[type=password] {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
+.fav-icon-card {
+    position: relative;
+    z-index: 99;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: -35px;
+}
 
 .fav-icon-card {
     float: right;

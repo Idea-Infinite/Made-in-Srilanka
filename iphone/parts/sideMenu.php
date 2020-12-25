@@ -43,9 +43,16 @@
         </tr>
         <tr>
             <td><img src="../../common/assets/images/icons/exit.png" width="35" height="35"></td>
-            <td><a href="../pages/logIn.php">Logout</a></td>
+            <td><a  href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop">Logout</a></td>
         </tr>
     </table>
+    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="true">
+        <div role="main" class="ui-content">
+            <h3 class="ui-title">Are you sure you want to Logout?</h3>
+            <a href="../pages/logIn.php" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"
+               data-transition="flow">Logout</a>
+        </div>
+    </div>
 
     <div style="width: 100%; background-color:#f3f3f3; padding: 0; position:absolute; bottom: 0">
         <p style="text-align: center;">Version 1.0.0</p>
