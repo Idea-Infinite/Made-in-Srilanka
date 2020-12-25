@@ -11,7 +11,7 @@
 
         <center>
             <a href="slashItPlay.php">
-                <img src="../../common/assets/images/slashit/playNwin.png" width="200">
+                <img src="../../common/assets/images/slashit/playNwin.png" width="340px">
             </a>
         </center>
         <div style="display: flex; justify-content: space-around; padding: 10px">
