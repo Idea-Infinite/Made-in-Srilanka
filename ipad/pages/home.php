@@ -57,7 +57,7 @@
             ?>
             <div class="ui-grid-a" style="min-width: 100%">
                 <div class="ui-block-a" style="min-width: 50%; background-color: #4C5B5C; margin-top: 10px">
-                    <div class="ui-bar ui-bar-a" style="height:160px">Advertisement</div>
+                    <div class="ui-bar ui-bar-a" style="height:160px; background-color: slategray">Advertisement</div>
                 </div>
 
                 <div class="ui-block-b" style="min-width: 50%">

@@ -56,8 +56,8 @@ Payment is declined
         $('#totalPrice').html('LKR ' + total);
     }
 
-    const addCard = async (id, qty) =>
-        $.getJSON("/mobile/common/functions/getProduct.php?id=" + id, function (data, status) {
+    const addCard = async (id, qty) => {
+        $.getJSON("<?php echo $GLOBALS['domain'] ?>/common/functions/getProduct.php?id=" + id, function (data, status) {
             let price = parseFloat(data["price"]) * qty;
             total += price;
 
@@ -79,7 +79,7 @@ Payment is declined
                 '            </div>');
 
         });
-
+    }
     if ($.cookie('cart') != null) {
         update();
         $('#checkout-button').attr('disabled', false);

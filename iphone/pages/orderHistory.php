@@ -46,18 +46,22 @@ session_start();
                 Object.keys(status).forEach(async function (k) {
                     if (status[k] !== "REJECTED") {
                         let order = data[k];
-                        for (let j = 0; j < order.length; j++) {
-                            let id = order[j]['id'];
-                            let qty = order[j]['qty'];
-                            await addCard(id, qty);
+                        if (Array.isArray(order)) {
+                            for (let j = 0; j < order.length; j++) {
+                                let id = order[j]['id'];
+                                let qty = order[j]['qty'];
+                                await addCard(id, qty);
+                            }
+                        } else {
+                            addBookingCard(order['name']);
                         }
                     }
                 });
             });
         }
 
-        const addCard = async (id, qty) =>
-            $.getJSON("/mobile/common/functions/getProduct.php?id=" + id, function (data, status) {
+        const addCard = async (id, qty) => {
+            $.getJSON("<?php echo $GLOBALS['domain'] ?>/common/functions/getProduct.php?id=" + id, function (data, status) {
                 let price = parseFloat(data["price"]) * qty;
 
                 $('#items').append(
@@ -81,10 +85,39 @@ session_start();
                     '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
                     '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
                     '                           data-transition="pop">Rate Now</a>\n' +
-                    '                        <p>LKR ' + data["price"] + '</p>\n' +
+                    '                        <p>LKR ' + price + '</p>\n' +
                     '                    </div>\n' +
                     '                </div>\n');
             });
+        }
+
+        const addBookingCard = (name) => {
+
+            $('#items').append(
+                '                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">\n' +
+                '                    <div class="ui-block-a " style="width: 15%;">\n' +
+                '                        <img class="center" src="https://c1.sfdcstatic.com/content/dam/blogs/ca/Blog%20Posts/shake-up-sales-meeting-og.jpg"\n' +
+                '                             style="width: 50px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
+                '\n' +
+                '                    </div>\n' +
+                '                    <div class="ui-block-b" style="width: 50%;">\n' +
+                '                        <p>' + name + ' (Booking)</p>\n' +
+                '                        <button style="opacity: 1; padding: 4px; background-color: #fff63f; color: black;\n' +
+                '                                border-color: #fff; box-shadow: none; font-size: 11px" disabled>\n' +
+                '                            Pending\n' +
+                '                        </button>\n' +
+                '                    </div>\n' +
+                '                    <div class="ui-block-c" style="width: 10%;">\n' +
+                '                        <p>x 1</p>\n' +
+                '                    </div>\n' +
+                '                    <div class="ui-block-d" style="width: 25%; font-size: 12px; ">\n' +
+                '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
+                '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
+                '                           data-transition="pop">Rate Now</a>\n' +
+                '                        <p>LKR 2500.00</p>\n' +
+                '                    </div>\n' +
+                '                </div>\n');
+        };
 
         setTimeout(function () {
             $('#loading').hide();

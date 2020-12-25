@@ -1,4 +1,5 @@
 <!-- Made in Sri Lanka - Team Idea Infinite - Group 5 -->
+<?php include "../../common/vars.php" ?>
 <!DOCTYPE html>
 <html>
 

@@ -6,12 +6,13 @@
 
     <div role="main" class="ui-content">
 
-        <div class="header-title">
-            <h3>Sign Up</h3>
-            <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
-        </div>
+
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.7);">
-            <form>
+            <div class="header-title" style="color: white">
+                <h3>Sign Up</h3>
+                <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
+            </div>
+            <form style="color: #1797F3;">
                 <fieldset class="ui-grid-a">
                     <div class="ui-block-a" style="margin-left: 50px; width: 40%">
                         <input type="text" name="firstName" id="firstName" value="" placeholder="First Name">

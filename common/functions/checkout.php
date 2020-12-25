@@ -6,7 +6,6 @@ use Stripe\Checkout\Session;
 use Stripe\Stripe;
 
 header('Content-Type: application/json');
-$DOMAIN = 'http://localhost/mobile';
 
 Stripe::setApiKey('sk_test_51Hs4vICZjSyoKagrFIBYkgON3TKZ9TST4xp8sJ5t99IQpr0EyUOYVFj1u8hIxx9GVr8BlhYKsrq20UfWWjVtMs4900xuY2ithd');
 
@@ -22,18 +21,33 @@ $orders = json_decode(file_get_contents("../orders.json"), true);
 $products = json_decode($json);
 $line_items = array();
 
-foreach ($data as $product_id) {
-    $product = $products[$product_id['id']];
+if (!isset($_GET['cat'])) {
+    foreach ($data as $product_id) {
+        $product = $products[$product_id['id']];
+        $price_data = [
+            'price_data' => [
+                'currency' => 'lkr',
+                'unit_amount' => floatval($product->price) * 100,
+                'product_data' => [
+                    'name' => $product->name,
+                    'images' => [$product->image],
+                ],
+            ],
+            'quantity' => $product_id['qty'],
+        ];
+        array_push($line_items, $price_data);
+    }
+} else if ($_GET['cat'] == 'booking') {
     $price_data = [
         'price_data' => [
             'currency' => 'lkr',
-            'unit_amount' => floatval($product->price) * 100,
+            'unit_amount' => 250000,
             'product_data' => [
-                'name' => $product->name,
-                'images' => [$product->image],
+                'name' => $data['name'],
+                'images' => ['https://c1.sfdcstatic.com/content/dam/blogs/ca/Blog%20Posts/shake-up-sales-meeting-og.jpg'],
             ],
         ],
-        'quantity' => $product_id['qty'],
+        'quantity' => 1,
     ];
     array_push($line_items, $price_data);
 }
@@ -44,8 +58,8 @@ $checkout_session = Session::create(
         'payment_method_types' => ['card'],
         'line_items' => $line_items,
         'mode' => 'payment',
-        'success_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=success',
-        'cancel_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=failed',
+        'success_url' => $GLOBALS['domain'] . '/iphone/pages/orderHistory.php?status=success',
+        'cancel_url' => $GLOBALS['domain'] . '/iphone/pages/orderHistory.php?status=failed',
     ]);
 $session_id = $checkout_session->id;
 $orders[$session_id] = $data;
