@@ -43,6 +43,7 @@
                 html2canvas(items, {useCORS: true}).then(
                     function (canvas) {
                         var data = canvas.toDataURL();
+                        console.log(data);
                         Email.send({
                             SecureToken: "34bd09c6-e5f4-4a35-a8b2-e857011f8c68",
                             To: email.value,

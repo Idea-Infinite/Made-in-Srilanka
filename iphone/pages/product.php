@@ -95,34 +95,12 @@
                 }
                 $name = $json[$i]['name'];
                 $price = $json[$i]['price'];
+                $image = $json[$i]['image'];
                 $key = $i;
                 include '../parts/poiCard.php';
             }
             ?>
         </div>
-        <!-- <div>
-             <form>
-                 <label>Comments</label>
-                 <input type="text" name="comment" placeholder="Comments">
-             </form>
-             <table>
-                 <tr>
-                     <td>
-                         <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
-                     </td>
-                     <td>
-                         <div class="product-comment"></div>
-                         <h3>Snoopy</h3>
-                         <span>eureviuryeoniuty</span>
-                         <div>
-                             <a style="margin: 10px">reply</a><a>like</a>
-                         </div>
-                         <div/>
-                     </td>
-                     </td>
-                 </tr>
-             </table>
-         </div>-->
         <?php include '../parts/comments.php' ?>
 
         <?php include '../popups/chatWithSeller.php' ?>
