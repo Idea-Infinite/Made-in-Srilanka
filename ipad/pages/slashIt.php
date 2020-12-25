@@ -20,7 +20,7 @@
             <img src="../../common/assets/images/slashit/callfriend2.png" >
         </div>
         <div style="display: flex">
-            <img src="../../common/assets/images/slashIt-ipad2.png" style="width: 28%; margin-right: 20px">
+            <img src="../../common/assets/images/slashIt-ipad2.png" style="width: 28%; margin-right: 20px; border-radius: 46px; ">
             <img src="../../common/assets/images/slashIt-ipad.png" style="width: 70%">
         </div>
 
