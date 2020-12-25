@@ -95,6 +95,7 @@
                 }
                 $name = $json[$i]['name'];
                 $price = $json[$i]['price'];
+                $image = $json[$i]['image'];
                 $key = $i;
                 include '../parts/poiCard.php';
             }

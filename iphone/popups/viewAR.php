@@ -64,10 +64,11 @@
             model-viewer="gltfModel: #man; title: car">
         <a-assets>
 
-            <a-asset-item id="man" src="../images/WoodenPlane.gltf"
+            <a-asset-item id="man" src="../../common/assets/models/WoodenPlane.gltf"
                           response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
 
-            <img id="shadow" src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
+            <img id="shadow"
+                 src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
         </a-assets>
     </a-scene>
 </div>

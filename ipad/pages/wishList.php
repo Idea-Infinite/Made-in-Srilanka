@@ -29,7 +29,7 @@
         }
 
         const addCard = async (id) =>
-            $.getJSON(<?php $GLOBALS['domain'] ?>"/common/functions/getProduct.php?id=" + id, function (data, status) {
+            $.getJSON("<?php echo $GLOBALS['domain'] ?>/common/functions/getProduct.php?id=" + id, function (data, status) {
 
                 $('#items').append(
                     '                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">\n' +

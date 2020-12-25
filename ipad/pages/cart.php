@@ -39,8 +39,8 @@
         $('#totalPrice').html('LKR ' + total);
     }
 
-    const addCard = async (id, qty) =>
-        $.getJSON(<?php $GLOBALS['domain'] ?>"/common/functions/getProduct.php?id=" + id, function (data, status) {
+    const addCard = async (id, qty) => {
+        $.getJSON("<?php echo $GLOBALS['domain'] ?>/common/functions/getProduct.php?id=" + id, function (data, status) {
             let price = parseFloat(data["price"]);
             total += price;
 
@@ -62,7 +62,7 @@
                 '            </div>');
 
         });
-
+    }
     update();
 
 </script>
