@@ -50,7 +50,7 @@
     <?php include '../parts/footer.php' ?>
     </body>
     <script>
-        // if (!$.cookie('introduction')){
+        if (!$.cookie('introduction')){
         $(window).on('load', function () {
             if ($.cookie('wishList') != null) {
                 data = JSON.parse($.cookie('wishList'));
@@ -58,10 +58,11 @@
                     $("#" + data[i]).css('color', 'red');
                 }
             }
+            $.cookie('introduction', true, {path: '/'});
             $("#popupIntroductory").popup("open");
         });
 
-        // }
+        }
 
         function favourite(e) {
             let id = e.id;

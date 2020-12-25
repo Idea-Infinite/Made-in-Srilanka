@@ -24,7 +24,6 @@
     let page = 1;
     const next = (element) => {
         if (page === 1) {
-            $.cookie('introduction', true, {path: '/'});
             $('#imageIntro').attr('src', "../../common/assets/images/introductory/intro_info2.png");
             page++;
         } else if (page === 2) {
