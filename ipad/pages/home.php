@@ -61,10 +61,11 @@
                 </div>
 
                 <div class="ui-block-b" style="min-width: 50%">
-                    <div class="ui-block-a  card ui-corner-all custom-corners" style="min-width: 50%; padding-right: 1px;">
+                    <div class="ui-block-a  card ui-corner-all custom-corners"
+                         style="min-width: 50%; padding-right: 1px;">
+                        <span class="flaticon-122-heart fav-icon-card" onclick="favourite(this)" id="5"></span>
                         <a href="product.php?id=5">
                             <div class="ui-bar ui-bar-a ui-card">
-                                <span class="flaticon-122-heart fav-icon-card"></span>
                                 <img class="center" src="<?php echo $json[5]['image'] ?>" width="80" height="80"></br>
                                 <strong><p style="text-decoration: none"
                                            class="card-title"><?php echo $json[5]['name'] ?> </p> </br> <span
@@ -73,10 +74,11 @@
                         </a>
                     </div>
 
-                    <div class="ui-block-b  card ui-corner-all custom-corners" style="min-width: 50%; padding-right: 1px;">
-                        <a href="product.php?id=5">
+                    <div class="ui-block-b  card ui-corner-all custom-corners"
+                         style="min-width: 50%; padding-right: 1px;">
+                        <span class="flaticon-122-heart fav-icon-card" onclick="favourite(this)" id="6"></span>
+                        <a href="product.php?id=6">
                             <div class="ui-bar ui-bar-a ui-card">
-                                <span class="flaticon-122-heart fav-icon-card"></span>
                                 <img class="center" src="<?php echo $json[6]['image'] ?>" width="80" height="80"></br>
                                 <strong><p style="text-decoration: none"
                                            class="card-title"><?php echo $json[6]['name'] ?> </p> </br> <span
@@ -129,6 +131,7 @@
         $("#popupIntroductory").popup("open");
     });
     }
+
 
     function favourite(e) {
         let id = e.id;

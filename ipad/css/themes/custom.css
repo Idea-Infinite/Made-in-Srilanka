@@ -255,10 +255,11 @@ input[type=text], input[type=password] {
 }
 
 .fav-icon-card {
+    position: relative;
+    z-index: 99;
     float: right;
-    position: absolute;
-    right: 0;
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-bottom: -35px;
 }
 
 .ui-overlay-inherit {

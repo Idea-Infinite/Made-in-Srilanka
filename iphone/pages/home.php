@@ -50,18 +50,18 @@
     <?php include '../parts/footer.php' ?>
     </body>
     <script>
-        if (!$.cookie('introduction')){
-        $(window).on('load', function () {
-            if ($.cookie('wishList') != null) {
-                data = JSON.parse($.cookie('wishList'));
-                for (let i = 0; i < data.length; i++) {
-                    $("#" + data[i]).css('color', 'red');
-                }
-            }
-            $.cookie('introduction', true, {path: '/'});
-            $("#popupIntroductory").popup("open");
-        });
+        if (!$.cookie('introduction')) {
+            $(window).on('load', function () {
+                $.cookie('introduction', true, {path: '/'});
+                $("#popupIntroductory").popup("open");
+            });
+        }
 
+        if ($.cookie('wishList') != null) {
+            data = JSON.parse($.cookie('wishList'));
+            for (let i = 0; i < data.length; i++) {
+                $("#" + data[i]).css('color', 'red');
+            }
         }
 
         function favourite(e) {
