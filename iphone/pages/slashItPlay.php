@@ -1,12 +1,6 @@
 <?php include '../parts/head.php' ?>
 <!-- This is slash it page-->
 <div data-role="page" id="slashit">
-    <?php include '../parts/header.php' ?>
-    <?php
-    $data = $GLOBALS['db'];
-    $json = json_decode($data, true);
-    $id = $_GET['id'];
-    ?>
     <div role="main" class="ui-content">
         <center>
             <img src="../../common/assets/images/slashit/select_product.png"
@@ -25,6 +19,7 @@
             }
             $name = $item['name'];
             $price = $item['price'];
+            $image = $item['image'];
             include '../parts/poiCard.php';
         }
         ?>
