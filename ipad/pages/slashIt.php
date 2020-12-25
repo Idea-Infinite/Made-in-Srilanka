@@ -14,7 +14,7 @@
                 <img src="../../common/assets/images/slashit/playNwin.png" width="340px">
             </a>
         </center>
-        <div style="display: flex; justify-content: space-around; padding: 10px">
+        <div style="display: flex; justify-content: space-around; padding: 40px 0px">
             <img src="../../common/assets/images/slashit/slashit-banner-1.png" width="330">
             <img src="../../common/assets/images/slashit/callfriend.png" >
             <img src="../../common/assets/images/slashit/callfriend2.png" >
