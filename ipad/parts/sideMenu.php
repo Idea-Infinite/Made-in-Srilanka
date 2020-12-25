@@ -36,11 +36,8 @@
         </tr>
     </table>
 
-    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="true"
-         style="max-width:400px;">
-        <div data-role="header" data-theme="a">
-            <h1>Delete Page?</h1>
-        </div>
+    <div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="true">
+
         <div role="main" class="ui-content">
             <h3 class="ui-title">Are you sure you want to Logout?</h3>
             <a href="../pages/logIn.php" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"
