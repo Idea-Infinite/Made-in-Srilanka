@@ -60,9 +60,17 @@
                     </a>
                 </div>
                 <!-- BUTTONS -->
-                <div style="display: inline-flex;width: 100%;">
-                    <button id="addToCart" style="margin: 10px;">Add to Cart</button>
-                    <button style="margin: 10px">Buy Now</button>
+                <div style="display: inline-flex;width: 100%; justify-content: center">
+                    <a style="margin: 10px;" href="#cart-feedback" data-rel="popup" data-transition="pop">
+                        <button id="addToCart" style="margin: 10px;">Add to Cart</button>
+                    </a>
+                    <a style="margin: 10px">
+                        <button>Buy Now</button>
+                    </a>
+                </div>
+
+                <div style="display: flex" data-role="popup" id="cart-feedback">
+                    <h3>Added to Cart</h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
                 </div>
                 <!--                start of mini product grid-->
                 <div class="ipad-feature-products-mini">
@@ -183,7 +191,7 @@
             }
             $.cookie('cart', JSON.stringify(data), { path: '/' });
             $('#addToCart').html('Added ' + qty);
-            alert("Added to the cart");
+            // alert("Added to the cart");
         });
     </script>
     </html>

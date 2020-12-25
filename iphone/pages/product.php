@@ -77,17 +77,23 @@
         </div>
 
         <!-- BUTTONS -->
-        <div style="
-   display: inline-flex;width: 100%;
-">
-            <button id="addToCart" style="margin: 10px;">Add to Cart</button>
-            <button style="margin: 10px">Buy Now</button>
+        <div style="display: inline-flex;width: 100%; justify-content: center;">
+            <a style="margin: 10px;" href="#cart-feedback" data-rel="popup" data-transition="pop">
+                <button id="addToCart">Add to Cart</button>
+            </a>
+            <a style="margin: 10px">
+                <button>Buy Now</button>
+            </a>
+        </div>
+
+        <div style="display: flex" data-role="popup" id="cart-feedback">
+            <h3>Added to Cart</h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
         </div>
 
         <b><span>Similar Items</span></b>
         <div class="ui-grid-a">
             <?php
-            for ($i = $id+1; $i < $id+3; $i++) {
+            for ($i = $id + 1; $i < $id + 3; $i++) {
                 if ($i == 0) {
                     $column = 'a';
                 } else {
@@ -134,7 +140,7 @@
                 data.push(id);
                 $(e).css('color', 'red')
             }
-            $.cookie('wishList', JSON.stringify(data), {path: '/'});
+            $.cookie('wishList', JSON.stringify(data), { path: '/' });
         }
 
         $addCartButton = $('#addToCart');
@@ -155,11 +161,10 @@
                 data = [];
             }
             if (!found) {
-                data.push({"id": <?php echo $id ?>, "qty": qty});
+                data.push({ "id": <?php echo $id ?>, "qty": qty });
             }
-            $.cookie('cart', JSON.stringify(data), {path: '/'});
+            $.cookie('cart', JSON.stringify(data), { path: '/' });
             $('#addToCart').html('Added ' + qty);
-            alert("Added to the cart");
         });
     </script>
     </html>
