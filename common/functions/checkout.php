@@ -22,18 +22,33 @@ $orders = json_decode(file_get_contents("../orders.json"), true);
 $products = json_decode($json);
 $line_items = array();
 
-foreach ($data as $product_id) {
-    $product = $products[$product_id['id']];
+if (!isset($_GET['cat'])) {
+    foreach ($data as $product_id) {
+        $product = $products[$product_id['id']];
+        $price_data = [
+            'price_data' => [
+                'currency' => 'lkr',
+                'unit_amount' => floatval($product->price) * 100,
+                'product_data' => [
+                    'name' => $product->name,
+                    'images' => [$product->image],
+                ],
+            ],
+            'quantity' => $product_id['qty'],
+        ];
+        array_push($line_items, $price_data);
+    }
+} else if ($_GET['cat'] == 'booking') {
     $price_data = [
         'price_data' => [
             'currency' => 'lkr',
-            'unit_amount' => floatval($product->price) * 100,
+            'unit_amount' => 250000,
             'product_data' => [
-                'name' => $product->name,
-                'images' => [$product->image],
+                'name' => $data['name'],
+                'images' => ['https://c1.sfdcstatic.com/content/dam/blogs/ca/Blog%20Posts/shake-up-sales-meeting-og.jpg'],
             ],
         ],
-        'quantity' => $product_id['qty'],
+        'quantity' => 1,
     ];
     array_push($line_items, $price_data);
 }
