@@ -57,7 +57,7 @@ Payment is declined
     }
 
     const addCard = async (id, qty) =>
-        $.getJSON("/mobile/common/functions/getProduct.php?id=" + id, function (data, status) {
+        $.getJSON(<?php $GLOBALS['domain'] ?>"/common/functions/getProduct.php?id=" + id, function (data, status) {
             let price = parseFloat(data["price"]) * qty;
             total += price;
 

@@ -6,7 +6,6 @@ use Stripe\Checkout\Session;
 use Stripe\Stripe;
 
 header('Content-Type: application/json');
-$DOMAIN = 'http://localhost/mobile';
 
 Stripe::setApiKey('sk_test_51Hs4vICZjSyoKagrFIBYkgON3TKZ9TST4xp8sJ5t99IQpr0EyUOYVFj1u8hIxx9GVr8BlhYKsrq20UfWWjVtMs4900xuY2ithd');
 
@@ -59,8 +58,8 @@ $checkout_session = Session::create(
         'payment_method_types' => ['card'],
         'line_items' => $line_items,
         'mode' => 'payment',
-        'success_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=success',
-        'cancel_url' => $DOMAIN . '/iphone/pages/orderHistory.php?status=failed',
+        'success_url' => $GLOBALS['domain'] . '/iphone/pages/orderHistory.php?status=success',
+        'cancel_url' => $GLOBALS['domain'] . '/iphone/pages/orderHistory.php?status=failed',
     ]);
 $session_id = $checkout_session->id;
 $orders[$session_id] = $data;

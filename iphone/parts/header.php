@@ -1,6 +1,6 @@
 <!-- side menu-->
 <?php include "sideMenu.php" ?>
-<?php include "db.php" ?>
+<?php include "../../common/vars.php" ?>
 <!-- header logo-->
 <div data-role="header" data-position="fixed"
      class="header">
