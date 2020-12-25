@@ -42,6 +42,7 @@ session_start();
         const update = async () => {
             $.getJSON('../../common/orders.json', function (data) {
                 let status = data['status'];
+                let bookingId = 13000;
 
                 Object.keys(status).forEach(async function (k) {
                     if (status[k] !== "REJECTED") {
@@ -53,7 +54,7 @@ session_start();
                                 await addCard(id, qty);
                             }
                         } else {
-                            addBookingCard(order['name']);
+                            addBookingCard(order['name'], bookingId++);
                         }
                     }
                 });
@@ -84,14 +85,14 @@ session_start();
                     '                    <div class="ui-block-d" style="width: 25%; font-size: 12px; ">\n' +
                     '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
                     '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
-                    '                           data-transition="pop">Rate Now</a>\n' +
+                    '                           data-transition="pop" onclick="return rate(' + id + ');">Rate Now</a>\n' +
                     '                        <p>LKR ' + price + '</p>\n' +
                     '                    </div>\n' +
                     '                </div>\n');
             });
         }
 
-        const addBookingCard = (name) => {
+        const addBookingCard = (name, id) => {
 
             $('#items').append(
                 '                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">\n' +
@@ -113,7 +114,7 @@ session_start();
                 '                    <div class="ui-block-d" style="width: 25%; font-size: 12px; ">\n' +
                 '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
                 '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
-                '                           data-transition="pop">Rate Now</a>\n' +
+                '                           data-transition="pop" onclick="return rate(' + id + ');">Rate Now</a>\n' +
                 '                        <p>LKR 2500.00</p>\n' +
                 '                    </div>\n' +
                 '                </div>\n');
@@ -123,6 +124,29 @@ session_start();
             $('#loading').hide();
             update();
         }, 2000);
+
+        // rating
+        var ratings = document.getElementsByClassName('rating');
+        var r = 0;
+        var addedRatings = {}
+        var selectedProduct = 0;
+        for (var i = 0; i < ratings.length; i++) {
+            r = new SimpleStarRating(ratings[i]);
+
+            ratings[i].addEventListener('rate', function (e) {
+                onRateChange(e.detail);
+            });
+        }
+
+        function rate(id) {
+            selectedProduct = id;
+            r.setCurrentRating(addedRatings[selectedProduct]);
+            return true;
+        }
+
+        function onRateChange(rate) {
+            addedRatings[selectedProduct] = rate;
+        }
 
     </script>
     </html>
