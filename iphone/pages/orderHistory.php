@@ -135,12 +135,14 @@ session_start();
 
             ratings[i].addEventListener('rate', function (e) {
                 onRateChange(e.detail);
+
             });
         }
 
         function rate(id) {
             selectedProduct = id;
             r.setCurrentRating(addedRatings[selectedProduct]);
+            $('.your-choice-was').hide();
             return true;
         }
 
@@ -149,10 +151,14 @@ session_start();
             //alert("You Rated : " + rate + " stars !!!");
            // $( "#popuprating" ).popup( "close" );
            // $( "#rate-feedback" ).popup( "open" );
-            setTimeout(function(){ $( "#popuprating" ).popup( "close" ); }, 800);
-            setTimeout(function(){ $( "#rate-feedback" ).popup( "open" );}, 1000);
-
-
+            if (rate) {
+                $('.your-choice-was').show();
+                $('.choice').text(rate);
+            } else {
+                $('.your-choice-was').hide();
+            }
+            setTimeout(function(){ $( "#popuprating" ).popup( "close" ); }, 2000);
+            setTimeout(function(){ $( "#rate-feedback" ).popup( "open" );}, 3500);
         }
 
     </script>
