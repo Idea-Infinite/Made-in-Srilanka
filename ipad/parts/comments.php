@@ -1,7 +1,9 @@
 <div class="ui-grid-a">
     <label>Comments</label>
     <input type="text" data-clear-btn="true" name="comment" id="inputComment" value="">
-    <button id="postBtn" style="opacity: 1" onclick="getInputValue(this);">Post</button>
+    <a href="#popupBasic" data-rel="popup" data-transition="pop">
+        <button id="postBtn" style="opacity: 1" onclick="getInputValue(this);">Post</button>
+    </a>
     <ul id="ul" style="list-style: none; margin-left: -40px;">
         <li>
             <table>
@@ -22,7 +24,9 @@
         </li>
     </ul>
 </div>
-
+<div style="display: flex" data-role="popup" id="popupBasic">
+    <h3>Comment Added</h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
+</div>
 <script>
     function getInputValue(e) {
         let comment = $('#inputComment').val();
