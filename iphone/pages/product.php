@@ -87,7 +87,7 @@
         <b><span>Similar Items</span></b>
         <div class="ui-grid-a">
             <?php
-            for ($i = 0; $i < 2; $i++) {
+            for ($i = $id+1; $i < $id+3; $i++) {
                 if ($i == 0) {
                     $column = 'a';
                 } else {
