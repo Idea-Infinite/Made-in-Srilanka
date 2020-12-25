@@ -46,6 +46,10 @@
             </p>
 
         </main>
+
+        <div style="display: flex" data-role="popup" id="rate-feedback">
+            <h3>You Rated : </h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
+        </div>
         <script src="../../common/js/star/SimpleStarRating.js"></script>
     </div>
 </center>

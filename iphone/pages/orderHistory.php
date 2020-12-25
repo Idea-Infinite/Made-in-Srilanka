@@ -146,6 +146,13 @@ session_start();
 
         function onRateChange(rate) {
             addedRatings[selectedProduct] = rate;
+            //alert("You Rated : " + rate + " stars !!!");
+           // $( "#popuprating" ).popup( "close" );
+           // $( "#rate-feedback" ).popup( "open" );
+            setTimeout(function(){ $( "#popuprating" ).popup( "close" ); }, 800);
+            setTimeout(function(){ $( "#rate-feedback" ).popup( "open" );}, 1000);
+
+
         }
 
     </script>
