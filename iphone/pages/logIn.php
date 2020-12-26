@@ -1,7 +1,7 @@
 <?php include '../parts/head.php' ?>
 <!-- This is login page-->
 <div data-role="page" id="login"
-     style='background-image: url("../common/assets/images/christmas.jpg"); background-size: cover;'>
+     style='background-image: url("../../common/assets/images/christmas.jpg"); background-size: cover;'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
@@ -26,7 +26,7 @@
             </form>
         </div>
     </div>
-    <div style="margin-bottom: 100px;">
+    <div style="position: absolute; bottom: 0; width: 100%; margin-bottom: -50px;">
         <?php include '../parts/footer.php' ?>
     </div>
 </div>
