@@ -19,7 +19,7 @@
 
                 <button style="opacity: 1; width: 205px; margin: 25px auto auto auto;">Sign In</button>
                 <center>
-                    <a href="register.php"
+                    <a data-ajax="false" href="register.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
                         Don't have an account?
                     </a>

@@ -83,7 +83,7 @@ session_start();
                     '                        <p>x ' + qty + '</p>\n' +
                     '                    </div>\n' +
                     '                    <div class="ui-block-d" style="width: 25%; font-size: 12px; ">\n' +
-                    '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
+                    '                        <a data-ajax="false" href="#popuprating" data-rel="popup" data-position-to="window"\n' +
                     '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
                     '                           data-transition="pop" onclick="return rate(' + id + ');">Rate Now</a>\n' +
                     '                        <p>LKR ' + price + '</p>\n' +
@@ -112,7 +112,7 @@ session_start();
                 '                        <p>x 1</p>\n' +
                 '                    </div>\n' +
                 '                    <div class="ui-block-d" style="width: 25%; font-size: 12px; ">\n' +
-                '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
+                '                        <a data-ajax="false" href="#popuprating" data-rel="popup" data-position-to="window"\n' +
                 '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
                 '                           data-transition="pop" onclick="return rate(' + id + ');">Rate Now</a>\n' +
                 '                        <p>LKR 2500.00</p>\n' +

@@ -13,7 +13,8 @@
              style="margin-top: 10px;">
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="../pages/store.php" data-transition="pop" style="float: right; line-height: 3.5em;">View
+                <a data-ajax="false" href="../pages/store.php" data-transition="pop"
+                   style="float: right; line-height: 3.5em;">View
                     All</a>
             </div>
             <?php

@@ -2,7 +2,7 @@
 <div data-role="popup" id="popupIntroductory" data-theme="a" class="ui-corner-all" style="height: 400px">
     <form>
         <div style="padding: 10px 30px;height: 450px; width: 300px;">
-            <a href="#home" data-transition="pop"
+            <a data-ajax="false" href="#home" data-transition="pop"
                style="position: absolute; margin: 10px 10px 0 0; text-decoration: none">&times</a>
             <div class="header-title" style="margin-bottom: 17px; overflow: auto">
                 <h3>Getting Started</h3>

@@ -34,7 +34,7 @@
                 </tr>
             </table>
             <div style="display: flex; padding-top: 20px">
-                <a href="orderHistory.php">
+                <a data-ajax="false" href="orderHistory.php">
                     <button style="opacity: 1; font-size: 14px;">Order History</button>
                 </a>
                 <div style="width: 20px"></div>

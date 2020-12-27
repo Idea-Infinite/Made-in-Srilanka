@@ -31,7 +31,7 @@
 
                 <button style="opacity: 1; width: 205px; margin: 25px auto auto auto">Sign Up</button>
                 <center>
-                    <a href="logIn.php"
+                    <a data-ajax="false" href="logIn.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
                         Already have an account?
                     </a>

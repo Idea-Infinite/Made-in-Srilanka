@@ -19,7 +19,7 @@
         </div>
         <div style="display: flex; justify-content: space-around; padding: 10px">
             <img src="../../common/assets/images/slashit/gift.png" width="95">
-            <a href="slashItPlay.php">
+            <a data-ajax="false" href="slashItPlay.php">
                 <img src="../../common/assets/images/slashit/playNwin.png" width="200">
             </a>
         </div>

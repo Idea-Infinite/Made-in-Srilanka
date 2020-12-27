@@ -1,7 +1,7 @@
 <div class="ui-grid-a">
     <label>Comments</label>
     <input type="text" data-clear-btn="true" name="comment" id="inputComment" value="">
-    <a href="#popupBasic" data-rel="popup" data-transition="pop">
+    <a data-ajax="false" href="#popupBasic" data-rel="popup" data-transition="pop">
         <button id="postBtn" style="opacity: 1" onclick="getInputValue(this);">Post</button>
     </a>
     <ul id="ul" style="list-style: none; margin-left: -40px;">

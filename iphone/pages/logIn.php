@@ -18,7 +18,7 @@
 
                 <button style="opacity: 1">Sign In</button>
                 <center>
-                    <a href="#register"
+                    <a data-ajax="false" href="#register"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
                         Don't have an account?
                     </a>

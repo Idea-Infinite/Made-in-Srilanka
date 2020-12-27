@@ -24,7 +24,8 @@
 
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a href="shop.php" data-transition="pop" style="float: right; line-height: 3.5em;">View All</a>
+                <a data-ajax="false" href="shop.php" data-transition="pop" style="float: right; line-height: 3.5em;">View
+                    All</a>
             </div>
 
             <?php
@@ -64,7 +65,7 @@
                     <div class="ui-block-a  card ui-corner-all custom-corners"
                          style="min-width: 50%; padding-right: 1px;">
                         <span class="flaticon-122-heart fav-icon-card" onclick="favourite(this)" id="5"></span>
-                        <a href="product.php?id=5">
+                        <a data-ajax="false" href="product.php?id=5">
                             <div class="ui-bar ui-bar-a ui-card">
                                 <img class="center" src="<?php echo $json[5]['image'] ?>" width="80" height="80"></br>
                                 <strong><p style="text-decoration: none"
@@ -77,7 +78,7 @@
                     <div class="ui-block-b  card ui-corner-all custom-corners"
                          style="min-width: 50%; padding-right: 1px;">
                         <span class="flaticon-122-heart fav-icon-card" onclick="favourite(this)" id="6"></span>
-                        <a href="product.php?id=6">
+                        <a data-ajax="false" href="product.php?id=6">
                             <div class="ui-bar ui-bar-a ui-card">
                                 <img class="center" src="<?php echo $json[6]['image'] ?>" width="80" height="80"></br>
                                 <strong><p style="text-decoration: none"

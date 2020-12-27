@@ -41,7 +41,7 @@
                             <p class="card-price" style="position: relative"><?php echo $json[$id]['price'] ?? '' ?></p>
                         </div>
                         <div class="ui-block-b" style="width: 20%">
-                            <a href="#viewAR" data-rel="popup" data-position-to="window"
+                            <a data-ajax="false" href="#viewAR" data-rel="popup" data-position-to="window"
                                data-transition="pop"><img src="../../common/assets/images/icons/ar.png"></a>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                  class="ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-collapsed">
                         <span class="ui-collapsible-heading ui-collapsible-heading-collapsed" style="margin-top: -30px;
                          padding: 0 12px;">
-                            <a href="#" class="ui-collapsible-toggle">
+                            <a data-ajax="false" href="#" class="ui-collapsible-toggle">
                             Readmore
                             </a>
                         </span>

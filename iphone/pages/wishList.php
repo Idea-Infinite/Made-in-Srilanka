@@ -47,7 +47,7 @@
                 '                        <p>' + data["name"] + '</p>\n' +
                 '                    </div>\n' +
                 '                    <div class="ui-block-c" style="width: 17%; font-size: 12px; ">\n' +
-                '                        <a href="product.php?id=' + id + '" \n' +
+                '                        <a data-ajax="false" href="product.php?id=' + id + '" \n' +
                 '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
                 '                           data-transition="pop">View</a>\n' +
                 '                    </div>\n' +

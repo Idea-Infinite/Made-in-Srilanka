@@ -37,18 +37,18 @@
             </table>
              </div>
 
-            <div style="display: flex; padding-top: 20px; margin: 10px auto auto; width: fit-content;">
-                <a href="orderHistory.php">
-                    <button style="opacity: 1; font-size: 14px;">Order History</button>
-                </a>
-                <div style="width: 20px"></div>
-                <a data-rel="popup" data-position-to="window" href="#editprofile">
-                    <button style="opacity: 1; font-size: 14px;">Edit Details</button>
-                </a>
-            </div>
-        </div>
+             <div style="display: flex; padding-top: 20px; margin: 10px auto auto; width: fit-content;">
+                 <a data-ajax="false" href="orderHistory.php">
+                     <button style="opacity: 1; font-size: 14px;">Order History</button>
+                 </a>
+                 <div style="width: 20px"></div>
+                 <a data-rel="popup" data-position-to="window" href="#editprofile">
+                     <button style="opacity: 1; font-size: 14px;">Edit Details</button>
+                 </a>
+             </div>
+         </div>
     </div>
-        <?php include '../popups/editProfile.php' ?>
+    <?php include '../popups/editProfile.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
     <?php include '../parts/footer.php' ?>
 </div>
