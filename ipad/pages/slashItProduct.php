@@ -35,13 +35,14 @@
         </div>
         <div class="back-box" style="margin-bottom: 20px">
             <center>
-                    <a href="#popupBasic" data-rel="popup" data-position-to="window"  data-transition="pop"><h3 style="color: #1797F3;">Invite Friends
-                            to slash prices</h3></a>
-                </center>
+                <a href="#popupBasic" data-rel="popup" data-position-to="window" data-transition="pop"><h3
+                            style="color: #1797F3;">Invite Friends
+                        to slash prices</h3></a>
+            </center>
         </div>
         <div style="width: 200px; text-align: center" data-role="popup" id="popupBasic">
             <h2>Share with Social Media</h2>
-            <div><a style="color: white;" href="#" class="fa fa-facebook"></a>
+            <div class="share-social"><a style="color: white;" href="#" class="fa fa-facebook"></a>
                 <a style="color: white;" href="#" class="fa fa-twitter"></a>
                 <a style="color: white;" href="#" class="fa fa-instagram"></a>
                 <a style="color: white;" href="#" class="fa fa-snapchat-ghost"></a></div>
