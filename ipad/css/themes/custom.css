@@ -276,13 +276,19 @@ input[type=text], input[type=password] {
    font-size: 14px;
 }
 
-.ipad-feature-products-mini .card-price{
-   font-size: 10px;
+.ipad-feature-products-mini .card-price {
+    font-size: 10px;
 }
 
 .chat-with-seller {
     height: 180px;
     border: solid 1px black;
+}
+
+
+a-scene {
+    height: 300px;
+    width: 600px;
 }
 
 .progress-wrapper {

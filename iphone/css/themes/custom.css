@@ -351,3 +351,8 @@ input[type=text], input[type=password] {
     padding: 10px 0;
     border-radius: 10px;
 }
+
+a-scene {
+    height: 300px;
+    width: 600px;
+}

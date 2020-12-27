@@ -21,6 +21,6 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <!--   <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>-->
 </head>
 <body>

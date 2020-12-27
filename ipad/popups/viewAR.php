@@ -1,6 +1,5 @@
 <div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
-     -->
-    class="ui-content">
+     class="ui-content">
 
     <meta name="description" content="Model Viewer (VR / AR) • A-Frame">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -14,13 +13,13 @@
 
     <body>
     <a-scene
-
+            embedded
             renderer="colorManagement: true;"
-            model-viewer="gltfModel: #man; title: car">
+            model-viewer="gltfModel: #man; title: <?php echo $json[$id]['name'] ?>">
         <a-assets>
 
-            <a-asset-item id="man" src="../images/WoodenPlane.gltf"
-                          response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
+            <a-asset-item id="man" src=<?php echo $json[$id]['ar_view'] ?>
+            response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>
 
             <img id="shadow"
                  src="https://cdn.glitch.com/20600112-c04b-492c-8190-8a5ccc06f37d%2Fshadow.png?v=1606338852399"></img>
