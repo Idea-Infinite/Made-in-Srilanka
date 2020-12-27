@@ -6,7 +6,7 @@
         <div class="side-menu-info">
             <p>Hi Snoopy</p>
             <p>Diamonds: 50</p>
-            <p>View Profile</p>
+            <p><a data-ajax="false" href="../pages/profile.php">View Profile</a></p>
         </div>
     </div>
     <table class="side-menu" style="text-align: center">
