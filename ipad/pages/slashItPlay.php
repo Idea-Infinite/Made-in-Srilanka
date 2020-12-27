@@ -8,7 +8,7 @@
                  style="margin: -20px -20px 20px -10px; width: 70%;">
         </center>
 
-        <div>
+        <div style="margin: auto; width: fit-content;">
             <?php
             $data = $GLOBALS['db'];
             $json = json_decode($data, true);
@@ -22,6 +22,7 @@
                 $name = $item['name'];
                 $price = $item['price'];
                 $image = $item['image'];
+                $page = 'slashItProduct.php';
                 include '../parts/poiCard.php';
             }
             ?>

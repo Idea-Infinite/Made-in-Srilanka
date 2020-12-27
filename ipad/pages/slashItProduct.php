@@ -9,7 +9,7 @@
     ?>
     <div role="main" class="ui-content">
         <center>
-            <img src="../../common/assets/images/slashit/slashitproduct.png"
+            <img src="../../common/assets/images/SlashitProduct.png"
                  style="margin: -20px -20px 20px -20px; width: 110%;">
         </center>
         <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
@@ -35,8 +35,16 @@
         </div>
         <div class="back-box" style="margin-bottom: 20px">
             <center>
-                <h3 style="color: #1797F3;">Invite Friends to slash prices</h3>
-            </center>
+                    <a href="#popupBasic" data-rel="popup" data-position-to="window"  data-transition="pop"><h3 style="color: #1797F3;">Invite Friends
+                            to slash prices</h3></a>
+                </center>
+        </div>
+        <div style="width: 200px; text-align: center" data-role="popup" id="popupBasic">
+            <h2>Share with Social Media</h2>
+            <div><a style="color: white;" href="#" class="fa fa-facebook"></a>
+                <a style="color: white;" href="#" class="fa fa-twitter"></a>
+                <a style="color: white;" href="#" class="fa fa-instagram"></a>
+                <a style="color: white;" href="#" class="fa fa-snapchat-ghost"></a></div>
         </div>
 
         <?php include '../parts/bottomNavbar.php' ?>
