@@ -41,7 +41,7 @@
             <table>
                 <tr>
                     <td><span id="rating" class="rating" data-default-rating="0"></span>
-                    <br/>
+                        <br/>
                         <span class='your-choice-was' style='display: none; font-size: 20px; text-align: center'>Your rating was <span style="font-weight: bolder" class='choice'></span></span>
                     </td>
                 </tr>
