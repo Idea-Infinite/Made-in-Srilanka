@@ -50,3 +50,4 @@
 </div>
 
 <?php include("../popups/viewQR.php") ?>
+<?php include("../popups/QRrewards.php") ?>

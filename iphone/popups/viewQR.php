@@ -8,6 +8,9 @@
     <script>
         function onScanSuccess(qrCodeMessage) {
             // handle on success condition with the decoded message
+            $("#viewQR").popup("close");
+            $("#qrId").html(qrCodeMessage);
+            $("#qrRewards").popup("open");
         }
 
         var html5QrcodeScanner = new Html5QrcodeScanner(
