@@ -19,8 +19,8 @@
 
     <div role="main" class="ui-content" style="margin-top: -250px;">
         <!-- POI Card-->
-        <div class="ui-grid-c search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 200px;">
+        <div class="ui-grid-d search" data-filter="true" data-filter-placeholder="Search for DIY products"
+             style="width: fit-content; margin: 200px auto 0 auto">
 
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
@@ -45,77 +45,56 @@
                 $name = $item['name'];
                 $image = $item['image'];
                 $price = $item['price'];
+
+                if ($key == 4) {
+                    echo '
+                    <div class="ui-block-a" style="min-width: 50%; background-color: #4C5B5C; margin-top: 10px">
+                    <div class="ui-bar ui-bar-a" style="height:220px; background-color: slategray">Advertisement</div>
+                </div>';
+                    $column = 'c';
+                } elseif ($key == 5) {
+                    $column = 'd';
+                }
+
                 include '../parts/poiCard.php';
-                if ($key++ == 3) break;
+                if ($key++ == 5) break;
             }
             ?>
         </div>
-        <!-- advertisement roe -->
         <div>
             <?php
             $data = $GLOBALS['db'];
             $json = json_decode($data, true);
             ?>
-            <div class="ui-grid-a" style="min-width: 100%">
-                <div class="ui-block-a" style="min-width: 50%; background-color: #4C5B5C; margin-top: 10px">
-                    <div class="ui-bar ui-bar-a" style="height:160px; background-color: slategray">Advertisement</div>
-                </div>
 
-                <div class="ui-block-b" style="min-width: 50%">
-                    <div class="ui-block-a  card ui-corner-all custom-corners"
-                         style="min-width: 50%; padding-right: 1px;">
-                        <span class="flaticon-122-heart fav-icon-card" onclick="favourite(this)" id="5"></span>
-                        <a data-ajax="false" href="product.php?id=5">
-                            <div class="ui-bar ui-bar-a ui-card">
-                                <img class="center" src="<?php echo $json[5]['image'] ?>" width="80" height="80"></br>
-                                <strong><p style="text-decoration: none"
-                                           class="card-title"><?php echo $json[5]['name'] ?> </p> </br> <span
-                                            class="card-price">LKR <?php echo $json[5]['price'] ?? '' ?></span></strong>
-                            </div>
-                        </a>
-                    </div>
+            <div class="ui-grid-d" style="width: fit-content; margin: auto">
+                <h3 style="float: left; font-weight: 800">Offers</h3>
 
-                    <div class="ui-block-b  card ui-corner-all custom-corners"
-                         style="min-width: 50%; padding-right: 1px;">
-                        <span class="flaticon-122-heart fav-icon-card" onclick="favourite(this)" id="6"></span>
-                        <a data-ajax="false" href="product.php?id=6">
-                            <div class="ui-bar ui-bar-a ui-card">
-                                <img class="center" src="<?php echo $json[6]['image'] ?>" width="80" height="80"></br>
-                                <strong><p style="text-decoration: none"
-                                           class="card-title"><?php echo $json[6]['name'] ?> </p> </br> <span
-                                            class="card-price">LKR <?php echo $json[6]['price'] ?? '' ?></span></strong>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- others -->
+                <?php
+                $data = $GLOBALS['db'];
+                $json = json_decode($data, true);
 
-                <div class="ui-grid-c" style="min-width: 100%">
-                    <h3 style="float: left; font-weight: 800">Offers</h3>
+                $key = -1;
+                for ($i = 6; $i < sizeof($json); $i++) {
+                    $key++;
+                    $item = $json[$i];
 
-                    <?php
-                    $data = $GLOBALS['db'];
-                    $json = json_decode($data, true);
-
-                    foreach ($json as $key => $item) {
-
-                        if ($key % 4 == 0) {
-                            $column = 'a';
-                        } else if ($key % 3 == 0) {
-                            $column = 'b';
-                        } else if ($key % 2 == 0) {
-                            $column = 'c';
-                        } else {
-                            $column = 'd';
-                        }
-                        $name = $item['name'];
-                        $image = $item['image'];
-                        $price = $item['price'];
-                        include '../parts/poiCard.php';
-                        if ($key++ == 7) break;
+                    if ($key % 4 == 0) {
+                        $column = 'a';
+                    } else if ($key % 4 == 1) {
+                        $column = 'b';
+                    } else if ($key % 4 == 2) {
+                        $column = 'c';
+                    } else {
+                        $column = 'd';
+                        $key = -1;
                     }
-                    ?>
-                </div>
+                    $name = $item['name'];
+                    $image = $item['image'];
+                    $price = $item['price'];
+                    include '../parts/poiCard.php';
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -126,13 +105,19 @@
 
 </body>
 <script>
-    if (!$.cookie('introduction')){
-    $(window).on('load', function () {
-        $.cookie('introduction', true, {path: '/'});
-        $("#popupIntroductory").popup("open");
-    });
+    if (!$.cookie('introduction')) {
+        $(window).on('load', function () {
+            $.cookie('introduction', true, {path: '/'});
+            $("#popupIntroductory").popup("open");
+        });
     }
 
+    if ($.cookie('wishList') != null) {
+        data = JSON.parse($.cookie('wishList'));
+        for (let i = 0; i < data.length; i++) {
+            $("#" + data[i]).css('color', 'red');
+        }
+    }
 
     function favourite(e) {
         let id = e.id;

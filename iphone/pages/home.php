@@ -21,7 +21,7 @@
 
     <div role="main" class="ui-content" style="margin-top: -250px;">
         <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
+        <div class="ui-grid-d search" data-filter="true" data-filter-placeholder="Search for DIY products"
              style="margin-top: 200px;">
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
@@ -33,10 +33,14 @@
             $json = json_decode($data, true);
 
             foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
+                if ($key % 4 == 0) {
                     $column = 'a';
-                } else {
+                } else if ($key % 4 == 1) {
                     $column = 'b';
+                } else if ($key % 4 == 2) {
+                    $column = 'c';
+                } else {
+                    $column = 'd';
                 }
                 $name = $item['name'];
                 $price = $item['price'];

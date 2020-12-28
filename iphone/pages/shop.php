@@ -3,14 +3,14 @@
 <div data-role="page" id="shop">
     <?php include '../parts/header.php' ?>
 
-    <div role="main" class="ui-content">
+    <div role="main" class="ui-content" style="margin: 0; padding: 0;">
         <div class="header-title" style="margin-bottom: 10px;">
             <h3>Shop</h3>
             <img src="../../common/assets/images/icons/shop.png" height="35px" width="35px">
         </div>
         <!-- POI Card-->
-        <div class="ui-grid-a search" data-filter="true" data-filter-placeholder="Search for DIY products"
-             style="margin-top: 10px;">
+        <div class="ui-grid-d search" data-filter="true" data-filter-placeholder="Search for DIY products"
+             style="padding: 15px; width: fit-content; margin: 10px auto 100px auto;">
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
                 <a data-ajax="false" href="../pages/store.php" data-transition="pop"
@@ -22,10 +22,14 @@
             $json = json_decode($data, true);
 
             foreach ($json as $key => $item) {
-                if ($key % 2 == 0) {
+                if ($key % 4 == 0) {
                     $column = 'a';
-                } else {
+                } else if ($key % 4 == 1) {
                     $column = 'b';
+                } else if ($key % 4 == 2) {
+                    $column = 'c';
+                } else {
+                    $column = 'd';
                 }
                 $name = $item['name'];
                 $price = $item['price'];
@@ -38,4 +42,31 @@
         <?php include '../parts/footer.php' ?>
     </div>
     </body>
+    <script>
+        if ($.cookie('wishList') != null) {
+            data = JSON.parse($.cookie('wishList'));
+            for (let i = 0; i < data.length; i++) {
+                $("#" + data[i]).css('color', 'red');
+            }
+        }
+
+        function favourite(e) {
+            let id = e.id;
+            if ($.cookie('wishList') != null) {
+                data = JSON.parse($.cookie('wishList'));
+                if (!data.includes(id)) {
+                    data.push(id);
+                    $(e).css('color', 'red')
+                } else {
+                    data = data.filter(item => item !== id);
+                    $(e).css('color', 'black')
+                }
+            } else {
+                data = [];
+                data.push(id);
+                $(e).css('color', 'red')
+            }
+            $.cookie('wishList', JSON.stringify(data), {path: '/'});
+        }
+    </script>
     </html>

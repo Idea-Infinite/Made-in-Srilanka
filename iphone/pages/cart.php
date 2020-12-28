@@ -67,7 +67,7 @@ Payment is declined
                 '                    <img class="center" src="' + data["image"] + '"\n' +
                 '                         style="width: <?php echo $imgSize ?? "35px" ?>; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
                 '                </div>\n' +
-                '                <div class="ui-block-b" style="width: 50%;">\n' +
+                '                <div class="ui-block-b" style="width: 40%; margin-left: 10%">\n' +
                 '                    <p>' + data["name"] + '</p>\n' +
                 '                </div>\n' +
                 '                <div class="ui-block-c" style="width: 10%;">\n' +
