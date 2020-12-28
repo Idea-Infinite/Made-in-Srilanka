@@ -14,7 +14,7 @@ Payment is declined
 
 <script src="https://js.stripe.com/v3/"></script>
 <!-- This is shop page-->
-<div data-role="page" id="cart" style="min-height: unset">
+<div data-role="page" id="cart" style='min-height: unset; background-image: url("../../common/assets/images/cart-back.jpg")'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
