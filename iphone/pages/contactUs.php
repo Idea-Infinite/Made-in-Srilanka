@@ -64,7 +64,7 @@
 <div data-role="page" id="contactUs">
     <?php include '../parts/header.php' ?>
     <div class="header-title">
-        <h3>Conact Us</h3>
+        <h3>Contact Us</h3>
         <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
     </div>
     <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">

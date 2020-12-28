@@ -9,14 +9,14 @@
     $json = json_decode($data, true);
     $id = $_GET['id'];
     ?>
-    <div role="main" class="ui-content">
+    <div role="main" class="ui-content" style="padding: 0">
 
         <div class="header-title">
             <h3>Product</h3>
             <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
         </div>
         <!--start of main grid-->
-        <div class="ui-grid-a">
+        <div class="ui-grid-a" style="padding: 30px">
             <!--            start of main product block-->
             <div class="ui-block-a">
                 <div class="ui-bar ui-bar-a ui-card" style="height: unset; max-width: 70%; margin: auto;">
@@ -131,7 +131,7 @@
                         </span>
 
                 <div class="ui-collapsible-content ui-collapsible-content-collapsed" aria-hidden="true">
-                    <p style="text-align: justify"><?php /*echo $json[$id]['longDescription'] ?? '' */?></p>
+                    <p style="text-align: justify"><?php /*echo $json[$id]['longDescription'] ?? '' */ ?></p>
                 </div>
             </div>-->
 
@@ -146,59 +146,60 @@
             <?php include '../parts/bottomNavbar.php' ?>
         </div><?php include '../parts/footer.php' ?>
     </div>
-    </body>
-    <script>
-        $(window).on('load', function () {
-            if ($.cookie('wishList') != null) {
-                data = JSON.parse($.cookie('wishList'));
-                for (let i = 0; i < data.length; i++) {
-                    $("#" + data[i]).css('color', 'red');
-                }
+</div>
+</body>
+<script>
+    $(window).on('load', function () {
+        if ($.cookie('wishList') != null) {
+            data = JSON.parse($.cookie('wishList'));
+            for (let i = 0; i < data.length; i++) {
+                $("#" + data[i]).css('color', 'red');
             }
-        });
+        }
+    });
 
-        function favourite(e) {
-            let id = e.id;
-            if ($.cookie('wishList') != null) {
-                data = JSON.parse($.cookie('wishList'));
-                if (!data.includes(id)) {
-                    data.push(id);
-                    $(e).css('color', 'red')
-                } else {
-                    data = data.filter(item => item !== id);
-                    $(e).css('color', 'black')
-                }
-            } else {
-                data = [];
+    function favourite(e) {
+        let id = e.id;
+        if ($.cookie('wishList') != null) {
+            data = JSON.parse($.cookie('wishList'));
+            if (!data.includes(id)) {
                 data.push(id);
                 $(e).css('color', 'red')
-            }
-            $.cookie('wishList', JSON.stringify(data), { path: '/' });
-        }
-
-        $addCartButton = $('#addToCart');
-        $addCartButton.on('click', function () {
-            let found = false;
-            let qty = 1;
-            if ($.cookie('cart') != null) {
-                data = JSON.parse($.cookie('cart'));
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i]['id'] === <?php echo $id ?>) {
-                        data[i]['qty'] = data[i]['qty'] + 1;
-                        qty = data[i]['qty'];
-                        found = true;
-                        break;
-                    }
-                }
             } else {
-                data = [];
+                data = data.filter(item => item !== id);
+                $(e).css('color', 'black')
             }
-            if (!found) {
-                data.push({ "id": <?php echo $id ?>, "qty": qty });
+        } else {
+            data = [];
+            data.push(id);
+            $(e).css('color', 'red')
+        }
+        $.cookie('wishList', JSON.stringify(data), {path: '/'});
+    }
+
+    $addCartButton = $('#addToCart');
+    $addCartButton.on('click', function () {
+        let found = false;
+        let qty = 1;
+        if ($.cookie('cart') != null) {
+            data = JSON.parse($.cookie('cart'));
+            for (let i = 0; i < data.length; i++) {
+                if (data[i]['id'] === <?php echo $id ?>) {
+                    data[i]['qty'] = data[i]['qty'] + 1;
+                    qty = data[i]['qty'];
+                    found = true;
+                    break;
+                }
             }
-            $.cookie('cart', JSON.stringify(data), { path: '/' });
-            $('#addToCart').html('Added ' + qty);
-            // alert("Added to the cart");
-        });
-    </script>
-    </html>
+        } else {
+            data = [];
+        }
+        if (!found) {
+            data.push({"id": <?php echo $id ?>, "qty": qty});
+        }
+        $.cookie('cart', JSON.stringify(data), {path: '/'});
+        $('#addToCart').html('Added ' + qty);
+        // alert("Added to the cart");
+    });
+</script>
+</html>
