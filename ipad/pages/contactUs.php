@@ -61,15 +61,15 @@
 </script>
 
 <!-- This is checkout page-->
-<div data-role="page" id="contactUs">
+<div data-role="page" id="contactUs" style='background-image: url("../../common/assets/images/ipad-contactus-back.png");'>
 
     <?php include '../parts/header.php' ?>
 
-    <div class="header-title">
-        <h3>Contact Us</h3>
+    <div class="header-title" style="color: white">
+        <h3>Conact Us</h3>
         <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
     </div>
-    <div class="back-box" style="padding: 30px 20px;">
+    <div class="back-box" style="padding: 30px 20px; background-color: rgba(255, 255, 255, 0.8)" >
         <div class="ui-grid-a">
             <div class="ui-block-a">
 
@@ -103,7 +103,7 @@
             </div>
             <div class="ui-block-b">
                 <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
-                    <form class="form-light">
+                    <form class="form-light" style="font-weight: bolder; font-size: 18px">
                         <h4>You can send your suggestions/feedback :</h4>
                         <div class="ui-grid-a">
                             <div class="ui-block-a">
