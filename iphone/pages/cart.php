@@ -14,7 +14,7 @@ Payment is declined
 
 <script src="https://js.stripe.com/v3/"></script>
 <!-- This is shop page-->
-<div data-role="page" id="cart">
+<div data-role="page" id="cart" style="min-height: unset">
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
@@ -37,7 +37,8 @@ Payment is declined
     </div>
 
     <?php include '../parts/bottomNavbar.php' ?>
-</div><?php include '../parts/footer.php' ?>
+    <?php include '../parts/footer.php' ?>
+</div>
 </body>
 <script>
     let total = 0;

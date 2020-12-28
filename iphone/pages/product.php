@@ -112,7 +112,8 @@
         <?php include '../popups/chatWithSeller.php' ?>
         <?php include '../popups/viewAR.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
-    </div><?php include '../parts/footer.php' ?>
+        <?php include '../parts/footer.php' ?>
+    </div>
     </body>
     <script>
         $(window).on('load', function () {

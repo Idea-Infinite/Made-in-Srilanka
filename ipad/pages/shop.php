@@ -34,7 +34,8 @@
             ?>
         </div>
     </div>
-        <?php include '../parts/bottomNavbar.php' ?>
-    </div><?php include '../parts/footer.php' ?>
-    </body>
-    </html>
+    <?php include '../parts/bottomNavbar.php' ?>
+    <?php include '../parts/footer.php' ?>
+</div>
+</body>
+</html>
