@@ -58,6 +58,9 @@ $checkout_session = Session::create(
     [
 //        'customer_email' => 'customer@example.com',
         'payment_method_types' => ['card'],
+        'shipping_address_collection' => [
+            'allowed_countries' => ['LK'],
+        ],
         'line_items' => $line_items,
         'mode' => 'payment',
         'success_url' => $GLOBALS['domain'] . '/' . $origin . '/pages/orderHistory.php?status=success',
