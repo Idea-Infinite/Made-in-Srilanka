@@ -34,6 +34,7 @@ session_start();
                 <!--cards-->
             </div>
         </div>
+    </div>
         <?php include '../popups/addRating.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
