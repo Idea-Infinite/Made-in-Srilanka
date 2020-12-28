@@ -131,13 +131,13 @@ input[type=text], input[type=password] {
 
 .card {
     padding: 8px;
-    min-width: 190px;
+    min-width: 172px;
 }
 
 @media screen and (min-width: 600px) {
     .card {
-        max-width: 175px;
-        min-width: 175px;
+        max-width: 159px;
+        min-width: 159px;
     }
 }
 
