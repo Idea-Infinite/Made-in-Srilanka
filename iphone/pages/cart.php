@@ -65,7 +65,7 @@ Payment is declined
                 '<div class="ui-grid-c back-box" style="padding: <?php echo $padding ?? "10px" ?>; margin-bottom: 20px">\n' +
                 '                <div class="ui-block-a " style="width: 15%;">\n' +
                 '                    <img class="center" src="' + data["image"] + '"\n' +
-                '                         style="width: <?php echo $imgSize ?? "70px" ?>; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
+                '                         style="width: <?php echo $imgSize ?? "80px" ?>; height: 80px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
                 '                </div>\n' +
                 '                <div class="ui-block-b" style="width: 40%; margin-left: 10%">\n' +
                 '                    <p>' + data["name"] + '</p>\n' +

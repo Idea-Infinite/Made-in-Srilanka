@@ -68,13 +68,13 @@ session_start();
                 let price = parseFloat(data["price"]) * qty;
 
                 $('#items').append(
-                    '                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">\n' +
-                    '                    <div class="ui-block-a " style="width: 15%;">\n' +
+                    '                <div class="ui-grid-c back-box" style="padding: 15px; margin-bottom: 10px">\n' +
+                    '                    <div class="ui-block-a " style="width: 30%;">\n' +
                     '                        <img class="center" src="' + data["image"] + '"\n' +
-                    '                             style="width: 50px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
+                    '                             style="width: 100px; height: 100px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
                     '\n' +
                     '                    </div>\n' +
-                    '                    <div class="ui-block-b" style="width: 50%;">\n' +
+                    '                    <div class="ui-block-b" style="width: 40%; margin-left: 10px">\n' +
                     '                        <p>' + data["name"] + '</p>\n' +
                     '                        <button style="opacity: 1; padding: 4px; background-color: #fff63f; color: black;\n' +
                     '                                border-color: #fff; box-shadow: none; font-size: 11px" disabled>\n' +
@@ -84,10 +84,10 @@ session_start();
                     '                    <div class="ui-block-c" style="width: 10%;">\n' +
                     '                        <p>x ' + qty + '</p>\n' +
                     '                    </div>\n' +
-                    '                    <div class="ui-block-d" style="width: 25%; font-size: 12px; ">\n' +
+                    '                    <div class="ui-block-d" style="width: 20%; font-size: 12px; ">\n' +
                     '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
                     '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
-                    '                           data-transition="pop" onclick="return rate(' + id + ');">Rate Now</a>\n' +
+                    '                           data-transition="pop" onclick="return rate(' + id + ');">Rate</a>\n' +
                     '                        <p>LKR ' + price + '</p>\n' +
                     '                    </div>\n' +
                     '                </div>\n');

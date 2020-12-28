@@ -57,7 +57,7 @@
             let location = $('#location').find(":selected").text();
             let timeSlot = $('#timeSlot').find(":selected").text();
             let session = $('#session').find(":selected").text();
-            fetch("../../common/functions/checkout.php?cat=booking", {
+            fetch("../../common/functions/checkout.php?cat=booking&origin=<?php echo $origin ?? 'iPhone' ?>", {
                 method: "POST",
                 body: JSON.stringify({name: session + " " + timeSlot + " " + location}),
             })

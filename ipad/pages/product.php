@@ -61,11 +61,11 @@
                 </div>
                 <!-- BUTTONS -->
                 <div style="display: inline-flex; width: 100%; justify-content: center; font-size: 30px">
-                    <a  href="#cart-feedback" data-rel="popup" data-transition="pop">
+                    <a href="#cart-feedback" data-rel="popup" data-transition="pop">
                         <button id="addToCart">Add to Cart</button>
                     </a>
-                    <a >
-                        <button style="margin-left: 15px">Buy Now</button>
+                    <a style="margin: 10px">
+                        <button id="buyNow" style="margin-left: 15px">Buy Now</button>
                     </a>
                 </div>
 
@@ -152,9 +152,10 @@
 <!--        </a>-->
         </div>
         <?php include '../parts/footer.php' ?>
-    </div>
+</div>
 </div>
 </body>
+<script src="https://js.stripe.com/v3/"></script>
 <script>
     $(window).on('load', function () {
         if ($.cookie('wishList') != null) {
@@ -163,6 +164,35 @@
                 $("#" + data[i]).css('color', 'red');
             }
         }
+
+        // buy now
+        $buyNowButton = $('#buyNow');
+        $buyNowButton.on('click', function () {
+            // Create an instance of the Stripe object with API key
+            var stripe = Stripe("pk_test_51Hs4vICZjSyoKagriy62PgWm6qQLhrJtIYyy3Lq4GWCGNodf82TR4SFuLY4J4mcjNX45Kf7Yfjg80dv665AMmzK400rmoSi33N");
+
+            fetch("../../common/functions/checkout.php?origin=<?php echo $origin ?? 'iPhone' ?>", {
+                method: "POST",
+                body: JSON.stringify([{"id": <?php echo $id ?>, "qty": 1}]),
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (session) {
+                    return stripe.redirectToCheckout({sessionId: session.id});
+                })
+                .then(function (result) {
+                    // If redirectToCheckout fails due to a browser or network
+                    // error, you should display the localized error message to your
+                    // customer using error.message.
+                    if (result.error) {
+                        alert(result.error.message);
+                    }
+                })
+                .catch(function (error) {
+                    console.error("Error:", error);
+                });
+        });
     });
 
     function favourite(e) {

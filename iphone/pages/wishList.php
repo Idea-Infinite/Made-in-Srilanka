@@ -38,21 +38,21 @@
         $.getJSON("../../common/functions/getProduct.php?id=" + id, function (data, status) {
 
             $('#items').append(
-                '                <div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">\n' +
-                '                    <div class="ui-block-a " style="width: 15%; height: 50px">\n' +
+                '                <div class="ui-grid-c back-box" style="padding: 20px; margin-bottom: 10px">\n' +
+                '                    <div class="ui-block-a " style="width: 30%; height: 50px">\n' +
                 '                        <img class="center" src="' + data["image"] + '"\n' +
-                '                             style="width: 50px; top: 50%; margin-top: 30px; transform: translateY(-50%);">\n' +
+                '                             style="width: 80px; height: 80px; top: 50%; margin-top: 30px; transform: translateY(-50%);">\n' +
                 '\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-b" style="width: 40%;">\n' +
+                '                    <div class="ui-block-b" style="width: 35%;">\n' +
                 '                        <p>' + data["name"] + '</p>\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-c" style="width: 17%; font-size: 12px; ">\n' +
+                '                    <div class="ui-block-c" style="width: 20%; font-size: 12px; ">\n' +
                 '                        <a data-ajax="false" href="product.php?id=' + id + '" \n' +
                 '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
                 '                           data-transition="pop">View</a>\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-d" style="width: 28%; height: 50px">\n' +
+                '                    <div class="ui-block-d" style="width: 15%; height: 50px">\n' +
                 '                        <p style=" font-size: 14px; color: #f5a278; font-weight: 800;">LKR ' + data["price"] + '</p>\n' +
                 '                    </div>\n' +
                 '                </div>\n');

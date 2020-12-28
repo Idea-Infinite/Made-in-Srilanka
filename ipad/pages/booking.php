@@ -1,1 +1,3 @@
-<?php include '../../iphone/pages/booking.php' ?>
+<?php
+$origin = 'iPad';
+include '../../iphone/pages/booking.php';

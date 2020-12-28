@@ -47,5 +47,6 @@
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
     </div>
-    </body>
-    </html>
+</div>
+</body>
+</html>
