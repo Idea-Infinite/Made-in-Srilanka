@@ -66,17 +66,18 @@
     <?php include '../parts/header.php' ?>
 
     <div class="header-title">
-        <h3>Conact Us</h3>
+        <h3>Contact Us</h3>
         <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
     </div>
     <div class="back-box" style="padding: 30px 20px;">
         <div class="ui-grid-a">
             <div class="ui-block-a">
 
-                    <div style="margin-left: 150px">
-                        <img style="float: left" src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
-                        <h2>Locate Us</h2>
-                    </div>
+                <div style="margin-left: 150px">
+                    <img style="float: left" src="../../common/assets/images/icons/contact_us.png" height="35px"
+                         width="35px">
+                    <h2>Locate Us</h2>
+                </div>
 
                 <!-- locations-->
                 <div onload="initialize()" style="margin-bottom: 70px">
