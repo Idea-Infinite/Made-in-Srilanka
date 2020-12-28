@@ -25,7 +25,7 @@
              style="margin-top: 200px;">
             <div>
                 <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a data-ajax="false" href="#shop" data-transition="pop" style="float: right; line-height: 3.5em;">View
+                <a data-ajax="false" href="shop.php" data-transition="pop" style="float: right; line-height: 3.5em;">View
                     All</a>
             </div>
             <?php

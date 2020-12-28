@@ -12,10 +12,7 @@
         <div class="ui-grid-d search" data-filter="true" data-filter-placeholder="Search for DIY products"
              style="padding: 15px; width: fit-content; margin: 10px auto 100px auto;">
             <div>
-                <h3 style="float: left; font-weight: 800">Recommended DYI</h3>
-                <a data-ajax="false" href="../pages/store.php" data-transition="pop"
-                   style="float: right; line-height: 3.5em;">View
-                    All</a>
+                <h3 style="float: left; font-weight: 800">DYI Products</h3>
             </div>
             <?php
             $data = $GLOBALS['db'];
