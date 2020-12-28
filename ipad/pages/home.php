@@ -48,8 +48,9 @@
 
                 if ($key == 4) {
                     echo '
-                    <div class="ui-block-a" style="min-width: 50%; background-color: #4C5B5C; margin-top: 10px">
-                    <div class="ui-bar ui-bar-a" style="height:220px; background-color: slategray">Advertisement</div>
+                    <div class="ui-block-a" style="min-width: 50%; margin-top: 10px">
+                    <img src="http://via.placeholder.com/400x220.png/B7B7B7/808080?text=Advertisement" 
+                    style="width: 100%; height: 230px; border-radius: 20px">
                 </div>';
                     $column = 'c';
                 } elseif ($key == 5) {
