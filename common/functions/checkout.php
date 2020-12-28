@@ -53,14 +53,15 @@ if (!isset($_GET['cat'])) {
     array_push($line_items, $price_data);
 }
 
+$origin = $_GET['origin'];
 $checkout_session = Session::create(
     [
 //        'customer_email' => 'customer@example.com',
         'payment_method_types' => ['card'],
         'line_items' => $line_items,
         'mode' => 'payment',
-        'success_url' => $GLOBALS['domain'] . '/iphone/pages/orderHistory.php?status=success',
-        'cancel_url' => $GLOBALS['domain'] . '/iphone/pages/orderHistory.php?status=failed',
+        'success_url' => $GLOBALS['domain'] . '/' . $origin . '/pages/orderHistory.php?status=success',
+        'cancel_url' => $GLOBALS['domain'] . '/' . $origin . '/pages/orderHistory.php?status=failed',
     ]);
 $session_id = $checkout_session->id;
 $orders[$session_id] = $data;

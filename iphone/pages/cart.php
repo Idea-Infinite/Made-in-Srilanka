@@ -94,7 +94,7 @@ Payment is declined
     var checkoutButton = document.getElementById("checkout-button");
 
     checkoutButton.addEventListener("click", function () {
-        fetch("../../common/functions/checkout.php", {
+        fetch("../../common/functions/checkout.php?origin=<?php echo $origin ?? 'iPhone' ?>", {
             method: "POST",
             body: JSON.stringify(product_ids)
         })
