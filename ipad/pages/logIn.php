@@ -4,10 +4,11 @@
      style='background-image: url("../../common/assets/images/baskets.jpg"); background-size: cover;'>
     <?php include '../parts/header.php' ?>
 
-    <div role="main" class="ui-content">
+    <div role="main" style="display: flex; justify-content: center;" class="ui-content">
 
 
-        <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.7); margin-top: 100px;">
+        <div class="back-box"
+             style="padding: 50px 20px; width: 600px; background-color: rgba(0, 0, 0, 0.7); margin-top: 100px;">
             <div class="header-title" style="color: white">
                 <h3>Login</h3>
                 <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
