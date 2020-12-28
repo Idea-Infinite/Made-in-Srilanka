@@ -49,7 +49,12 @@
                             To: email.value,
                             From: "teamideainfinite@gmail.com",
                             Subject: "Your WishList",
-                            Body: "<html><img src='" + data + "'></html>",
+                            Body: "<html><h1>Your WishList is attached below</h1><br><img src='" + data + "'></html>",
+                            Attachments: [
+                                {
+                                    name: "wishlist.png",
+                                    data: data
+                                }]
                         }).then(
                             message => {
                                 console.log(message);
