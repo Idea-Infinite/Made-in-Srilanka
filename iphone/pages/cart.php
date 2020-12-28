@@ -61,10 +61,10 @@ Payment is declined
             let price = parseFloat(data["price"]) * qty;
             total += price;
             $('#items').append(
-                '<div class="ui-grid-c back-box" style="padding: 5px; margin-bottom: 10px">\n' +
+                '<div class="ui-grid-c back-box" style="padding: <?php echo $padding ?? "5px" ?>; margin-bottom: 20px">\n' +
                 '                <div class="ui-block-a " style="width: 15%;">\n' +
                 '                    <img class="center" src="' + data["image"] + '"\n' +
-                '                         style="width: 35px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
+                '                         style="width: <?php echo $imgSize ?? "35px" ?>; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
                 '                </div>\n' +
                 '                <div class="ui-block-b" style="width: 50%;">\n' +
                 '                    <p>' + data["name"] + '</p>\n' +
