@@ -6,7 +6,7 @@
     <div role="main" class="ui-content" style="margin: 0; padding: 0;">
         <div class="header-title" style="margin-bottom: 10px;">
             <h3>Shop</h3>
-            <img src="../../common/assets/images/icons/shop.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/shop.png" height="35" width="35">
         </div>
         <!-- POI Card-->
         <div class="ui-grid-d search" data-filter="true" data-filter-placeholder="Search for DIY products"

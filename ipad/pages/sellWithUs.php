@@ -9,7 +9,7 @@
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.7);">
             <div class="header-title" style="color: white">
                 <h3>Sell With Us</h3>
-                <img src="../../common/assets/images/icons/cash.png" height="35px" width="35px">
+                <img alt="page_icon" src="../../common/assets/images/icons/cash.png" height="35" width="35">
             </div>
             <form style="color: #1797F3;">
                 <fieldset class="ui-grid-a">

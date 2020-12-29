@@ -1,7 +1,7 @@
 <div style="max-width: none; min-width: 200px;" data-role="popup" id="viewQR" data-theme="a" class="ui-content">
     <div class="header-title" style="margin-top: -10px; display: flex">
         <h3>Chat with seller</h3>
-        <img src="../../common/assets/images/icons/qr.png" height="35px" width="35px">
+        <img alt="page_icon" src="../../common/assets/images/icons/qr.png" height="35" width="35">
     </div>
     <div style="width: 100%" id="reader"></div>
     <script src="../../common/js/html5-qrcode.min.js"></script>

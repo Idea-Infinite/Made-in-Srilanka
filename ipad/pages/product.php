@@ -13,7 +13,7 @@
 
         <div class="header-title">
             <h3>Product</h3>
-            <img src="../../common/assets/images/icons/login.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/login.png" height="35" width="35">
         </div>
         <!--start of main grid-->
         <div class="ui-grid-a" style="padding: 30px">
@@ -42,7 +42,7 @@
                         </div>
                         <div class="ui-block-b" style="width: 20%">
                             <a data-ajax="false" href="#viewAR" data-rel="popup" data-position-to="window"
-                               data-transition="pop"><img src="../../common/assets/images/icons/ar.png"></a>
+                               data-transition="pop"><img alt="page_icon" src="../../common/assets/images/icons/ar.png"></a>
                         </div>
                     </div>
                     <p style="font-weight: 200; font-size: 22px; margin-top: -35px"><?php echo $json[$id]['description'] ?? '' ?></p>
@@ -169,7 +169,7 @@
         $buyNowButton = $('#buyNow');
         $buyNowButton.on('click', function () {
             // Create an instance of the Stripe object with API key
-            var stripe = Stripe("pk_test_51Hs4vICZjSyoKagriy62PgWm6qQLhrJtIYyy3Lq4GWCGNodf82TR4SFuLY4J4mcjNX45Kf7Yfjg80dv665AMmzK400rmoSi33N");
+            const stripe = Stripe("<?php echo $GLOBALS['stripe_key'] ?>");
 
             fetch("../../common/functions/checkout.php?origin=<?php echo $origin ?? 'iPhone' ?>", {
                 method: "POST",

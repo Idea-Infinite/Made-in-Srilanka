@@ -1,7 +1,7 @@
 <div style="max-width: none; min-width: 300px;" data-role="popup" id="editprofile" data-theme="a" class="ui-content">
     <div class="header-title" style="margin-top: -10px; display: flex">
         <h3>Edit Profile</h3>
-        <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
+        <img alt="page_icon" src="../../common/assets/images/icons/registration.png" height="35" width="35">
     </div>
     <form>
         <center><p>Edit User details</p></center>

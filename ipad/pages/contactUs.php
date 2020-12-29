@@ -67,9 +67,9 @@
 
     <div class="header-title" style="color: white">
         <h3>Conact Us</h3>
-        <img src="../../common/assets/images/icons/contact_us.png" height="35px" width="35px">
+        <img alt="page_icon" src="../../common/assets/images/icons/contact_us.png" height="35" width="35">
     </div>
-    <div class="back-box" style="padding: 30px 20px; background-color: rgba(255, 255, 255, 0.8)" >
+    <div class="back-box" style="padding: 30px 20px; background-color: rgba(255, 255, 255, 0.8)">
         <div class="ui-grid-a">
             <div class="ui-block-a">
 

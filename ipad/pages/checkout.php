@@ -6,7 +6,7 @@
 
     <div class="header-title">
         <h3>Checkout</h3>
-        <img src="../../common/assets/images/icons/checkout.png" height="35px" width="35px">
+        <img alt="page_icon" src="../../common/assets/images/icons/checkout.png" height="35" width="35">
     </div>
     <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
         <form class="form-light">

@@ -9,7 +9,7 @@
             <table>
                 <tr>
                     <td>
-                        <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
+                        <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
                     </td>
                     <td>
                         <div class="product-comment"></div>
@@ -35,7 +35,7 @@
             '<table>' +
             '<tr>' +
             '<td>' +
-            '<img src="../../common/assets/images/icons/user.png" height="100px" width="100px">' +
+            '<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">' +
             '</td>' +
             '<td>' +
             '<div class="product-comment"></div>' +
@@ -71,7 +71,7 @@
             '<h3>Snoopy</h3>' +
             '<p id="snoopyReply">' + replyText + '</p>'
         );
-        $("#repliersPhoto").append('<img src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
+        $("#repliersPhoto").append('<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
 
     }
 
@@ -106,7 +106,8 @@
                 <table>
                     <tr>
                         <td>
-                            <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
+                            <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px"
+                                 width="100px">
                         </td>
                         <td>
                             <div class="product-comment"></div>
@@ -153,7 +154,7 @@
             '<table>' +
             '<tr>' +
             '<td>' +
-            '<img src="../../common/assets/images/icons/user.png" height="100px" width="100px">' +
+            '<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">' +
             '</td>' +
             '<td>' +
             '<div class="product-comment"></div>' +
@@ -202,7 +203,7 @@
             '<h3>Snoopy</h3>' +
             '<p id="snoopyReply">' + replyText + '</p>'
         );
-        $("#repliersPhoto").append('<img src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
+        $("#repliersPhoto").append('<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
 
     }
 
@@ -229,7 +230,7 @@
             '<h3>Snoopy</h3>' +
             '<p id="snoopyReply1">' + replyText + '</p>'
         );
-        $("#repliersPhoto1").append('<img src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
+        $("#repliersPhoto1").append('<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
 
     }
 

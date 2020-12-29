@@ -8,7 +8,7 @@
 
         <div class="header-title">
             <h3>Sell With Us</h3>
-            <img src="../../common/assets/images/icons/cash.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/cash.png" height="35" width="35">
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
             <form>

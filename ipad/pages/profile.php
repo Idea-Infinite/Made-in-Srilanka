@@ -6,26 +6,27 @@
 
     <?php include '../parts/header.php' ?>
     <div role="main" class="ui-content">
-         <div class="back-box" style="padding: 50px 20px; background-color: rgba(1, 1, 1, 0.7);">
+        <div class="back-box" style="padding: 50px 20px; background-color: rgba(1, 1, 1, 0.7);">
 
             <div class="header-title" style="color: white">
                 <h3>Profile</h3>
-                <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
+                <img alt="page_icon" src="../../common/assets/images/icons/registration.png" height="35" width="35">
             </div>
 
-             <div class="back-box" style="padding: 50px 20px; background-color: rgba(255, 255, 255, 0.7); width: 50%; margin: auto;">
-            <center>
-                <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
-            </center>
-            <table style="width: 100%; margin-left: 15%;color: black;font-weight: bolder;">
-                <tr>
-                    <td>Username</td>
-                    <td>Smith</td>
-                </tr>
-                <tr>
-                    <td>Email</td>
-                    <td>Smith@gmail.com</td>
-                </tr>
+            <div class="back-box"
+                 style="padding: 50px 20px; background-color: rgba(255, 255, 255, 0.7); width: 50%; margin: auto;">
+                <center>
+                    <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
+                </center>
+                <table style="width: 100%; margin-left: 15%;color: black;font-weight: bolder;">
+                    <tr>
+                        <td>Username</td>
+                        <td>Smith</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>Smith@gmail.com</td>
+                    </tr>
                 <tr>
                     <td>First Name</td>
                     <td>Smith</td>

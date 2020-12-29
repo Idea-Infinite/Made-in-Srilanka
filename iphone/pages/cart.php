@@ -1,3 +1,6 @@
+<!--
+Cart Page
+-->
 <?php include '../parts/head.php' ?>
 <!--
 Testing Card
@@ -20,7 +23,7 @@ Payment is declined
     <div role="main" class="ui-content">
         <div class="header-title" style="margin-bottom: 10px;">
             <h3>Cart</h3>
-            <img src="../../common/assets/images/icons/checkout.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/checkout.png" height="35" width="35">
         </div>
         <!-- POI Card-->
         <div>
@@ -28,11 +31,12 @@ Payment is declined
             <div id="items">
             </div>
 
-            <center>
-                <h1>Total: <span id="totalPrice" class="price-color">LKR.0.00</span></h1></center>
-            <center>
+            <div style="text-align: center;">
+                <h1>Total: <span id="totalPrice" class="price-color">LKR.0.00</span></h1>
+            </div>
+            <div style="text-align: center;">
                 <button id="checkout-button" disabled>Order</button>
-            </center>
+            </div>
         </div>
     </div>
 
@@ -45,7 +49,7 @@ Payment is declined
     let product_ids = [];
 
     const update = async () => {
-        cart = JSON.parse($.cookie('cart'));
+        const cart = JSON.parse($.cookie('cart'));
         for (let i = 0; i < cart.length; i++) {
             let id = cart[i]['id'];
             let qty = cart[i]['qty'];
@@ -64,7 +68,7 @@ Payment is declined
             $('#items').append(
                 '<div class="ui-grid-c back-box" style="padding: <?php echo $padding ?? "10px" ?>; margin-bottom: 20px">\n' +
                 '                <div class="ui-block-a " style="width: 15%;">\n' +
-                '                    <img class="center" src="' + data["image"] + '"\n' +
+                '                    <img alt="product_image" class="center" src="' + data["image"] + '"\n' +
                 '                         style="width: <?php echo $imgSize ?? "80px" ?>; height: 80px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
                 '                </div>\n' +
                 '                <div class="ui-block-b" style="width: 40%; margin-left: 10%">\n' +
@@ -84,16 +88,18 @@ Payment is declined
         $('#checkout-button').attr('disabled', false);
     }
 
-    var headers = {
+    const headers = {
         "Content-Type": "application/json",
         "Access-Control-Origin": "*"
-    }
+    };
 
     // Create an instance of the Stripe object with API key
-    var stripe = Stripe("pk_test_51Hs4vICZjSyoKagriy62PgWm6qQLhrJtIYyy3Lq4GWCGNodf82TR4SFuLY4J4mcjNX45Kf7Yfjg80dv665AMmzK400rmoSi33N");
-    var checkoutButton = document.getElementById("checkout-button");
+    const stripe = Stripe("<?php echo $GLOBALS['stripe_key'] ?>");
+    const checkoutButton = document.getElementById("checkout-button");
 
     checkoutButton.addEventListener("click", function () {
+        $('#checkout-button').attr('disabled', true);
+        $('#checkout-button').html("Processing");
         fetch("../../common/functions/checkout.php?origin=<?php echo $origin ?? 'iPhone' ?>", {
             method: "POST",
             body: JSON.stringify(product_ids)

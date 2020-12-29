@@ -2,7 +2,7 @@
      style="min-width: 400px; z-index: 1010;">
     <!-- panel content goes here -->
     <div style="height: 150px; background-color:#f3f3f3; padding: 20px; display: flex">
-        <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
+        <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
         <div class="side-menu-info">
             <p>Hi Snoopy</p>
             <p>Diamonds: 50</p>
@@ -11,10 +11,12 @@
     </div>
     <table class="side-menu" style="text-align: center">
         <tr>
-            <td><a data-ajax="false" href="../pages/home.php"><img src="../../common/assets/images/icons/home.png"
+            <td><a data-ajax="false" href="../pages/home.php"><img alt="page_icon"
+                                                                   src="../../common/assets/images/icons/home.png"
                                                                    width="35" height="35"><br/>Home</a>
             </td>
-            <td><a data-ajax="false" href="../pages/booking.php"><img src="../../common/assets/images/icons/booking.png"
+            <td><a data-ajax="false" href="../pages/booking.php"><img alt="page_icon"
+                                                                      src="../../common/assets/images/icons/booking.png"
                                                                       width="35"
                                                                       height="35"><br/>Book Class</a></td>
             <td><a data-ajax="false" href="../pages/contactUs.php"><img
@@ -22,7 +24,8 @@
                             height="35"><br/>Contact Us</a></td>
         </tr>
         <tr>
-            <td><a data-ajax="false" href="../pages/shop.php"><img src="../../common/assets/images/icons/shop.png"
+            <td><a data-ajax="false" href="../pages/shop.php"><img alt="page_icon"
+                                                                   src="../../common/assets/images/icons/shop.png"
                                                                    width="35" height="35"><br/>Shop</a>
             </td>
             <td><a data-ajax="false" href="../pages/orderHistory.php"><img
@@ -35,7 +38,8 @@
         <tr>
             <td><a data-rel="popup" data-position-to="window" href="#viewQR"><img
                             src="../../common/assets/images/icons/qr.png" width="35" height="35"><br/>Scan QR</a></td>
-            <td><a data-ajax="false" href="../pages/sellWithUs.php"><img src="../../common/assets/images/icons/cash.png"
+            <td><a data-ajax="false" href="../pages/sellWithUs.php"><img alt="page_icon"
+                                                                         src="../../common/assets/images/icons/cash.png"
                                                                          width="35"
                                                                          height="35"><br/>Sell with Us</a></td>
             <td><a data-ajax="false" href="#popupDialog" data-rel="popup" data-position-to="window"

@@ -6,7 +6,7 @@
     <div role="main" class="ui-content">
         <div class="header-title">
             <h3>About Us</h3>
-            <img src="../../common/assets/images/icons/wishList.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/wishList.png" height="35" width="35">
         </div>
         <p style="font-size: 12px; font-family: 'Montserrat', sans-serif; text-align: justify">
             iCraft is the leading independent home improvement and home repair website. It has been repeatedly honored

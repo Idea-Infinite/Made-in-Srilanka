@@ -6,7 +6,7 @@
     <div role="main" class="ui-content">
         <div class="header-title" style="margin-bottom: 10px;">
             <h3>Slash It</h3>
-            <img src="../../common/assets/images/icons/slashIt.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/slashIt.png" height="35" width="35">
         </div>
 
         <center>

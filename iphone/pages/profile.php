@@ -8,12 +8,12 @@
 
     <div class="header-title">
         <h3>Profile</h3>
-        <img src="../../common/assets/images/icons/registration.png" height="35px" width="35px">
+        <img alt="page_icon" src="../../common/assets/images/icons/registration.png" height="35" width="35">
     </div>
     <div style="padding: 10px 20px; background-color: rgba(0, 0, 0, 0)">
         <div class="back-box" style="padding: 50px 20px;">
             <center>
-                <img src="../../common/assets/images/icons/user.png" height="100px" width="100px">
+                <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
             </center>
             <table style="width:100%; padding-top: 40px">
                 <tr>

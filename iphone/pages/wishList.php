@@ -1,12 +1,14 @@
+<!--
+Wish List Page
+-->
 <?php include '../parts/head.php' ?>
-<!-- This is shop page-->
 <div data-role="page" id="shop">
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
         <div class="header-title" style="margin-bottom: 10px;">
             <h3>WishList</h3>
-            <img src="../../common/assets/images/icons/wishList.png" height="35px" width="35px">
+            <img alt="pageIcon" src="../../common/assets/images/icons/wishList.png" height="35" width="35">
         </div>
         <!-- POI Card-->
         <div id="content" class="ui-grid-a search" data-filter="true"
@@ -26,6 +28,7 @@
 </body>
 <script>
     const update = async () => {
+        let data;
         if ($.cookie('wishList') != null) {
             data = JSON.parse($.cookie('wishList'));
             for (let j = 0; j < data.length; j++) {
@@ -40,7 +43,7 @@
             $('#items').append(
                 '                <div class="ui-grid-c back-box" style="padding: 20px; margin-bottom: 10px">\n' +
                 '                    <div class="ui-block-a " style="width: 30%; height: 50px">\n' +
-                '                        <img class="center" src="' + data["image"] + '"\n' +
+                '                        <img alt="product_image" class="center" src="' + data["image"] + '"\n' +
                 '                             style="width: 80px; height: 80px; top: 50%; margin-top: 30px; transform: translateY(-50%);">\n' +
                 '\n' +
                 '                    </div>\n' +

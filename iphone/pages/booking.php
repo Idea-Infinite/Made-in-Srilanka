@@ -10,7 +10,7 @@
 
         <div class="header-title">
             <h3>Booking</h3>
-            <img src="../../common/assets/images/icons/booking.png" height="35px" width="35px">
+            <img alt="page_icon" src="../../common/assets/images/icons/booking.png" height="35" width="35">
         </div>
         <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
             <form id="booking-form"
@@ -52,7 +52,7 @@
         form.addEventListener("submit", function (ev) {
             ev.preventDefault();
             // Create an instance of the Stripe object with API key
-            var stripe = Stripe("pk_test_51Hs4vICZjSyoKagriy62PgWm6qQLhrJtIYyy3Lq4GWCGNodf82TR4SFuLY4J4mcjNX45Kf7Yfjg80dv665AMmzK400rmoSi33N");
+            const stripe = Stripe("<?php echo $GLOBALS['stripe_key'] ?>");
 
             let location = $('#location').find(":selected").text();
             let timeSlot = $('#timeSlot').find(":selected").text();
