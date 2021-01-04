@@ -39,8 +39,8 @@
                 <button style="opacity: 1">Place Booking</button>
             </form>
         </div>
+
     </div>
-</div>
 <?php include '../parts/bottomNavbar.php' ?>
     <?php include '../parts/footer.php' ?>
 </div>
