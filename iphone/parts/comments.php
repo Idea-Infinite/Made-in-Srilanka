@@ -1,6 +1,6 @@
 <div class="ui-grid-a">
     <label><b>Comments</b></label>
-    <table>
+    <table style="min-width: 100%;">
         <tr>
             <td>
                 <div style=" width:100%;padding-left: 12px;">
