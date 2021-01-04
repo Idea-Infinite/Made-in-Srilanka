@@ -65,7 +65,7 @@
                         <button id="addToCart">Add to Cart</button>
                     </a>
                     <a style="margin: 10px">
-                        <button id="buyNow" style="margin-left: 15px">Buy Now</button>
+                        <button id="buyNow" style="margin-left: 15px; margin-top: 5px;">Buy Now</button>
                     </a>
                 </div>
 
