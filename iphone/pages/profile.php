@@ -15,7 +15,7 @@
             <center>
                 <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
             </center>
-            <table style="width:100%; padding-top: 40px">
+            <table style="width:100%; padding-top: 40px; margin-left: 20%">
                 <tr>
                     <td>Username</td>
                     <td>Smith</td>
@@ -33,7 +33,7 @@
                     <td>Jackson</td>
                 </tr>
             </table>
-            <div style="display: flex; padding-top: 20px">
+            <div style="display: flex; padding-top: 20px; margin: 5px auto auto; width: fit-content">
                 <a data-ajax="false" href="orderHistory.php">
                     <button style="opacity: 1; font-size: 14px;">Order History</button>
                 </a>
@@ -43,10 +43,11 @@
                 </a>
             </div>
         </div>
-        <?php include '../popups/editProfile.php' ?>
+    </div>
+    <?php include '../popups/editProfile.php' ?>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
-    </div>
+
 </div>
 </body>
 </html>

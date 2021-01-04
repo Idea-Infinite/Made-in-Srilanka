@@ -6,15 +6,15 @@
     <form>
         <center><p>Edit User details</p></center>
         <div class="edit-user">
-            <input type="text" name="firstName" id="firstName" value="Smith">
+            <input type="text" name="firstName" id="firstName" value="Smith" style="margin-bottom: -33px">
             <img src="../../common/assets/images/editprof.png">
         </div>
         <div class="edit-user">
-            <input type="text" name="lastName" id="lastName" value="Jackson">
+            <input type="text" name="lastName" id="lastName" value="Jackson" style="margin-bottom: -33px">
             <img src="../../common/assets/images/editprof.png">
         </div>
         <div class="edit-user">
-            <input type="text" name="username" id="username" value="smith">
+            <input type="text" name="username" id="username" value="smith" style="margin-bottom: -33px">
             <img src="../../common/assets/images/editprof.png">
         </div>
 
@@ -22,11 +22,13 @@
         <br/>
         <center><p>Edit User details</p></center>
         <div class="edit-user">
-            <input type="password" name="password" id="password" value="" placeholder="New Password">
+            <input type="password" name="password" id="password" value="" placeholder="New Password"
+                   style="margin-bottom: -33px">
             <img src="../../common/assets/images/editlock.png">
         </div>
         <div class="edit-user">
-            <input type="password" name="rePassword" id="rePassword" value="" placeholder="Re-type New Password">
+            <input type="password" name="rePassword" id="rePassword" value="" placeholder="Re-type New Password"
+                   style="margin-bottom: -33px">
             <img src="../../common/assets/images/editlock.png">
         </div>
 

@@ -1,4 +1,4 @@
-<div class="ui-grid-a">
+<div class="ui-grid-a" style="padding:0 10px 80px 10px;">
     <label><b>Comments</b></label>
     <table style="min-width: 100%;">
         <tr>
