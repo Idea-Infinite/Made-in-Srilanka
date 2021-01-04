@@ -42,7 +42,7 @@
                                                                          src="../../common/assets/images/icons/cash.png"
                                                                          width="35"
                                                                          height="35"><br/>Sell with Us</a></td>
-            <td><a data-ajax="false" href="#popupDialog" data-rel="popup" data-position-to="window"
+            <td><a href="#popupDialog" data-rel="popup" data-position-to="window"
                    data-transition="pop"><img
                             src="../../common/assets/images/icons/exit.png" width="35" height="35"><br/>Logout</a></td>
         </tr>
@@ -52,7 +52,7 @@
 
         <div role="main" class="ui-content">
             <h3 class="ui-title">Are you sure you want to Logout?</h3>
-            <a data-ajax="false" href="../pages/logIn.php" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"
+            <a href="../pages/logIn.php" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"
                data-transition="flow">Logout</a>
         </div>
     </div>
