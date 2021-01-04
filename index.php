@@ -11,6 +11,7 @@
         body {
             background-color: #1797F3;
             color: #f4f4f4;
+            font-size: 16px;
         }
         @font-face {
             font-family: 'Nunito Sans';
@@ -228,7 +229,7 @@
 
 <body>
     <h1 style="text-align: center; margin-top: 50%;">Redirecting...</h1>
-    <p style="text-align: center">For your device, the site will work best in the <span id="device"></span> layout</p>
+    <p style="text-align: center; font-size: 14px">For your device, the site will work best in the <span id="device"></span> layout</p>
     <div class="sk-circle">
         <div class="sk-circle1 sk-child"></div>
         <div class="sk-circle2 sk-child"></div>

@@ -10,7 +10,7 @@ if (new RegExp("iPad").test(navigator.userAgent)) {
 console.log("You are using an " + device);
 $(document).ready(function () {
     $("#device").append(device);
-    $("#device").css('color', 'green');
+    $("#device").css('color', 'red');
     $("#device").css('font-weight', 'bold');
     setTimeout(function () {
         if (device == "iPhone") location.href = "./iphone/pages/home.php";
