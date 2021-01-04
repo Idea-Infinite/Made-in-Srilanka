@@ -13,40 +13,6 @@
             color: #f4f4f4;
             font-size: 16px;
         }
-        @font-face {
-            font-family: 'Nunito Sans';
-            src: url('./common/lib/fonts/Nunito_Sans/NunitoSans-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Montserrat';
-            src: url('./common/lib/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
-            font-weight: 700;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'Montserrat light italic';
-            src: url('./common/lib/fonts/Montserrat/Montserrat-LightItalic.ttf') format('truetype');
-            font-weight: 300;
-            font-style: oblique;
-        }
-
-        * {
-            font-family: 'Nunito Sans';
-        }
-
-        h1,
-        h2 {
-            font-family: 'Montserrat';
-        }
-
-        h3 {
-            font-family: 'Montserrat light italic';
-        }
-
         .sk-circle {
             margin: 50px auto;
             width: 40px;
