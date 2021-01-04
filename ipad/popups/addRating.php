@@ -1,6 +1,6 @@
 <!--intro_popup1-->
 <center>
-    <div data-role="popup" id="popuprating" data-theme="a" class="ui-content">
+    <div data-role="popup" id="popuprating" data-theme="a" class="ui-content" style="transform: translateX(-50%)">
         <link rel="stylesheet" href="../../common/js/star/SimpleStarRating.css">
         <style>
             body {

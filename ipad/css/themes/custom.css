@@ -396,3 +396,7 @@ a-scene {
 .fa:hover {
     color: #125688;
 }
+
+#rate-feedback {
+    padding: 15px;
+}
