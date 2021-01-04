@@ -37,7 +37,7 @@
                     <p class="card-price" style="position: relative">LKR <?php echo $json[$id]['price'] ?? '' ?></p>
                 </div>
                 <div class="ui-block-b" style="width: 20%">
-                    <a data-ajax="false" href="#viewAR" data-rel="popup" data-position-to="window"
+                    <a href="#viewAR" data-rel="popup" data-position-to="window"
                        data-transition="pop"><img alt="page_icon" src="../../common/assets/images/icons/ar.png"></a>
                 </div>
             </div>
@@ -105,7 +105,8 @@
             }
             ?>
         </div>
-        <?php include '../parts/comments.php' ?>
+    </div>
+    <?php include '../parts/comments.php' ?>
 
         <?php include '../popups/chatWithSeller.php' ?>
         <?php include '../popups/viewAR.php' ?>

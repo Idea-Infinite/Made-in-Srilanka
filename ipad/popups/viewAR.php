@@ -1,4 +1,5 @@
-<div style="max-width: none; min-width: 300px; top: 140px; height: 500px;" data-role="popup" id="viewAR" data-theme="a"
+<div style="max-width: none; min-width: 700px; top: 85px; height: 75vh; left: 0; transform: translateX(-50%);"
+     data-role="popup" id="viewAR" data-theme="a"
      class="ui-content">
 
     <meta name="description" content="Model Viewer (VR / AR) • A-Frame">

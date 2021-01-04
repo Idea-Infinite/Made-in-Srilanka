@@ -41,7 +41,7 @@
                             <p class="card-price" style="position: relative; font-size: 30px">LKR <?php echo $json[$id]['price'] ?? '' ?></p>
                         </div>
                         <div class="ui-block-b" style="width: 20%">
-                            <a data-ajax="false" href="#viewAR" data-rel="popup" data-position-to="window"
+                            <a href="#viewAR" data-rel="popup" data-position-to="window"
                                data-transition="pop"><img alt="page_icon" src="../../common/assets/images/icons/ar.png"></a>
                         </div>
                     </div>
