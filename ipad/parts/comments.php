@@ -82,17 +82,17 @@
 
 </script>-->
 
-<div class="ui-grid-a">
+<div>
     <label><b>Comments</b></label>
     <table>
         <tr>
             <td>
-                <div style="max-width: 500px; padding-left: 12px;">
+                <div style="min-width:100%; padding-left: 12px;">
                     <input type="text" data-clear-btn="true" name="comment" id="inputComment" value="">
                 </div>
             </td>
             <td>
-                <button id="postBtn" style="opacity: 1; max-height:80px; max-width: inherit"
+                <button id="postBtn" style="opacity: 1; max-height:80px; max-width: 100%"
                         onclick="getInputValue(this);">Post
                 </button>
             </td>
@@ -121,9 +121,8 @@
                         <td></td>
                         <td>
                             <div>
-                                <a style="margin: 10px" onclick="openReply()">reply</a><a
-                                        onclick="likeUnlike()">like</a>
-                                <p style="color: #1797F3" id="liked"></p>
+                                <a style="margin: 10px" onclick="openReply()">reply</a><i onclick="myFunction(this)"
+                                                                                          class="fa fa-thumbs-up"></i>
                             </div>
                         </td>
                     </tr>
@@ -162,8 +161,7 @@
             '<p id="snoopyComment">' + comment + '</p>' +
             '<div>' +
             '<a style="margin: 10px" onclick="openReply1()">reply</a>' +
-            '<a onclick="likeUnlike1()">like</a>' +
-            '<p style="color: #1797F3" id="liked1"></p>' +
+            '<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>' +
             '</div>' +
             '</div>' +
             '</td>' +
@@ -207,9 +205,8 @@
 
     }
 
-    function likeUnlike() {
-        $('#liked').append('+1');
-
+    function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
     }
 
     function openReply1() {
@@ -234,8 +231,5 @@
 
     }
 
-    function likeUnlike1() {
-        $('#liked1').append('+1');
 
-    }
 </script>

@@ -3,12 +3,12 @@
     <table>
         <tr>
             <td>
-                <div style="max-width: 250px; padding-left: 12px;">
+                <div style=" width:100%;padding-left: 12px;">
                     <input type="text" data-clear-btn="true" name="comment" id="inputComment" value="">
                 </div>
             </td>
             <td>
-                <button id="postBtn" style="opacity: 1; max-height:40px; max-width: inherit"
+                <button id="postBtn" style="opacity: 1; width:100%; max-height:40px; "
                         onclick="getInputValue(this);">Post
                 </button>
             </td>
@@ -37,9 +37,9 @@
                         <td></td>
                         <td>
                             <div>
-                                <a style="margin: 10px" onclick="openReply()">reply</a><a
-                                        onclick="likeUnlike()">like</a>
-                                <p style="color: #1797F3" id="liked"></p>
+                                <a style="margin: 10px" onclick="openReply()">reply</a><i onclick="myFunction(this)"
+                                                                                          class="fa fa-thumbs-up"></i>
+
                             </div>
                         </td>
                     </tr>
@@ -78,8 +78,7 @@
             '<p id="snoopyComment">' + comment + '</p>' +
             '<div>' +
             '<a style="margin: 10px" onclick="openReply1()">reply</a>' +
-            '<a onclick="likeUnlike1()">like</a>' +
-            '<p style="color: #1797F3" id="liked1"></p>' +
+            '<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>' +
             '</div>' +
             '</div>' +
             '</td>' +
@@ -103,7 +102,7 @@
 
     function openReply() {
         console.log('type a reply');
-        $("#replyTextField1").append('' +
+        $("#replyTextField").append('' +
             '<td></td>' +
             '<td>' +
             '<input type="text" data-clear-btn="true" name="reply" id="inputReply" value="" style=" margin-right:2px; max-width: 100px; border: none">' +
@@ -113,9 +112,9 @@
     }
 
     function displayReply() {
-        let replyText = $('#inputReply1').val();
+        let replyText = $('#inputReply').val();
         console.log('reply is: ' + replyText);
-        $("#displayReply1").append('' +
+        $("#displayReply").append('' +
             '<h3>Snoopy</h3>' +
             '<p id="snoopyReply">' + replyText + '</p>'
         );
@@ -123,9 +122,8 @@
 
     }
 
-    function likeUnlike() {
-        $('#liked').append('+1');
-
+    function myFunction(x) {
+        x.classList.toggle("fa-thumbs-down");
     }
 
     function openReply1() {
@@ -150,8 +148,5 @@
 
     }
 
-    function likeUnlike1() {
-        $('#liked1').append('+1');
 
-    }
 </script>
