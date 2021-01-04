@@ -17,16 +17,20 @@ Payment is declined
 
 <script src="https://js.stripe.com/v3/"></script>
 <!-- This is shop page-->
-<div data-role="page" id="cart" style='min-height: unset; background-image: url("../../common/assets/images/cart-back.jpg")'>
+<div data-role="page" id="cart" style='min-height: unset; background-image:linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ), url("../../common/assets/images/cart-back.jpg")'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
-        <div class="header-title" style="margin-bottom: 10px;">
-            <h3>Cart</h3>
-            <img alt="page_icon" src="../../common/assets/images/icons/checkout.png" height="35" width="35">
-        </div>
+
         <!-- POI Card-->
-        <div>
+        <div style="background-color: #ffffffe3;" class="back-box">
+            <div class="header-title" style="margin-bottom: 10px;">
+                <h3>Cart</h3>
+                <img alt="page_icon" src="../../common/assets/images/icons/checkout.png" height="35" width="35">
+            </div>
             <!--card data will load dynamically-->
             <div id="items">
             </div>

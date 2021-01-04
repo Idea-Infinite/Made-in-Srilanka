@@ -1,18 +1,17 @@
 <?php include '../parts/head.php' ?>
 <script src="https://js.stripe.com/v3/"></script>
 <!-- This is booking page-->
-<div data-role="page" id="booking"
-     style='background-image: url("../../common/assets/images/booking_back.jpg");
+<div data-role="page" id="booking" style='background-image: url("../../common/assets/images/booking_back.jpg");
      background-size: cover; background-position: bottom;'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content">
 
-        <div class="header-title">
-            <h3>Booking</h3>
-            <img alt="page_icon" src="../../common/assets/images/icons/booking.png" height="35" width="35">
-        </div>
-        <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.5)">
+        <div class="back-box" style="padding: 50px 20px; background-color: rgba(0, 0, 0, 0.7)">
+            <div style="color: white;" class="header-title">
+                <h3>Booking</h3>
+                <img alt="page_icon" src="../../common/assets/images/icons/booking.png" height="35" width="35">
+            </div>
             <form id="booking-form"
                   action="#"
                   method="POST">
@@ -41,7 +40,8 @@
             </form>
         </div>
     </div>
-    <?php include '../parts/bottomNavbar.php' ?>
+</div>
+<?php include '../parts/bottomNavbar.php' ?>
     <?php include '../parts/footer.php' ?>
 </div>
 </body>

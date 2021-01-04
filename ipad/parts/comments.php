@@ -1,97 +1,16 @@
-<!--<div class="ui-grid-a">
-    <label>Comments</label>
-    <input type="text" data-clear-btn="true" name="comment" id="inputComment" value="">
-    <a data-ajax="false" href="#popupBasic" data-rel="popup" data-transition="pop">
-        <button id="postBtn" style="opacity: 1" onclick="getInputValue(this);">Post</button>
-    </a>
-    <ul id="ul" style="list-style: none; margin-left: -40px;">
-        <li>
-            <table>
-                <tr>
-                    <td>
-                        <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
-                    </td>
-                    <td>
-                        <div class="product-comment"></div>
-                        <h3>Snoopy</h3>
-                        <p>What are the colours available?</p>
-                        <div>
-                            <a style="margin: 10px">reply</a><a>like</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </li>
-    </ul>
-</div>
-<div style="display: flex" data-role="popup" id="popupBasic">
-    <h3>Comment Added</h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
-</div>
-<script>
-    function getInputValue(e) {
-        let comment = $('#inputComment').val();
-        $("#ul").append('' +
-            ' <li>' +
-            '<table>' +
-            '<tr>' +
-            '<td>' +
-            '<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">' +
-            '</td>' +
-            '<td>' +
-            '<div class="product-comment"></div>' +
-            '<h3>Snoopy</h3>' +
-            '<p id="snoopyComment">' + comment + '</p>' +
-            '<div>' +
-            '<a style="margin: 10px">reply</a><a>like</a>' +
-            '</div>' +
-            '<div/>' +
-            '</td>' +
-            '</td>' +
-            '</tr>' +
-            '</table>' +
-            '</li>');
-
-    }
-
-    function openReply() {
-        console.log('type a reply');
-        $("#replyTextField").append('' +
-            '<td></td>' +
-            '<td>' +
-            '<input type="text" data-clear-btn="true" name="reply" id="inputReply" value="" style=" margin-right:2px; max-width: 100px; border: none">' +
-            '<button id="replyPostBtn" style="opacity: 1; background-color: #1797F3; color: white; border: none" onclick="displayReply();">Post</button>' +
-            '</td>');
-
-    }
-
-    function displayReply() {
-        let replyText = $('#inputReply').val();
-        console.log('reply is: ' + replyText);
-        $("#displayReply").append('' +
-            '<h3>Snoopy</h3>' +
-            '<p id="snoopyReply">' + replyText + '</p>'
-        );
-        $("#repliersPhoto").append('<img alt="page_icon" src="../../common/assets/images/icons/user.png" height="50px" width="50px" style="margin-left: 26px;" >');
-
-    }
-
-    function likeUnlike() {
-        $('#liked').append('+1');
-
-    }
-
-</script>-->
-
-<div>
-    <label><b>Comments</b></label>
-    <table>
+<div style="
+    margin-top: 3vh;
+    padding: 20px;
+">
+    <h2>Comments</h2>
+    <table style="min-width: 100%;">
         <tr>
-            <td>
-                <div style="min-width:100%; padding-left: 12px;">
+            <td width="90%">
+                <div style="margin-left: 25px; margin-right:8px">
                     <input type="text" data-clear-btn="true" name="comment" id="inputComment" value="">
                 </div>
             </td>
-            <td>
+            <td width="80px">
                 <button id="postBtn" style="opacity: 1; max-height:80px; max-width: 100%"
                         onclick="getInputValue(this);">Post
                 </button>
@@ -185,10 +104,10 @@
 
     function openReply() {
         console.log('type a reply');
-        $("#replyTextField1").append('' +
+        $("#replyTextField").append('' +
             '<td></td>' +
-            '<td>' +
-            '<input type="text" data-clear-btn="true" name="reply" id="inputReply" value="" style=" margin-right:2px; max-width: 100px; border: none">' +
+            '<td width="90%">' +
+            '<input type="text" data-clear-btn="true" name="reply" id="inputReply" value="" style=" max-width:178%; margin-left: 25px; margin-right:8px; border: none">' +
             '<button id="replyPostBtn" style="opacity: 1; background-color: #1797F3; color: white; border: none" onclick="displayReply();">Post</button>' +
             '</td>');
 
@@ -213,8 +132,8 @@
         console.log('type a reply');
         $("#replyTextField1").append('' +
             '<td></td>' +
-            '<td>' +
-            '<input type="text" data-clear-btn="true" name="reply" id="inputReply1" value="" style=" margin-right:2px; max-width: 100px; border: none">' +
+            '<td width="90%">' +
+            '<input type="text" data-clear-btn="true" name="reply" id="inputReply1" value="" style=" max-width:178%; margin-left: 25px; margin-right:8px; border: none">' +
             '<button id="replyPostBtn1" style="opacity: 1; background-color: #1797F3; color: white; border: none" onclick="displayReply1();">Post</button>' +
             '</td>');
 
