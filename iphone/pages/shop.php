@@ -3,7 +3,7 @@
 <div data-role="page" id="shop">
     <?php include '../parts/header.php' ?>
 
-    <div role="main" class="ui-content" style="margin: 0; padding: 0;">
+    <div role="main" class="ui-content" style="margin: 0; padding: 0; min-height: 85vh;">
         <div class="header-title" style="margin-bottom: 10px;">
             <h3>Shop</h3>
             <img alt="page_icon" src="../../common/assets/images/icons/shop.png" height="35" width="35">
