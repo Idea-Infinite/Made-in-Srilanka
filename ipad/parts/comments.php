@@ -40,8 +40,8 @@
                         <td></td>
                         <td>
                             <div>
-                                <a style="margin: 10px" onclick="openReply()">reply</a><i onclick="myFunction(this)"
-                                                                                          class="fa fa-thumbs-up"></i>
+                                <a style="margin: 10px; float: left" onclick="openReply()">reply</a>
+                                <i style="font-size: 30px;" onclick="likeUnlike(this)" class="fa fa-thumbs-up"></i>
                             </div>
                         </td>
                     </tr>
@@ -80,7 +80,7 @@
             '<p id="snoopyComment">' + comment + '</p>' +
             '<div>' +
             '<a style="margin: 10px" onclick="openReply1()">reply</a>' +
-            '<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>' +
+            '<i style="font-size: 30px;" onclick="likeUnlike(this)" class="fa fa-thumbs-up"></i>' +
             '</div>' +
             '</div>' +
             '</td>' +
@@ -124,8 +124,16 @@
 
     }
 
-    function myFunction(x) {
-        x.classList.toggle("fa-thumbs-down");
+    let liked = false;
+
+    function likeUnlike(x) {
+        if (liked) {
+            $(x).css({"color": "black"});
+            liked = false;
+        } else {
+            $(x).css({"color": "blue"});
+            liked = true;
+        }
     }
 
     function openReply1() {
