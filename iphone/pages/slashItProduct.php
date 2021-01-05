@@ -22,7 +22,7 @@
                         <p class="card-price"
                            style="position: relative; color: red; text-decoration: line-through;"><?php echo $json[$id]['price'] ?? '' ?></p>
                         <p class="card-price"
-                           style="margin-left: 20px; position: relative"><?php echo $json[$id]['price'] * 0.5 ?? '' ?></p>
+                           style="margin-left: 20px; position: relative"><?php echo $json[$id]['price'] * 0.7 ?? '' ?></p>
                     </div>
                 </div>
             </div>
