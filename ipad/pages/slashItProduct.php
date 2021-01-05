@@ -48,7 +48,7 @@
                 <a style="color: white;" href="#" class="fa fa-instagram"></a>
                 <a style="color: white;" href="#" class="fa fa-snapchat-ghost"></a></div>
         </div>
-
+    </div>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
     </div>
