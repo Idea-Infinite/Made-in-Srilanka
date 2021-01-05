@@ -10,7 +10,7 @@
             <img alt="page_icon" src="../../common/assets/images/icons/wishList.png" height="35" width="35">
         </div>
         <center>
-            <p style="font-size: 14px; font-family: 'poppins', serif; text-align: justify; width: 700px; color: white">
+            <p style="font-size: 22px; font-family: 'poppins', serif; text-align: justify; width: 700px; color: white">
                 iCraft is the leading independent home improvement and home repair website. It has been repeatedly
                 honored
                 among the Best on the Web, and was named "One of the Top 50 Sites in the World" by Time Magazine. In
