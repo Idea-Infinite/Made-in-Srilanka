@@ -35,7 +35,7 @@
         </div>
         <div class="back-box" style="margin-bottom: 20px">
             <center>
-                <a data-ajax="false" href="#popupBasic" data-rel="popup" data-position-to="window"
+                <a href="#popupBasic" data-rel="popup" data-position-to="window"
                    data-transition="pop"><h3
                             style="color: #1797F3;">Invite Friends
                         to slash prices</h3></a>
