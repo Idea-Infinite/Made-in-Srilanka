@@ -71,17 +71,15 @@ Payment is declined
             total += price;
             $('#items').append(
                 '<div class="ui-grid-c back-box" style="padding: <?php echo $padding ?? "10px" ?>; margin-bottom: 20px">\n' +
-                '                <div class="ui-block-a " style="width: 15%;">\n' +
+                '                <div class="ui-block-a " style="width: 25%;">\n' +
                 '                    <img alt="product_image" class="center" src="' + data["image"] + '"\n' +
-                '                         style="width: <?php echo $imgSize ?? "80px" ?>; height: 80px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
+                '                         style="top: 50%;;">\n' +
                 '                </div>\n' +
-                '                <div class="ui-block-b" style="width: 40%; margin-left: 10%">\n' +
-                '                    <p>' + data["name"] + '</p>\n' +
+                '                <div class="ui-block-b" style="width: 50%; font-size: 12px; padding-left: 10px">\n' +
+                '                        <a data-ajax="false" href="product.php?id=' + id + '" \n' +
+                '                           data-transition="pop"><p style="font-size: 22px">' + data["name"] + ' </p><span style="font-size: 20px">x' + qty + '</span></a>\n' +
                 '                </div>\n' +
-                '                <div class="ui-block-c" style="width: 10%;">\n' +
-                '                    <p>x' + qty + '</p>\n' +
-                '                </div>\n' +
-                '                <div class="ui-block-d" style="width: 25%; font-size: 20px; ">\n' +
+                '                <div class="ui-block-c" style="width: 25%; font-size: 22px; ">\n' +
                 '                    <p> LKR ' + price + '</p>\n' +
                 '                </div>\n' +
                 '            </div>');

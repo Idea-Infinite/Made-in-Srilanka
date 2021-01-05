@@ -21,10 +21,6 @@
                 display: inline-block;
             }
 
-            td {
-                padding: 1em;
-            }
-
             .golden {
                 color: #ee0;
                 background-color: #444;

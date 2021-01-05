@@ -47,16 +47,12 @@ Wish List Page
                 '                             style="width: 80px; height: 80px; top: 50%; margin-top: 30px; transform: translateY(-50%);">\n' +
                 '\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-b" style="width: 35%;">\n' +
-                '                        <p>' + data["name"] + '</p>\n' +
-                '                    </div>\n' +
-                '                    <div class="ui-block-c" style="width: 20%; font-size: 12px; ">\n' +
+                '                    <div class="ui-block-b" style="width: 50%; font-size: 12px; ">\n' +
                 '                        <a data-ajax="false" href="product.php?id=' + id + '" \n' +
-                '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
-                '                           data-transition="pop">View</a>\n' +
+                '                           data-transition="pop"><p style="font-size: 22px">' + data["name"] + '</p></a>\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-d" style="width: 15%; height: 50px">\n' +
-                '                        <p style=" font-size: 14px; color: #f5a278; font-weight: 800;">LKR ' + data["price"] + '</p>\n' +
+                '                    <div class="ui-block-c" style="width: 20%; height: 50px">\n' +
+                '                        <p style=" font-size: 20px; color: #f5a278; font-weight: 800;">LKR ' + data["price"] + '</p>\n' +
                 '                    </div>\n' +
                 '                </div>\n');
         });

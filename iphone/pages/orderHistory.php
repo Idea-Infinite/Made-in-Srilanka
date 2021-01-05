@@ -77,18 +77,15 @@ session_start();
                 '                             style="width: 100px; height: 100px; top: 50%; position: absolute; transform: translateY(-50%);">\n' +
                 '\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-b" style="width: 40%; margin-left: 10px">\n' +
-                '                        <p>' + data["name"] + '</p>\n' +
-                '                        <button style="opacity: 1; padding: 4px; background-color: #fff63f; color: black;\n' +
+                '                    <div class="ui-block-b" style="width: 40%; padding-left: 20px; font-size: 22px">\n' +
+                '                        <p>' + data["name"] + '</p><span style="font-size: 20px">x' + qty + '</span>\n' +
+                '                        <button style="opacity: 1; padding: 8px; background-color: #fff63f; color: black;\n' +
                 '                                border-color: #fff; box-shadow: none; font-size: 11px" disabled>\n' +
                 '                            Pending\n' +
                 '                        </button>\n' +
                 '                    </div>\n' +
-                '                    <div class="ui-block-c" style="width: 10%;">\n' +
-                '                        <p>x ' + qty + '</p>\n' +
-                '                    </div>\n' +
-                '                    <div class="ui-block-d" style="width: 20%; font-size: 12px; ">\n' +
-                '                        <a href="#popuprating" data-rel="popup" data-position-to="window"\n' +
+                '                    <div class="ui-block-c" style="width: 20%; font-size: 20px; ">\n' +
+                '                        <a href="#popuprating" style="padding: 10px" data-rel="popup" data-position-to="window"\n' +
                 '                           class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-a"\n' +
                 '                           data-transition="pop" onclick="return rate(' + id + ');">Rate</a>\n' +
                 '                        <p>LKR ' + price + '</p>\n' +
