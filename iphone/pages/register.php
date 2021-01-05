@@ -21,7 +21,7 @@
 
                 <button style="opacity: 1">Sign Up</button>
                 <center>
-                    <a data-ajax="false" href="#login"
+                    <a data-ajax="false" href="logIn.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
                         Already have an account?
                     </a>

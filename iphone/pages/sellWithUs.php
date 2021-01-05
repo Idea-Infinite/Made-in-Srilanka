@@ -1,6 +1,7 @@
 <?php include '../parts/head.php' ?>
 <!-- This is sell with us page-->
-<div data-role="page" id="sellWithUs">
+<div data-role="page" id="sellWithUs"
+     style='background-image: url("../../common/assets/images/christmas.jpg"); background-size: cover;'>
     <?php include '../parts/header.php' ?>
 
     <div role="main" class="ui-content"
@@ -23,7 +24,7 @@
 
                 <button style="opacity: 1">Sign Up</button>
                 <center>
-                    <a data-ajax="false" href="#login"
+                    <a data-ajax="false" href="logIn.php"
                        style="font-weight: 100; color: white; font-family: 'Poppins', sans-serif; font-size: 12px;">
                         Already have an account?
                     </a>
