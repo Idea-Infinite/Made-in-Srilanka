@@ -22,7 +22,7 @@
                         <p class="card-price"
                            style="position: relative; color: red; text-decoration: line-through;"><?php echo $json[$id]['price'] ?? '' ?></p>
                         <p class="card-price"
-                           style="margin-left: 20px; position: relative"><?php echo $json[$id]['price'] * 0.5 ?? '' ?></p>
+                           style="margin-left: 20px; position: relative"><?php echo $json[$id]['price'] * 0.7 ?? '' ?></p>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="back-box" style="margin-bottom: 20px">
             <center>
-                <a data-ajax="false" href="#popupBasic" data-rel="popup" data-position-to="window"
+                <a href="#popupBasic" data-rel="popup" data-position-to="window"
                    data-transition="pop"><h3
                             style="color: #1797F3;">Invite Friends
                         to slash prices</h3></a>
@@ -48,7 +48,7 @@
                 <a style="color: white;" href="#" class="fa fa-instagram"></a>
                 <a style="color: white;" href="#" class="fa fa-snapchat-ghost"></a></div>
         </div>
-
+    </div>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
     </div>

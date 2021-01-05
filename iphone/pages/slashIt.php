@@ -26,7 +26,7 @@
         <center>
             <img src="../../common/assets/images/slashit/gameRules.png" width="330">
         </center>
-
+    </div>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
     </div>

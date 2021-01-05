@@ -24,7 +24,7 @@
                  style="width: 28%; margin-right: 20px; border-radius: 46px; ">
             <img src="../../common/assets/images/slashIt-ipad.png" style="width: 70%">
         </div>
-
+    </div>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
     </div>

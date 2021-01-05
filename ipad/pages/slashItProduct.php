@@ -22,7 +22,7 @@
                         <p class="card-price"
                            style="position: relative; color: red; text-decoration: line-through;"><?php echo $json[$id]['price'] ?? '' ?></p>
                         <p class="card-price"
-                           style="margin-left: 20px; position: relative"><?php echo $json[$id]['price'] * 0.5 ?? '' ?></p>
+                           style="margin-left: 20px; position: relative"><?php echo $json[$id]['price'] * 0.7 ?? '' ?></p>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 <a style="color: white;" href="#" class="fa fa-instagram"></a>
                 <a style="color: white;" href="#" class="fa fa-snapchat-ghost"></a></div>
         </div>
-
+    </div>
         <?php include '../parts/bottomNavbar.php' ?>
         <?php include '../parts/footer.php' ?>
     </div>
