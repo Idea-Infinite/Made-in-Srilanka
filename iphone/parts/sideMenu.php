@@ -3,11 +3,32 @@
     <div style="height: 150px; background-color:#f3f3f3; padding: 20px; display: flex">
         <img alt="page_icon" src="../../common/assets/images/icons/user.png" height="100px" width="100px">
         <div class="side-menu-info">
-            <p>Hi Snoopy</p>
-            <p>Diamonds: 50</p>
+            <p>Hi <span id="userName"></span></p>
+            <p>Diamonds: <span id="diamondCount"></span></p>
             <p><a data-ajax="false" href="../pages/profile.php">View Profile</a></p>
         </div>
     </div>
+    <script>
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function displayDiamondCount() {
+            var diamondCount = readCookie('diamondCount');
+            var userName = readCookie('userName');
+            $("#diamondCount").html(diamondCount);
+            $("#userName").html(userName);
+        }
+
+        displayDiamondCount();
+    </script>
     <table class="side-menu">
         <tr>
             <td><img alt="page_icon" src="../../common/assets/images/icons/home.png" width="35" height="35"></td>
