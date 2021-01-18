@@ -56,9 +56,8 @@
                     <p>
                     <center style="margin-bottom: -15px">Have a question?</center>
                     </p>
-                    <a data-rel="popup" data-position-to="window"
-                       data-transition="pop" href="#chatWithSeller">
-                        <button style="margin-bottom: 5px; font-size: 12px">chat now</button>
+                    <a href="#" onclick="collectchat.open()">
+                        <button style="margin-bottom: 5px; font-size: 12px">Chat Now</button>
                     </a></div>
             </div>
         </div>
@@ -108,93 +107,98 @@
     </div>
     <?php include '../parts/comments.php' ?>
 
-        <?php include '../popups/chatWithSeller.php' ?>
-        <?php include '../popups/viewAR.php' ?>
-        <?php include '../parts/bottomNavbar.php' ?>
-        <?php include '../parts/footer.php' ?>
-    </div>
-    </body>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-        $(window).on('load', function () {
-            if ($.cookie('wishList') != null) {
-                data = JSON.parse($.cookie('wishList'));
-                for (let i = 0; i < data.length; i++) {
-                    $("#" + data[i]).css('color', 'red');
-                }
+    <?php include '../popups/chatWithSeller.php' ?>
+    <?php include '../popups/viewAR.php' ?>
+    <?php include '../parts/bottomNavbar.php' ?>
+    <?php include '../parts/footer.php' ?>
+</div>
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    $(window).bind("DOMNodeInserted", function () {
+        $("#chat-bot-iframe").contents().find(".powered-by").empty();
+
+    });
+    $(window).on('load', function () {
+
+        if ($.cookie('wishList') != null) {
+            data = JSON.parse($.cookie('wishList'));
+            for (let i = 0; i < data.length; i++) {
+                $("#" + data[i]).css('color', 'red');
             }
-
-            // buy now
-            $buyNowButton = $('#buyNow');
-            $buyNowButton.on('click', function () {
-                // Create an instance of the Stripe object with API key
-                const stripe = Stripe("<?php echo $GLOBALS['stripe_key'] ?>");
-
-                fetch("../../common/functions/checkout.php?origin=<?php echo $origin ?? 'iPhone' ?>", {
-                    method: "POST",
-                    body: JSON.stringify([{"id": <?php echo $id ?>, "qty": 1}]),
-                })
-                    .then(function (response) {
-                        return response.json();
-                    })
-                    .then(function (session) {
-                        return stripe.redirectToCheckout({sessionId: session.id});
-                    })
-                    .then(function (result) {
-                        // If redirectToCheckout fails due to a browser or network
-                        // error, you should display the localized error message to your
-                        // customer using error.message.
-                        if (result.error) {
-                            alert(result.error.message);
-                        }
-                    })
-                    .catch(function (error) {
-                        console.error("Error:", error);
-                    });
-            });
-        });
-
-        function favourite(e) {
-            let id = e.id;
-            if ($.cookie('wishList') != null) {
-                data = JSON.parse($.cookie('wishList'));
-                if (!data.includes(id)) {
-                    data.push(id);
-                    $(e).css('color', 'red')
-                } else {
-                    data = data.filter(item => item !== id);
-                    $(e).css('color', 'black')
-                }
-            } else {
-                data = [];
-                data.push(id);
-                $(e).css('color', 'red')
-            }
-            $.cookie('wishList', JSON.stringify(data), {path: '/'});
         }
 
-        $addCartButton = $('#addToCart');
-        $addCartButton.on('click', function () {
-            let found = false;
-            let qty = 1;
-            if ($.cookie('cart') != null) {
-                data = JSON.parse($.cookie('cart'));
-                for (let i = 0; i < data.length; i++) {
-                    if (data[i]['id'] === <?php echo $id ?>) {
-                        data[i]['qty'] = data[i]['qty'] + 1;
-                        qty = data[i]['qty'];
-                        found = true;
-                        break;
+        // buy now
+        $buyNowButton = $('#buyNow');
+        $buyNowButton.on('click', function () {
+            // Create an instance of the Stripe object with API key
+            const stripe = Stripe("<?php echo $GLOBALS['stripe_key'] ?>");
+
+            fetch("../../common/functions/checkout.php?origin=<?php echo $origin ?? 'iPhone' ?>", {
+                method: "POST",
+                body: JSON.stringify([{"id": <?php echo $id ?>, "qty": 1}]),
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (session) {
+                    return stripe.redirectToCheckout({sessionId: session.id});
+                })
+                .then(function (result) {
+                    // If redirectToCheckout fails due to a browser or network
+                    // error, you should display the localized error message to your
+                    // customer using error.message.
+                    if (result.error) {
+                        alert(result.error.message);
                     }
-                }
-            } else {
-                data = [];
-            }
-            if (!found) {
-                data.push({"id": <?php echo $id ?>, "qty": qty});
-            }
-            $.cookie('cart', JSON.stringify(data), {path: '/'});
-            $('#addToCart').html('Added ' + qty);
+                })
+                .catch(function (error) {
+                    console.error("Error:", error);
+                });
         });
-    </script>
-    </html>
+    });
+
+    function favourite(e) {
+        let id = e.id;
+        if ($.cookie('wishList') != null) {
+            data = JSON.parse($.cookie('wishList'));
+            if (!data.includes(id)) {
+                data.push(id);
+                $(e).css('color', 'red')
+            } else {
+                data = data.filter(item => item !== id);
+                $(e).css('color', 'black')
+            }
+        } else {
+            data = [];
+            data.push(id);
+            $(e).css('color', 'red')
+        }
+        $.cookie('wishList', JSON.stringify(data), {path: '/'});
+    }
+
+    $addCartButton = $('#addToCart');
+    $addCartButton.on('click', function () {
+        let found = false;
+        let qty = 1;
+        if ($.cookie('cart') != null) {
+            data = JSON.parse($.cookie('cart'));
+            for (let i = 0; i < data.length; i++) {
+                if (data[i]['id'] === <?php echo $id ?>) {
+                    data[i]['qty'] = data[i]['qty'] + 1;
+                    qty = data[i]['qty'];
+                    found = true;
+                    break;
+                }
+            }
+        } else {
+            data = [];
+        }
+        if (!found) {
+            data.push({"id": <?php echo $id ?>, "qty": qty});
+        }
+        $.cookie('cart', JSON.stringify(data), {path: '/'});
+        $('#addToCart').html('Added ' + qty);
+    });
+</script>
+</html>

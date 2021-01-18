@@ -38,7 +38,8 @@
                                 }
                             }
                             ?>
-                            <p class="card-price" style="position: relative; font-size: 30px">LKR <?php echo $json[$id]['price'] ?? '' ?></p>
+                            <p class="card-price" style="position: relative; font-size: 30px">
+                                LKR <?php echo $json[$id]['price'] ?? '' ?></p>
                         </div>
                         <div class="ui-block-b" style="width: 20%">
                             <a href="#viewAR" data-rel="popup" data-position-to="window"
@@ -52,11 +53,10 @@
             <div class="ui-block-b ipad-feature-product">
                 <div>
                     <h2>
-                    <center style="margin-bottom: -15px;">Have a question?</center>
+                        <center style="margin-bottom: -15px;">Have a question?</center>
                     </h2>
-                    <a data-rel="popup" data-position-to="window"
-                       data-transition="pop" href="#chatWithSeller">
-                        <button style="margin: auto;  font-size: 20px; width:70%">chat now</button>
+                    <a href="#" onclick="collectchat.open()">
+                        <button style="margin: auto;  font-size: 20px; width:70%">Chat Now</button>
                     </a>
                 </div>
                 <!-- BUTTONS -->
@@ -83,8 +83,6 @@
             </div>
 
 
-
-
             <?php include '../popups/customer_Rewards.php' ?>
             <?php include '../popups/chatWithSeller.php' ?>
             <?php include '../popups/viewAR.php' ?>
@@ -96,40 +94,43 @@
             <div>
                 <div class="ui-grid-b">
                     <div class="ui-block-a">
-                        <a target="_parent" href="product.php?id=<?php echo $json[$id+1]['id'] ?>">
+                        <a target="_parent" href="product.php?id=<?php echo $json[$id + 1]['id'] ?>">
                             <div class="ui-bar ui-bar-a ui-card"
                                  style="height: unset; max-width: 70%; margin: auto;">
 
                                 <?php echo '<img class="center" src="', $json[$id + 1]['image'], '" >' ?? '' ?>
                                 <p style="font-weight: 200; font-family: 'Poppins'; font-size: 22px"><?php echo $json[$id + 1]['name'] ?? '' ?> </p>
                                 <p class="card-price"
-                                   style="position: relative; font-size: 25px">LKR <?php echo $json[$id + 1]['price'] ?? '' ?></p>
+                                   style="position: relative; font-size: 25px">
+                                    LKR <?php echo $json[$id + 1]['price'] ?? '' ?></p>
                             </div>
                         </a>
                     </div>
                     <div class="ui-block-b">
-                        <a target="_parent" href="product.php?id=<?php echo $json[$id+2]['id'] ?>">
+                        <a target="_parent" href="product.php?id=<?php echo $json[$id + 2]['id'] ?>">
                             <div class="ui-bar ui-bar-a ui-card"
                                  style="height: unset; max-width: 70%; margin: auto;">
                                 <?php echo '<img class="center" src="', $json[$id + 2]['image'], '" >' ?? '' ?>
                                 <div class="ui-block-a" style="width: 80%">
                                     <p style="font-weight: 200; font-family: 'Poppins'; font-size: 22px"><?php echo $json[$id + 2]['name'] ?? '' ?> </p>
                                     <p class="card-price"
-                                       style="position: relative; font-size: 25px">LKR <?php echo $json[$id + 2]['price'] ?? '' ?></p>
+                                       style="position: relative; font-size: 25px">
+                                        LKR <?php echo $json[$id + 2]['price'] ?? '' ?></p>
                                 </div>
 
                             </div>
                         </a>
                     </div>
                     <div class="ui-block-c">
-                        <a target="_parent" href="product.php?id=<?php echo $json[$id+3]['id'] ?>">
+                        <a target="_parent" href="product.php?id=<?php echo $json[$id + 3]['id'] ?>">
                             <div class="ui-bar ui-bar-a ui-card"
                                  style="height: unset; max-width: 70%; margin: auto;">
                                 <?php echo '<img class="center" src="', $json[$id + 3]['image'], '" >' ?? '' ?>
                                 <div class="ui-block-a" style="width: 80%">
                                     <p style="font-weight: 200; font-family: 'Poppins'; font-size: 22px"><?php echo $json[$id + 3]['name'] ?? '' ?> </p>
                                     <p class="card-price"
-                                       style="position: relative; font-size: 25px">LKR <?php echo $json[$id + 3]['price'] ?? '' ?></p>
+                                       style="position: relative; font-size: 25px">
+                                        LKR <?php echo $json[$id + 3]['price'] ?? '' ?></p>
                                 </div>
 
                             </div>
@@ -139,24 +140,21 @@
             </div>
 
 
-        <!-- comment area -->
+            <!-- comment area -->
             <?php include '../parts/comments.php' ?>
 
         </div>
-
-
-
-<!--        <a data-rel="popup" data-position-to="window"-->
-<!--           data-transition="pop" href="#customer_Rewards">-->
-<!--            <button style="margin-bottom: 5px; font-size: 12px">Diamonds</button>-->
-<!--        </a>-->
-        </div>
-        <?php include '../parts/footer.php' ?>
+    </div>
+    <?php include '../parts/footer.php' ?>
 </div>
 </div>
 </body>
 <script src="https://js.stripe.com/v3/"></script>
 <script>
+    $(window).bind("DOMNodeInserted", function () {
+        $("#chat-bot-iframe").contents().find(".powered-by").empty();
+
+    });
     $(window).on('load', function () {
         if ($.cookie('wishList') != null) {
             data = JSON.parse($.cookie('wishList'));
