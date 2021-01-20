@@ -1,7 +1,8 @@
 <!--
 Wish List email function.
 -->
-<div style="max-width: none; min-width: 200px;" data-role="popup" id="wishListEmail" data-theme="a" class="ui-content">
+<div style="max-width: none; min-width: 200px; transform: translateX(-50%)" data-role="popup" id="wishListEmail"
+     data-theme="a" class="ui-content">
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
     </script>

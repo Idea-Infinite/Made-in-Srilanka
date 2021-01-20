@@ -77,13 +77,14 @@
 
         <!-- BUTTONS -->
         <div style="display: inline-flex;width: 100%; justify-content: center;">
-            <a style="margin: 10px;" href="#cart-feedback" data-rel="popup" data-transition="pop">
+            <a style="margin: 10px;" href="#cart-feedback" data-rel="popup" data-position-to="window"
+               data-transition="pop">
                 <button id="addToCart">Add to Cart</button>
             </a>
             <button id="buyNow" style="margin: 15px">Buy Now</button>
         </div>
 
-        <div style="display: flex" data-role="popup" id="cart-feedback">
+        <div class="ui-content" style="text-align: center; padding: 20px;" data-role="popup" id="cart-feedback">
             <h3>Added to Cart</h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
         </div>
 

@@ -61,7 +61,7 @@
                 </div>
                 <!-- BUTTONS -->
                 <div style="display: inline-flex; width: 100%; justify-content: center; font-size: 30px">
-                    <a href="#cart-feedback" data-rel="popup" data-transition="pop">
+                    <a href="#cart-feedback" data-rel="popup" data-position-to="window" data-transition="pop">
                         <button id="addToCart">Add to Cart</button>
                     </a>
                     <a style="margin: 10px">
@@ -69,8 +69,9 @@
                     </a>
                 </div>
 
-                <div style="display: flex" data-role="popup" id="cart-feedback">
-                    <h3>Added to Cart</h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
+                <div style="text-align: center; padding: 60px; top: 0; transform: translateX(-50%);" data-role="popup"
+                     id="cart-feedback">
+                    <h1>Added to Cart</h1> <img style="width: 90px" src="../../common/assets/images/checked-green.png">
                 </div>
 
                 <!-- product description -->

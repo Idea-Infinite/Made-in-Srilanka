@@ -38,19 +38,17 @@
                 <tr>
                     <td><span id="rating" class="rating" data-default-rating="0"></span>
                         <br/>
-                        <span class='your-choice-was' style='display: none; font-size: 20px; text-align: center'>Your rating was <span style="font-weight: bolder" class='choice'></span></span>
+                        <span class='your-choice-was' style='display: none; font-size: 20px; text-align: center'>Your rating was <span
+                                    style="font-weight: bolder" class='choice'></span></span>
                     </td>
                 </tr>
             </table>
-
-
-
             </p>
-
         </main>
 
-        <div style="display: flex" data-role="popup" id="rate-feedback">
-            <h3>Thank you for your Rating !!! </h3> <img style="width: 60px" src="../../common/assets/images/checked-green.png">
+        <div style="text-align: center; padding: 20px;" data-role="popup" id="rate-feedback">
+            <h3>Thank you for your Rating !!! </h3> <img style="width: 60px"
+                                                         src="../../common/assets/images/checked-green.png">
         </div>
         <script src="../../common/js/star/SimpleStarRating.js"></script>
     </div>
