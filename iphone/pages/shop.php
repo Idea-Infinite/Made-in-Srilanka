@@ -13,9 +13,12 @@
              style="padding: 15px; width: fit-content; margin: 10px auto 100px auto;">
             <div>
                 <h3 style="float: left; font-weight: 800">DYI Products</h3>
+                <button onclick=sort()><?php if ($_COOKIE['sortDb'] == 'db') {
+                        echo "Sort A-Z";
+                    } else echo "Reset Sort" ?></button>
             </div>
             <?php
-            $data = $GLOBALS['db'];
+            $data = $GLOBALS[$_COOKIE['sortDb']];
             $json = json_decode($data, true);
 
             foreach ($json as $key => $item) {
@@ -63,7 +66,33 @@
                 data.push(id);
                 $(e).css('color', 'red')
             }
-            $.cookie('wishList', JSON.stringify(data), {path: '/'});
+            $.cookie('wishList', JSON.stringify(data), { path: '/' });
+        }
+
+        function sort() {
+            if (getCookie('sortDb') === 'db') {
+                document.cookie = "sortDb=sodb";
+            } else {
+                document.cookie = "sortDb=db";
+            }
+            console.log(getCookie('sortDb'))
+            window.location.reload();
+        }
+
+        function getCookie(cname) {
+            const name = cname + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
         }
     </script>
     </html>
