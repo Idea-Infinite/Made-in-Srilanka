@@ -8,7 +8,7 @@ use Stripe\Stripe;
 
 header('Content-Type: application/json');
 
-Stripe::setApiKey('sk_test_51Hs4vICZjSyoKagrFIBYkgON3TKZ9TST4xp8sJ5t99IQpr0EyUOYVFj1u8hIxx9GVr8BlhYKsrq20UfWWjVtMs4900xuY2ithd');
+Stripe::setApiKey('API_KEY_HERE');
 
 // post data
 $data = json_decode(file_get_contents('php://input'), true);
