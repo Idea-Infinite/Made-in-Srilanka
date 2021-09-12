@@ -1,7 +1,7 @@
 <?php include '../parts/head.php' ?>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpqIR1ZdFGYjyKBKFqKCKhbSVGj_hyTz4&callback=initialize"
+        src="https://maps.googleapis.com/maps/api/js?key=<API-Key-Here>&callback=initialize"
         defer
 ></script>
 
