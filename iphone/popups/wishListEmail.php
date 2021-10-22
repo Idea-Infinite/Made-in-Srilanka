@@ -3,7 +3,6 @@ Wish List email function.
 -->
 <div style="max-width: none; min-width: 200px; transform: translateX(-50%)" data-role="popup" id="wishListEmail"
      data-theme="a" class="ui-content">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
     </script>
     <form id="my-form"
@@ -44,9 +43,9 @@ Wish List email function.
                         const data = canvas.toDataURL();
                         console.log(data);
                         Email.send({
-                            SecureToken: "34bd09c6-e5f4-4a35-a8b2-e857011f8c68",
+                            SecureToken: "API_KEY",
                             To: email.value,
-                            From: "teamideainfinite@gmail.com",
+                            From: "teamideainfinite",
                             Subject: "Your WishList",
                             Body: "<html lang='en'><h1>Your WishList is attached below</h1><br><img alt='screenshot' src='" + data + "'></html>",
                             Attachments: [
